@@ -8,20 +8,26 @@ function getDadosEgressoJson(){
             $url = 'https://sagitta.ufpa.br/sagitta/ws/discente/' . $cpf . '?login=rsantsil';
             $json = json_decode(file_get_contents($url));
             
-            foreach($json as $matricula) {
-                
+            $ultimoAnoIngresso = 0;
+            foreach ($json as $matricula) {
+                if ($matricula->anoIngresso > $ultimoAnoIngresso) {
+                    $ultimaMatricula = $matricula;
+                    $ultimoAnoIngresso = $matricula->anoIngresso;
+                }
+           
             }
             
-            if ($json) {
+            if ($ultimaMatricula) {
                 session_start();
                 $_SESSION['cpf'] = $cpf;
-                $_SESSION['nome'] = $json[0]->nome;
-                $_SESSION['dataNascimento'] = $json[0]->dataNascimento;
+                $_SESSION['nome'] = $ultimaMatricula->nome;
+                $_SESSION['dataNascimento'] = $ultimaMatricula->dataNascimento;
+                $_SESSION['anoIngresso'] = $ultimaMatricula->anoIngresso;
                 echo "<meta http-equiv='refresh' content='0;url=formularioEgresso.php'>";
                 die();
 
             } else {
-                echo 'Egresso n√£o encontrado.';
+                echo 'Egresso n„o encontrado.';
 
             }
         }
