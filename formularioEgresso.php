@@ -10,4 +10,5 @@ echo 'Idade: ' . $tempo->diff($dataNascimento)->format('%y') . '<br>';
 
 echo 'Ano de Ingresso: ' . $_SESSION['anoIngresso'] . '<br>';
 
-echo 'Raça: ';
+echo 'RaÃ§a: ';
+
