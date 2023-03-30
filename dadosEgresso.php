@@ -27,7 +27,7 @@ function getDadosEgressoJson(){
                 die();
 
             } else {
-                echo 'Egresso n„o encontrado.';
+                echo 'Egresso n√£o encontrado.';
 
             }
         }
