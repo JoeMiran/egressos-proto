@@ -1,6 +1,6 @@
 <?php
 include_once 'salvaQuestionario.php';
-session_start();
+// session_start();
 
 echo 'Nome: '.$_SESSION['nome'] . '<br>';
 
