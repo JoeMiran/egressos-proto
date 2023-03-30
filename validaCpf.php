@@ -9,7 +9,7 @@ include_once 'dadosEgresso.php';
 				id="cpf" name="cpf" type="text" size="18" 
 				alt="Informe seu CPF" title="CPF" required>
 			<input type="submit" name="botaoConfirmar" id="botaoConfirmar" 
-				value="Responder QuestionárioA">
+				value="Responder Questionário">
 		</fieldset>
 	</form>
 	<?php getDadosEgressoJson()?>
