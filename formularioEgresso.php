@@ -33,4 +33,4 @@ echo 'Raça: ';
 			<input type="submit" name="botaoConfirmar" id="botaoConfirmar" 
 				value="Enviar Questionário">
 		</fieldset>
-	</form>>
+	</form>

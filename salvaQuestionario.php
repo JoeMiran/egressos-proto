@@ -1,19 +1,19 @@
 <?php
-    if (isset($_POST['cpf'])) {
+session_start();
+    if (isset($_POST['cor'])) {
+        extract($_POST);
         $servername = "localhost";
         $username = "root";
         $password = "";
         $dbname = "egressos";
         $conn = new mysqli($servername, $username, $password, $dbname);
-        $cpf = $_POST['cpf'];
-		$nome = $_POST['nome'];
-		$dataNascimento = $_POST['dataNascimento'];
-        $anoIngresso = $POST['anoIngresso'];
-        $curso = $_POST['curso'];
-        $capus = $_POST['campus'];
-        $email = $_POST['email'];
-		$cor = $_POST['cor'];
-        $sql = "insert into egresso (cpf, nome, anoIngresso) values ('" . $cpf . ',' .$nome. ',' .$anoIngresso. "' );";
+        $sql = "insert into egresso (cor, cpf, nome, dataNascimento, 
+        anoIngresso, curso, campus, email) values ('" . $cor . "', 
+        '" . $_SESSION['cpf'] . "', '" . $_SESSION['nome'] . "', 
+        '" . $_SESSION['dataNascimento'] . "', 
+        '" . $_SESSION['anoIngresso'] . "', 
+        '" . $_SESSION['curso'] . "', 
+        '" . $_SESSION['campus'] . "', '" . $_SESSION['email'] . "');";
 
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
