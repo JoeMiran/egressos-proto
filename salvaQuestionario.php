@@ -8,13 +8,13 @@ session_start();
         $dbname = "egressos";
         $conn = new mysqli($servername, $username, $password, $dbname);
         $sql = "insert into egresso (cor, cpf, nome, dataNascimento, 
-        anoIngresso, curso, campus, email) values ('" . $cor . "', 
+        anoIngresso, curso, idade, campus, email) values ('" . $cor . "', 
         '" . $_SESSION['cpf'] . "', '" . $_SESSION['nome'] . "', 
         '" . $_SESSION['dataNascimento'] . "', 
         '" . $_SESSION['anoIngresso'] . "', 
         '" . $_SESSION['curso'] . "', 
+        '" . $idade . "', 
         '" . $_SESSION['campus'] . "', '" . $_SESSION['email'] . "');";
-
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }

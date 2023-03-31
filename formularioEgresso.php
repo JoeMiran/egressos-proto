@@ -1,26 +1,36 @@
 <?php
 include_once 'salvaQuestionario.php';
-session_start();
-
-echo 'Nome: '.$_SESSION['nome'] . '<br>';
 
 $tempo = new DateTime(date('Y-m-d', time()));
 $dataNascimento = new DateTime($_SESSION['dataNascimento']);
-echo 'Idade: ' . $tempo->diff($dataNascimento)->format('%y') . '<br>';
+$idade = $tempo->diff($dataNascimento)->format('%y');
 
-echo 'Ano de Ingresso: ' . $_SESSION['anoIngresso'] . '<br>';
+echo 'Perfil sócio demográfico: caracterização contextual do público pesquisado<br><br>';
 
-echo 'Curso: ' . $_SESSION['curso'] .'<br>';
+echo 'DADOS PESSOAIS<br><br>';
 
-echo 'Campus: ' . $_SESSION['campus'] .'<br>';
+echo 'Nome: '.$_SESSION['nome'] . '<br>'.'<br>';
 
-echo 'Email: '.$_SESSION['email'] .'<br>';
+echo 'Idade: ' . $idade . ' anos<br>'.'<br>';
 
+echo 'Ano de Ingresso: ' . $_SESSION['anoIngresso'] . '<br>'.'<br>';
 
-echo 'Raça: ';
+echo 'Curso: ' . $_SESSION['curso'] .'<br>'.'<br>';
+
+echo 'Campus: ' . $_SESSION['campus'] .'<br>'.'<br>';
+
+echo 'Email: '.$_SESSION['email'] .'<br>'.'<br>';
+
 ?>
 <form action="salvaQuestionario.php" method="post" name="form">
-		<fieldset>
+		
+			<label for="genero">Gênero: </label>
+			<select id="genero" name="genero">
+				<option value="Masculino">Masculino</option>
+				<option value="Feminino">Feminino</option>
+				<option value="Outro">Outro</option>	
+			</select><br><br>
+			<input type="hidden" id="idade" name="idade" value="<?= $idade; ?>">
 			<label for="cor">Cor/Raça: </label>
 			<select id="cor" name="cor">
 				<option value="Preto">Preto</option>
@@ -29,8 +39,17 @@ echo 'Raça: ';
 				<option value="Amarelo">Amarelo</option>
 				<option value="Indígena">Indígena</option>
 				<option value="Não desejo declarar raca/cor">Não desejo declarar raca/cor</option>		
-			</select>
+			</select><br><br>
+			<label for="bolsa1">Obteve bolsa durante o curso?</label>
+			<select id="bolsa1" name="bolsa1">
+				<option value="Sim">Sim</option>
+				<option value="Não">Não</option>		
+			</select><br><br>
+			<label for="bolsa2">Se sim, qual(is)? </label>
+			<input type="text" id="bolsa2" name="bolsa2"><br><br>
+			
+			
 			<input type="submit" name="botaoConfirmar" id="botaoConfirmar" 
 				value="Enviar Questionário">
-		</fieldset>
+		
 	</form>
