@@ -12,5 +12,11 @@ include_once 'dadosEgresso.php';
 				value="Responder Questionário">
 		</fieldset>
 	</form>
-	<?php getDadosEgressoJson()?>
+	<?php 
+	
+	cpfSessionStart();
+
+	getDadosEgressoJson();
+	
+	?>
 </div>
