@@ -47,8 +47,19 @@ echo 'Email: '.$_SESSION['email'] .'<br>'.'<br>';
 			</select><br><br>
 			<label for="bolsa2">Se sim, qual(is)? </label>
 			<input type="text" id="bolsa2" name="bolsa2"><br><br>
-			
-			
+			DADOS COMPLEMENTARES<br><br>
+<!-- 			<label for="atvExtra">Participação em atividades acadêmicas extracurriculares durante o curso</label> -->
+<!-- 			<div> -->
+<!-- 				<input type=checkbox id="atvExtra" name="atvExtra"> -->
+<!-- 					<option value="Iniciação Científica">Iniciação Científica</option> -->
+<!-- 					<option value="Monitoria">Monitoria</option> -->
+<!-- 					<option value="Estágio Não Obrigatório pertinente ao curso">Estágio Não Obrigatório pertinente ao curso</option> -->
+<!-- 					<option value="Atividade Curricular em Comunidade - ACC">Atividade Curricular em Comunidade - ACC</option> -->
+<!-- 					<option value="Eventos: Congressos, Seminários, etc">Eventos: Congressos, Seminários, etc</option> -->
+<!-- 					<option value="Empresa Júnior">Empresa Júnior</option> -->
+<!-- 					<option value="Diretório Acadêmico">Diretório Acadêmico</option> -->
+<!-- 					<option value="Outras">Outras</option> -->
+<!-- 			<br><br> -->
 			<input type="submit" name="botaoConfirmar" id="botaoConfirmar" 
 				value="Enviar Questionário">
 		

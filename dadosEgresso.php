@@ -49,10 +49,10 @@ function getDadosEgressoJson()
         {
             $url = 'https://sagitta.ufpa.br/sagitta/ws/discente/' . $_SESSION['cpf'] . '?login=rsantsil';
             $json = json_decode(file_get_contents($url));
-
+            $ultimoAnoIngresso = 0;
             foreach ($json as $matricula) 
             {
-                $ultimoAnoIngresso = 0;
+                
                 if ($matricula->anoIngresso > $ultimoAnoIngresso) 
                 {
                     $ultimaMatricula = $matricula;
