@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Formulário Egressos - Acessar</title>
+    </head>
+    <body>
+       
+        <header>
+            <div id="navbar">
+                <div class="resp">
+                        <h1>
+                            <strong>Formulário de Egressos da UFPA</strong>
+                        </h1>
+                </div>
+            </div>   
+            
+            <div id="barra"> 
+                <a href="https://egressos.ufpa.br/">
+                    <img class="logo" src="imagens/Programa_de_Acompanhamento_de_Egressos-removebg-181x106.png">
+                </a>
+                <!--<a href="https://egressos.ufpa.br/">-->
+                <button class="return" type="button"><strong><a class="link" href="https://egressos.ufpa.br/">SAIR</a></strong></button>
+                </a>
+            </div>
+        </header>
+        
+        <div id="content">
+            <form action="validaCpf.php" method="post" name="form">
+                <fieldset>
+                    <h2><strong>Verificar credenciais</strong></h2>
+                    <div class="elements" >
+                        <input class="cpf" placeholder=" Informe seu CPF..." type= "text" id="cpf" name="cpf" type="text" size="18" alt="Informe seu CPF" title="CPF" required>
+                        <br><br>
+                       <strong> <input class="submeter" type="button" name="botaoConfirmar" id="botaoConfirmar" value="Responder"></strong>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        
+    </body>
+</html>
