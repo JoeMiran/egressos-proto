@@ -2,7 +2,7 @@
 
 function getDadosEgressoFromDatabase($cpf = NULL) 
 {
-    if ($cpf) 
+    if (isset($cpf)) 
     {
         $servername = "localhost";
         $username = "root";
@@ -49,6 +49,7 @@ function getDadosEgressoJson()
         {
             $url = 'https://sagitta.ufpa.br/sagitta/ws/discente/' . $_SESSION['cpf'] . '?login=rsantsil';
             $json = json_decode(file_get_contents($url));
+            
             $ultimoAnoIngresso = 0;
             foreach ($json as $matricula) 
             {
@@ -62,7 +63,7 @@ function getDadosEgressoJson()
 
             }
         
-            if ($ultimaMatricula) 
+            if (isset($ultimaMatricula)) 
             {
                 $_SESSION['nome'] = $ultimaMatricula->nome;
                 $_SESSION['dataNascimento'] = $ultimaMatricula->dataNascimento;

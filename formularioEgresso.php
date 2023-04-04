@@ -46,20 +46,29 @@ echo 'Email: '.$_SESSION['email'] .'<br>'.'<br>';
 				<option value="Não">Não</option>		
 			</select><br><br>
 			<label for="bolsa2">Se sim, qual(is)? </label>
+			
 			<input type="text" id="bolsa2" name="bolsa2"><br><br>
 			DADOS COMPLEMENTARES<br><br>
-<!-- 			<label for="atvExtra">Participação em atividades acadêmicas extracurriculares durante o curso</label> -->
-<!-- 			<div> -->
-<!-- 				<input type=checkbox id="atvExtra" name="atvExtra"> -->
-<!-- 					<option value="Iniciação Científica">Iniciação Científica</option> -->
-<!-- 					<option value="Monitoria">Monitoria</option> -->
-<!-- 					<option value="Estágio Não Obrigatório pertinente ao curso">Estágio Não Obrigatório pertinente ao curso</option> -->
-<!-- 					<option value="Atividade Curricular em Comunidade - ACC">Atividade Curricular em Comunidade - ACC</option> -->
-<!-- 					<option value="Eventos: Congressos, Seminários, etc">Eventos: Congressos, Seminários, etc</option> -->
-<!-- 					<option value="Empresa Júnior">Empresa Júnior</option> -->
-<!-- 					<option value="Diretório Acadêmico">Diretório Acadêmico</option> -->
-<!-- 					<option value="Outras">Outras</option> -->
-<!-- 			<br><br> -->
+			<label for="atvExtra">Participação em atividades acadêmicas extracurriculares durante o curso</label>
+			<div>
+				<input type=checkbox id="atvIniCi" name="atvIniCi">
+				<label for="atvIniCi">Iniciação Científica</label><br>
+				<input type=checkbox id="atvMonit" name="atvMonit">
+				<label for="atvMonit">Monitoria</label><br>
+				<input type=checkbox id="atvEstNa" name="atvEstNa">
+				<label for="atvEstNa">Estágio Não Obrigatório pertinente ao curso</label><br>
+				<input type=checkbox id="atvCurrC" name="atvCurrC">
+				<label for="atvCurrC">Atividade Curricular em Comunidade - ACC</label><br>
+				<input type=checkbox id="atvEvent" name="atvEvent">
+				<label for="atvEvent">Eventos: Congressos, Seminários, etc</label><br>
+				<input type=checkbox id="atvEmpre" name="atvEmpre">
+				<label for="atvEmpre">Empresa Júnior</label><br>
+				<input type=checkbox id="atvDirAc" name="atvDirAc">
+				<label for="atvDirAc">Diretório Acadêmico</label><br>
+				<input type=checkbox id="atvOutra" name="atvOutra">
+				<label for="atvOutra">Outras</label><br>
+			<br><br>
+
 			<input type="submit" name="botaoConfirmar" id="botaoConfirmar" 
 				value="Enviar Questionário">
 		
