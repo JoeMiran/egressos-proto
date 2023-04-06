@@ -1,34 +1,5 @@
 <?php
 
-function getDadosEgressoJson() 
-{
-    if (isset($_SESSION['cpf']))
-    {    
-
-        $url = 'https://sagitta.ufpa.br/sagitta/ws/discente/' . $_SESSION['cpf'] . '?login=rsantsil';
-        $json = json_decode(file_get_contents($url));
-        
-        if (isset($json))
-        {
-            $ultimoAnoIngresso = 0;
-            foreach ($json as $matricula) 
-            {
-                if ($matricula->anoIngresso > $ultimoAnoIngresso) 
-                {
-                    $ultimaMatricula = $matricula;
-                    $ultimoAnoIngresso = $matricula->anoIngresso;
-
-                }
-
-            }
-
-        }
-        return $ultimaMatricula;
-
-    }
-    
-}
-
 function dataDiferenca($dataNascimento = NULL)
 {
     if (isset($dataNascimento))
@@ -66,42 +37,77 @@ function getDadosEgressoFromDatabase($cpf = NULL)
 
 }
 
+function getDadosEgressoJson() 
+{
+    if (isset($_SESSION['cpf']))
+    {    
+        $url = 'https://sagitta.ufpa.br/sagitta/ws/discente/' . $_SESSION['cpf'] . '?login=rsantsil';
+        $json = json_decode(file_get_contents($url));
+
+        if ($json)
+        {
+            $ultimoAnoIngresso = 0;
+            foreach ($json as $matricula) 
+            {
+                if ($matricula->anoIngresso > $ultimoAnoIngresso) 
+                {
+                    $ultimaMatricula = $matricula;
+                    $ultimoAnoIngresso = $matricula->anoIngresso;
+
+                }
+
+            }
+            return $ultimaMatricula;
+
+        }
+
+    }
+    
+}
+
 function definirDadosSessao()
 {
     session_start();
 
-    $_SESSION['cpf'] = ltrim($_POST['cpf'], '0');
+    if (isset($_POST['cpf']))
+    {
+        $_SESSION['cpf'] = ltrim($_POST['cpf'], '0');
 
-    $ultimaMatricula = getDadosEgressoJson();
-    
-    if (isset($ultimaMatricula)) 
-    {        
-        $_SESSION['dataNascimento'] = $ultimaMatricula->dataNascimento;
-        $_SESSION['idade'] = dataDiferenca($_SESSION['dataNascimento']);
-        $_SESSION['nome'] = $ultimaMatricula->nome;
-        $_SESSION['anoIngresso'] = $ultimaMatricula->anoIngresso;
-        $_SESSION['curso'] = $ultimaMatricula->curso->nome;
-        $_SESSION['campus'] = $ultimaMatricula->curso->campus->nome;
-        $_SESSION['email'] = $ultimaMatricula->email;
-    
+        $ultimaMatricula = getDadosEgressoJson();
+        
+        if (isset($ultimaMatricula)) 
+        {        
+            $_SESSION['dataNascimento'] = $ultimaMatricula->dataNascimento;
+            $_SESSION['idade'] = dataDiferenca($_SESSION['dataNascimento']);
+            $_SESSION['nome'] = $ultimaMatricula->nome;
+            $_SESSION['anoIngresso'] = $ultimaMatricula->anoIngresso;
+            $_SESSION['curso'] = $ultimaMatricula->curso->nome;
+            $_SESSION['campus'] = $ultimaMatricula->curso->campus->nome;
+            $_SESSION['email'] = $ultimaMatricula->email;
+        
+        }
+
     }
 
 }
 
 function seletorRedirecionamento() 
 {
-    $resultadoConsulta = getDadosEgressoFromDatabase($_SESSION['cpf']);
+    if (isset($_POST['cpf']))
+    {
+        $resultadoConsulta = getDadosEgressoFromDatabase($_SESSION['cpf']);
+        // echo var_dump($_POST['cpf']);
 
         if (isset($resultadoConsulta)) 
         {
             echo "<meta http-equiv='refresh' content='0;url=consultaResposta.php'>";
             die();
+
         }
         else 
         {
-            if (definirDadosSessao()) 
+            if (getDadosEgressoJson()) 
             {
-                
                 echo "<meta http-equiv='refresh' content='0;url=formularioEgresso.php'>";
                 die();
 
@@ -109,6 +115,8 @@ function seletorRedirecionamento()
             else echo 'Egresso não encontrado.';
 
         }
+    
+    }
     
 }
 

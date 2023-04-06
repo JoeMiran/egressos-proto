@@ -2,6 +2,8 @@
 // include_once 'salvaQuestionario.php';
 include_once 'dadosEgresso.php';
 
+definirDadosSessao();
+
 ?>
 
 <form action="salvaQuestionario.php" method="post" name="resposta">
@@ -39,8 +41,8 @@ include_once 'dadosEgresso.php';
 			<option value="Branco">Branco</option>
 			<option value="Pardo">Pardo</option>
 			<option value="Amarelo">Amarelo</option>
-			<option value="Indígena">Indígena</option>
-			<option value="Não desejo declarar raca/cor">Não desejo declarar raca/cor</option>		
+			<option value="Indigena">Indígena</option>
+			<option value="Não declarada">Não desejo declarar raca/cor</option>		
 		</select><br><br>
 
 	</fieldset><br>
