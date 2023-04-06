@@ -10,7 +10,7 @@ if (isset($_POST['botaoConfirmar'])) {
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     $sql = "insert into egresso (cpf, nome, dataNascimento, email, genero, cor, 
-    idade, curso, anoIngresso, campus, bolsa, bolsaResumo, inicicaoCientifica, 
+    idade, curso, anoIngresso, campus, bolsa, bolsaResumo, iniciacaoCientifica, 
     monitoria, estagioNaoObrigatorio, atividadeComunidade, eventos, 
     empresaJunior, diretorioAcademico, outrasAtividades) values 
     (
@@ -25,15 +25,15 @@ if (isset($_POST['botaoConfirmar'])) {
         '" . $_SESSION['anoIngresso'] . "', 
         '" . $_SESSION['campus'] . "', 
         '" . $bolsa . "',
-        '" . $bolsaResumo . "'
-        '" . ($iniciacaoCientifica ? "Sim" : "Não") . "'
-        '" . ($monitoria ? "Sim" : "Não") . "'
-        '" . ($estagioNaoObrigatorio ? "Sim" : "Não") . "'
-        '" . ($atividadeComunidade ? "Sim" : "Não") . "'
-        '" . ($eventos ? "Sim" : "Não") . "'
-        '" . ($empresaJunior ? "Sim" : "Não") . "'
-        '" . ($diretorioAcademico ? "Sim" : "Não") . "'
-        '" . ($outrasAtividades ? "Sim" : "Não") . "'
+        '" . $bolsaResumo . "',
+        '" . (isset($iniciacaoCientifica) ? "Sim" : "Não") . "',
+        '" . (isset($monitoria) ? "Sim" : "Não") . "',
+        '" . (isset($estagioNaoObrigatorio) ? "Sim" : "Não") . "',
+        '" . (isset($atividadeComunidade) ? "Sim" : "Não") . "',
+        '" . (isset($eventos) ? "Sim" : "Não") . "',
+        '" . (isset($empresaJunior) ? "Sim" : "Não") . "',
+        '" . (isset($diretorioAcademico) ? "Sim" : "Não") . "',
+        '" . (isset($outrasAtividades) ? "Sim" : "Não") . "'
     );";
     
     if (!$conn) {

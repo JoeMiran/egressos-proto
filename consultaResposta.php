@@ -35,5 +35,19 @@ echo 'Participou de atividades acadêmicas extracurriculares durante o curso?<br
 
 echo 'Iniciação Científica <br>' . $dados['iniciacaoCientifica'] . '<br><br>';
 
+echo 'Monitoria <br>' . $dados['monitoria'] . '<br><br>';
+
+echo 'Estágio Não Obrigatório pertinente ao curso <br>' . $dados['estagioNaoObrigatorio'] . '<br><br>';
+
+echo 'Atividade Curricular em Comunidade - ACC <br>' . $dados['atividadeComunidade'] . '<br><br>';
+
+echo 'Eventos: Congressos, Seminários, etc <br>' . $dados['eventos'] . '<br><br>';
+
+echo 'Empresa Júnior <br>' . $dados['empresaJunior'] . '<br><br>';
+
+echo 'Diretório Acadêmico <br>' . $dados['diretorioAcademico'] . '<br><br>';
+
+echo 'Outras <br>' . $dados['outrasAtividades'] . '<br><br>';
+
 
 ?>
