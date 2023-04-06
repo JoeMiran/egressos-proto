@@ -31,4 +31,9 @@ echo 'Obteve bolsa durante o curso? <br>' . $dados['bolsa'] . '<br><br>';
 
 echo 'Se sim, qual(is)? <br>' . $dados['bolsaResumo'] . '<br><br>';
 
+echo 'Participou de atividades acadêmicas extracurriculares durante o curso?<br><br>';
+
+echo 'Iniciação Científica <br>' . $dados['iniciacaoCientifica'] . '<br><br>';
+
+
 ?>

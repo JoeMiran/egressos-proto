@@ -67,22 +67,30 @@ definirDadosSessao();
 
 		<a>Participou de atividades acadêmicas extracurriculares durante o curso?</a>
 		<div>
-			<input type=checkbox id="iniciacaoCientifica" name="iniciacaoCientifica">
+			<input type=checkbox id="iniciacaoCientifica" name="iniciacaoCientifica" value="">
 			<label for="iniciacaoCientifica">Iniciação Científica</label><br>
+
 			<input type=checkbox id="monitoria" name="monitoria">
 			<label for="monitoria">Monitoria</label><br>
+
 			<input type=checkbox id="estagioNaoObrigatorio" name="estagioNaoObrigatorio">
 			<label for="estagioNaoObrigatorio">Estágio Não Obrigatório pertinente ao curso</label><br>
+
 			<input type=checkbox id="atividadeComunidade" name="atividadeComunidade">
 			<label for="atividadeComunidade">Atividade Curricular em Comunidade - ACC</label><br>
+
 			<input type=checkbox id="eventos" name="eventos">
 			<label for="eventos">Eventos: Congressos, Seminários, etc</label><br>
+
 			<input type=checkbox id="empresaJunior" name="empresaJunior">
 			<label for="empresaJunior">Empresa Júnior</label><br>
+
 			<input type=checkbox id="diretorioAcademico" name="diretorioAcademico">
 			<label for="diretorioAcademico">Diretório Acadêmico</label><br>
+
 			<input type=checkbox id="outrasAtividades" name="outrasAtividades">
 			<label for="outrasAtividades">Outras</label><br>
+		</div>
 		<br><br>
 
 	</fieldset><br>
