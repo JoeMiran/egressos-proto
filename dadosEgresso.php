@@ -1,5 +1,19 @@
 <?php
 
+function dataDiferenca($dataNascimento = NULL)
+{
+    if (isset($dataNascimento))
+    {
+        $tempo = new DateTime(date('Y-m-d', time()));
+        $dataNascimento = new DateTime($dataNascimento);
+        $idade = $tempo->diff($dataNascimento)->format('%y');
+
+        return $idade;
+
+    }
+    else return FALSE;
+}
+
 function getDadosEgressoFromDatabase($cpf = NULL) 
 {
     if (isset($cpf)) 

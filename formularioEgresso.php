@@ -1,75 +1,93 @@
 <?php
 include_once 'salvaQuestionario.php';
+include_once 'dadosEgresso.php';
 
-$tempo = new DateTime(date('Y-m-d', time()));
-$dataNascimento = new DateTime($_SESSION['dataNascimento']);
-$idade = $tempo->diff($dataNascimento)->format('%y');
-
-echo 'Perfil sócio demográfico: caracterização contextual do público pesquisado<br><br>';
-
-echo 'DADOS PESSOAIS<br><br>';
-
-echo 'Nome: '.$_SESSION['nome'] . '<br>'.'<br>';
-
-echo 'Idade: ' . $idade . ' anos<br>'.'<br>';
-
-echo 'Ano de Ingresso: ' . $_SESSION['anoIngresso'] . '<br>'.'<br>';
-
-echo 'Curso: ' . $_SESSION['curso'] .'<br>'.'<br>';
-
-echo 'Campus: ' . $_SESSION['campus'] .'<br>'.'<br>';
-
-echo 'Email: '.$_SESSION['email'] .'<br>'.'<br>';
+$_SESSION['idade'] = dataDiferenca($_SESSION['dataNascimento']);
 
 ?>
-<form action="salvaQuestionario.php" method="post" name="form">
-		
-			<label for="genero">Gênero: </label>
-			<select id="genero" name="genero">
-				<option value="Masculino">Masculino</option>
-				<option value="Feminino">Feminino</option>
-				<option value="Outro">Outro</option>	
-			</select><br><br>
-			<input type="hidden" id="idade" name="idade" value="<?= $idade; ?>">
-			<label for="cor">Cor/Raça: </label>
-			<select id="cor" name="cor">
-				<option value="Preto">Preto</option>
-				<option value="Branco">Branco</option>
-				<option value="Pardo">Pardo</option>
-				<option value="Amarelo">Amarelo</option>
-				<option value="Indígena">Indígena</option>
-				<option value="Não desejo declarar raca/cor">Não desejo declarar raca/cor</option>		
-			</select><br><br>
-			<label for="bolsa1">Obteve bolsa durante o curso?</label>
-			<select id="bolsa1" name="bolsa1">
-				<option value="Sim">Sim</option>
-				<option value="Não">Não</option>		
-			</select><br><br>
-			<label for="bolsa2">Se sim, qual(is)? </label>
-			
-			<input type="text" id="bolsa2" name="bolsa2"><br><br>
-			DADOS COMPLEMENTARES<br><br>
-			<label for="atvExtra">Participação em atividades acadêmicas extracurriculares durante o curso</label>
-			<div>
-				<input type=checkbox id="atvIniCi" name="atvIniCi">
-				<label for="atvIniCi">Iniciação Científica</label><br>
-				<input type=checkbox id="atvMonit" name="atvMonit">
-				<label for="atvMonit">Monitoria</label><br>
-				<input type=checkbox id="atvEstNa" name="atvEstNa">
-				<label for="atvEstNa">Estágio Não Obrigatório pertinente ao curso</label><br>
-				<input type=checkbox id="atvCurrC" name="atvCurrC">
-				<label for="atvCurrC">Atividade Curricular em Comunidade - ACC</label><br>
-				<input type=checkbox id="atvEvent" name="atvEvent">
-				<label for="atvEvent">Eventos: Congressos, Seminários, etc</label><br>
-				<input type=checkbox id="atvEmpre" name="atvEmpre">
-				<label for="atvEmpre">Empresa Júnior</label><br>
-				<input type=checkbox id="atvDirAc" name="atvDirAc">
-				<label for="atvDirAc">Diretório Acadêmico</label><br>
-				<input type=checkbox id="atvOutra" name="atvOutra">
-				<label for="atvOutra">Outras</label><br>
-			<br><br>
 
-			<input type="submit" name="botaoConfirmar" id="botaoConfirmar" 
-				value="Enviar Questionário">
+<form action="salvaQuestionario.php" method="post" name="resposta">
+
+	<h1>Perfil sócio demográfico: caracterização contextual do público pesquisado<br><br></h1>
+
+	<fieldset>
 		
-	</form>
+		<legend>Dados Pessoais</legend><br>
+
+		<?php echo 'Nome: '.$_SESSION['nome'] . '<br><br>';?>
+		
+		<?php echo 'Curso: ' . $_SESSION['curso'] .'<br><br>';?>
+		
+		<?php echo 'Campus: ' . $_SESSION['campus'] .'<br><br>';?>
+		
+		<?php echo 'Ano de Ingresso: ' . $_SESSION['anoIngresso'] . '<br><br>';?>
+		
+		<?php // echo 'Ano de Conclusão: ' . $_SESSION['anoConclusao'] . '<br><br>';?>
+		
+		<?php echo 'Email: '.$_SESSION['email'] .'<br><br>';?>
+		
+		<?php echo 'Idade: ' . $_SESSION['idade'] . ' anos<br><br>';?>
+
+		<label for="genero">Gênero: </label>
+		<select id="genero" name="genero">
+			<option value="Masculino">Masculino</option>
+			<option value="Feminino">Feminino</option>
+			<option value="Outro">Outro</option>	
+		</select><br><br>
+			
+		<label for="cor">Cor/Raça: </label>
+		<select id="cor" name="cor">
+			<option value="Preto">Preto</option>
+			<option value="Branco">Branco</option>
+			<option value="Pardo">Pardo</option>
+			<option value="Amarelo">Amarelo</option>
+			<option value="Indígena">Indígena</option>
+			<option value="Não desejo declarar raca/cor">Não desejo declarar raca/cor</option>		
+		</select><br><br>
+
+	</fieldset><br>
+
+	<fieldset>
+
+		<legend>Sobre sua formação na Universidade</legend><br>
+
+		<label for="bolsa">Obteve bolsa durante o curso?</label>
+		<select id="bolsa" name="bolsa">
+			<option value="Sim">Sim</option>
+			<option value="Não">Não</option>
+		</select><br><br>
+		<label for="bolsaResumo">Se sim, qual(is)? </label>
+		<input type="text" id="bolsaResumo" name="bolsaResumo"><br><br>
+		
+	</fieldset><br>
+	
+	<fieldset>
+		
+		<legend>Dados Complementares</legend><br>
+
+		<a>Participou de atividades acadêmicas extracurriculares durante o curso?</a>
+		<div>
+			<input type=checkbox id="iniciacaoCientifica" name="iniciacaoCientifica">
+			<label for="iniciacaoCientifica">Iniciação Científica</label><br>
+			<input type=checkbox id="monitoria" name="monitoria">
+			<label for="monitoria">Monitoria</label><br>
+			<input type=checkbox id="estagioNaoObrigatorio" name="estagioNaoObrigatorio">
+			<label for="estagioNaoObrigatorio">Estágio Não Obrigatório pertinente ao curso</label><br>
+			<input type=checkbox id="atividadeComunidade" name="atividadeComunidade">
+			<label for="atividadeComunidade">Atividade Curricular em Comunidade - ACC</label><br>
+			<input type=checkbox id="eventos" name="eventos">
+			<label for="eventos">Eventos: Congressos, Seminários, etc</label><br>
+			<input type=checkbox id="empresaJunior" name="empresaJunior">
+			<label for="empresaJunior">Empresa Júnior</label><br>
+			<input type=checkbox id="diretorioAcademico" name="diretorioAcademico">
+			<label for="diretorioAcademico">Diretório Acadêmico</label><br>
+			<input type=checkbox id="outrasAtividades" name="outrasAtividades">
+			<label for="outrasAtividades">Outras</label><br>
+		<br><br>
+
+	</fieldset><br>
+
+	<input type="submit" name="botaoConfirmar" id="botaoConfirmar" 
+		value="enviado">
+		
+</form>

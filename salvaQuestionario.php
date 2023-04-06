@@ -19,7 +19,7 @@ session_start();
         '" . $_SESSION['dataNascimento'] . "', 
         '" . $_SESSION['anoIngresso'] . "', 
         '" . $_SESSION['curso'] . "', 
-        '" . $idade . "', 
+        '" . $_SESSION['idade'] . "', 
         '" . $_SESSION['campus'] . "', '" . $_SESSION['email'] . "',
         '" . $bolsa1 . "',
         '" . $bolsa2 . "',
