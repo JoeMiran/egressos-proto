@@ -14,9 +14,9 @@ include_once 'dadosEgresso.php';
 	</form>
 	<?php 
 	
-	cpfSessionStart();
+	definirDadosSessao();
 
-	getDadosEgressoJson();
+	seletorRedirecionamento();
 	
 	?>
 </div>

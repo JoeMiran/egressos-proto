@@ -1,8 +1,6 @@
 <?php
-include_once 'salvaQuestionario.php';
+// include_once 'salvaQuestionario.php';
 include_once 'dadosEgresso.php';
-
-$_SESSION['idade'] = dataDiferenca($_SESSION['dataNascimento']);
 
 ?>
 
@@ -88,6 +86,6 @@ $_SESSION['idade'] = dataDiferenca($_SESSION['dataNascimento']);
 	</fieldset><br>
 
 	<input type="submit" name="botaoConfirmar" id="botaoConfirmar" 
-		value="enviado">
+		value="Enviar Resposta">
 		
 </form>
