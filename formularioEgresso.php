@@ -14,7 +14,7 @@ definirDadosSessao();
 		
 		<legend>Dados Pessoais</legend><br>
 
-		<?php echo 'Nome: '.$_SESSION['nome'] . '<br><br>';?>
+		<?php echo 'Nome: ' . $_SESSION['nome'] . '<br><br>';?>
 		
 		<?php echo 'Curso: ' . $_SESSION['curso'] .'<br><br>';?>
 		
@@ -65,8 +65,9 @@ definirDadosSessao();
 		
 		<legend>Dados Complementares</legend><br>
 
-		<a>Participou de atividades acadêmicas extracurriculares durante o curso?</a>
 		<div>
+			<p>Participou de atividades acadêmicas extracurriculares durante o curso?</p>
+
 			<input type=checkbox id="iniciacaoCientifica" name="iniciacaoCientifica" value="">
 			<label for="iniciacaoCientifica">Iniciação Científica</label><br>
 
@@ -90,8 +91,54 @@ definirDadosSessao();
 
 			<input type=checkbox id="outrasAtividades" name="outrasAtividades">
 			<label for="outrasAtividades">Outras</label><br>
+
 		</div>
 		<br><br>
+
+		<div>
+			<p>Durante o curso, você desenvolveu atividade remunerada fora da Universidade?</p>
+
+			<input type="radio" name="AtividadeRemunerada" id="AtividadeRemunerada1" value="Todo o período do curso">
+			<label for="AtividadeRemunerada1">Todo o período do curso</label>
+			<br>
+
+			<input type="radio" name="AtividadeRemunerada" id="AtividadeRemunerada2" value="Na maior parte do curso">
+			<label for="AtividadeRemunerada2">Na maior parte do curso</label>
+			<br>
+			
+			<input type="radio" name="AtividadeRemunerada" id="AtividadeRemunerada3" value="Por pouco tempo na trajetória do curso">
+			<label for="AtividadeRemunerada3">Por pouco tempo na trajetória do curso</label>
+			<br>
+
+			<input type="radio" name="AtividadeRemunerada" id="AtividadeRemunerada4" value="Não">
+			<label for="AtividadeRemunerada4">Não</label>
+			<br>
+			
+		</div>
+		<br><br>
+		
+		<div>
+			<p>Curso de Pós-Graduação concluído ou em andamento:</p>
+
+			<select name="cursoPosGraduacao" id="cursoPosGraduacao">
+				<option value="Nenhum">Nenhum</option>
+				<option value="Aperfeiçoamento">Aperfeiçoamento</option>
+				<option value="Especialização">Especialização</option>
+				<option value="Mestrado">Mestrado</option>
+				<option value="Doutorado">Doutorado</option>
+			</select><br>
+
+			<p>Situação do curso:</p>
+			
+			<input type="radio" name="situacaoCursoPosGraduacao" id="posGraduacaoEmAndamento">
+			<label for="posGraduacaoEmAndamento">Em andamento</label>
+			<input type="radio" name="situacaoCursoPosGraduacao" id="posGraduacaoConcluida">
+			<label for="posGraduacaoConcluida">Concluído</label>
+
+		</div>
+		<br><br>
+
+
 
 	</fieldset><br>
 
