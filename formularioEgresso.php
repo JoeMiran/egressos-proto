@@ -288,7 +288,91 @@ definirDadosSessao();
 		<label for="satisfacaoComCurso2">Satisfeito</label><br>
 		<input type="radio" id="satisfacaoComCurso3" name="satisfacaoComCurso" 
 		value="Insatisfeito">
-		<label for="satisfacaoComCurso3">Insatisfeito</label><br><br>
+		<label for="satisfacaoComCurso3">Insatisfeito</label><br>
+
+		<p>Justifique:</p>
+
+		<textarea name="resumoSatisfacaoComCurso" cols=40 rows=6 
+		placeholder="Justifique sua satisfação com o curso"
+		></textarea><br>
+
+		<p>Você recomendaria seu curso para outra pessoa?</p>
+
+		<input type="radio" id="recomendaCurso1" name="recomendaCurso" 
+		value="Sim">
+		<label for="recomendaCurso1">Sim</label><br>
+		<input type="radio" id="recomendaCurso2" name="recomendaCurso" 
+		value="Não">
+		<label for="recomendaCurso2">Não</label><br>
+
+		<p>Justifique:</p>
+		
+		<textarea name="resumoRecomendacaoCurso" cols=40 rows=6 
+		placeholder="Justifique a posição da sua recomendação"
+		></textarea><br><br>
+		
+		<!-- --------------------------------------------------------------- -->
+	</fieldset><br>
+
+	<fieldset>
+
+		<legend>Relação atual com a Universidade</legend>
+		<!-- --------------------------------------------------------------- -->
+		<p>Participa de eventos acadêmicos da UFPA?</p>
+		<input type="radio" id="participaDeEventos1" name="participaDeEventos">
+		<label for="participaDeEventos1">Sim</label><br>
+		<input type="radio" id="participaDeEventos2" name="participaDeEventos">
+		<label for="participaDeEventos2">Não</label><br>
+
+		<p>Caso sim, cite os principais:</p>
+
+		<textarea name="resumoEventosParticipados" cols=40 rows=6 
+		placeholder="Cite os eventos aos quais mais participa"
+		></textarea><br>
+
+		<p>Participa de grupos de pesquisa e/ou projetos de extensão?</p>
+
+		<input type="radio" id="participaDeProjeto1" name="participaDeProjeto" 
+		value="Sim">
+		<label for="participaDeProjeto1">Sim</label><br>
+		<input type="radio" id="participaDeProjeto2" name="participaDeProjeto" 
+		value="Não">
+		<label for="participaDeProjeto2">Não</label><br>
+
+		<p>Caso sim, cite os principais:</p>
+
+		<textarea name="resumoProjetosAtuais" cols=40 rows=6 
+		placeholder="Projetos atuais de extensão e/ou pesquisa"
+		></textarea><br>
+		
+		<p>Participa de algum curso?</p>
+		
+		<input type="radio" id="participaDeCurso1" name="participaDeCurso" 
+		value="Sim">
+		<label for="participaDeCurso1">Sim</label><br>
+		<input type="radio" id="participaDeCurso2" name="participaDeCurso" 
+		value="Não">
+		<label for="participaDeCurso2">Não</label><br>
+		
+		<p>Caso sim, cite os principais:</p>
+
+		<textarea name="resumoParticipacaoCurso" cols=40 rows=6 
+		placeholder="Liste os cursos aos quais participa"
+		></textarea><br>
+		
+		<p>Indique atividades que você gostaria de participar:</p>
+
+		<textarea name="resumoAtividadesInteresse" cols=40 rows=6 
+		placeholder="Projetos de extensão e/ou pesquisa, eventos, cursos"
+		></textarea><br>
+		
+		<p>Agradecemos a sua participação, que foi de suma 
+		importância. Caso tenha alguma sugestão que possa enriquecer 
+		este questionário, por favor, utilize o espaço abaixo:</p>
+
+		<textarea name="resumoSugestaoQuestionario" cols=40 rows=6 
+		placeholder="Deixe aqui sua sugestão"
+		></textarea><br><br>
 		<!-- --------------------------------------------------------------- -->
 	</fieldset><br>
 
