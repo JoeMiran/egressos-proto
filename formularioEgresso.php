@@ -15,12 +15,12 @@ definirDadosSessao();
 		<!-- --------------------------------------------------------------- -->
 		<legend>Dados Pessoais</legend><br>
 
-		<?php echo 'Nome: ' . $_SESSION['nome'] . '<br><br>';?>
+		<?php echo 'Nome: ' . $_SESSION['nome'];?><br><br>
 		
-		<?php echo 'Email: '.$_SESSION['email'] .'<br><br>';?>
+		<?php echo 'Email: '.$_SESSION['email'];?><br><br>
 		
-		<?php echo 'Idade: ' . $_SESSION['idade'] . ' anos<br><br>';?><br><br>
-		<!-- --------------------------------------------------------------- -->
+		<?php echo 'Idade: ' . $_SESSION['idade'] . ' anos';?><br><br>
+
 		<label for="genero">Gênero: </label>
 		<select id="genero" name="genero">
 			<option value="Masculino">Masculino</option>
@@ -51,8 +51,8 @@ definirDadosSessao();
 		<?php echo 'Ano de Ingresso: ' . $_SESSION['anoIngresso'];?><br><br>
 		
 		<?php echo 'Ano de Conclusão: '// . $_SESSION['anoConclusao'];
-		?><br><br><br>
-		<!-- --------------------------------------------------------------- -->
+		?><br><br>
+
 		<p>Obteve bolsa durante o curso?</p>
 		
 		<input type="radio" name="bolsa" id="bolsa1">
@@ -96,8 +96,8 @@ definirDadosSessao();
 		<label for="diretorioAcademico">Diretório Acadêmico</label><br>
 
 		<input type=checkbox id="outrasAtividades" name="outrasAtividades">
-		<label for="outrasAtividades">Outras</label><br><br>
-		<!-- --------------------------------------------------------------- -->
+		<label for="outrasAtividades">Outras</label><br>
+
 		<p>Durante o curso, você desenvolveu atividade remunerada fora da 
 			Universidade?</p>
 	
@@ -116,8 +116,8 @@ definirDadosSessao();
 	
 		<input type="radio" name="AtividadeRemunerada" id="AtividadeRemunerada4"
 		 value="Não">
-		<label for="AtividadeRemunerada4">Não</label><br><br>
-		<!-- --------------------------------------------------------------- -->
+		<label for="AtividadeRemunerada4">Não</label><br>
+
 		<p>Curso de Pós-Graduação concluído ou em andamento:</p>
 	
 		<select name="cursoPosGraduacao" id="cursoPosGraduacao">
@@ -246,8 +246,7 @@ definirDadosSessao();
 		<label for="indiferente">Não fiz estágio</label><br><br>
 
 		<label>Comente:</label><br>
-		<textarea cols=40 rows=6 placeholder="Descreva mais um pouco como anda 
-		sua situação profissional..."></textarea><br><br>
+		<textarea cols=40 rows=6 placeholder="Descreva mais um pouco como anda sua situação profissional..."></textarea><br><br>
 		<!-- --------------------------------------------------------------- -->
 	</fieldset><br>
 
@@ -263,7 +262,7 @@ definirDadosSessao();
 		<input type="radio" id="insatisfeito" name="satisfacao">
 		<label for="insatisfeito">Insatisfeito</label><br><br>
 		<!-- --------------------------------------------------------------- -->
-	</fieldset>
+	</fieldset><br>
 
 	<input type="submit" name="botaoConfirmar" id="botaoConfirmar" 
 		value="Enviar Resposta">
