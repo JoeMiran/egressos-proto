@@ -112,7 +112,7 @@ function seletorRedirecionamento()
                 die();
 
             }
-            else echo 'Egresso não encontrado.';
+            else echo '<span class="erro">Egresso não encontrado</span>';
 
         }
     
