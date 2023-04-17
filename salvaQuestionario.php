@@ -9,31 +9,97 @@ if (isset($_POST['botaoConfirmar'])) {
     $dbname = "egressos";
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    $sql = "insert into egresso (cpf, nome, dataNascimento, email, genero, cor, 
-    idade, curso, anoIngresso, campus, bolsa, bolsaResumo, iniciacaoCientifica, 
-    monitoria, estagioNaoObrigatorio, atividadeComunidade, eventos, 
-    empresaJunior, diretorioAcademico, outrasAtividades) values 
+    $sql = "insert into egresso 
+    (
+        cpf, 
+        nome, 
+        email, 
+        dataNascimento, 
+        idade, 
+        genero, 
+        cor, 
+        curso, 
+        anoIngresso, 
+        campus, 
+        bolsa, 
+        resumoBolsa, 
+        atividadesExtracurriculares,
+        atividadeRemunerada,
+        cursoPosGraduacao,
+        situacaoCursoPosGraduacao,
+        posGraduacaoUfpa,
+        inseridoNoMercado,
+        tipoDeEmprego,
+        tempoFormaturaEmprego,
+        trabalhaNaAreaDeFormacao,
+        faixaSalarial,
+        relacaoCursoTrabalho,
+        recebeuOrientacao,
+        disciplinasForamUteis,
+        estagioContribuiuEmprego,
+        resumoSituacaoProfissional,
+        satisfacaoComCurso,
+        resumoSatisfacaoComCurso,
+        recomendaCurso,
+        resumoRecomendacaoCurso,
+        participaDeEventos,
+        resumoEventosAtuais,
+        participaDeProjeto,
+        resumoProjetosAtuais,
+        participaDeCurso,
+        resumoCursosAtuais,
+        resumoAtividadesInteresse,
+        resumoSugestaoQuestionario
+    ) values 
     (
         '" . $_SESSION['cpf'] . "', 
         '" . $_SESSION['nome'] . "', 
-        '" . $_SESSION['dataNascimento'] . "', 
         '" . $_SESSION['email'] . "',
+        '" . $_SESSION['dataNascimento'] . "', 
+        '" . $_SESSION['idade'] . "', 
         '" . $genero . "',
         '" . $cor . "', 
-        '" . $_SESSION['idade'] . "', 
         '" . $_SESSION['curso'] . "', 
         '" . $_SESSION['anoIngresso'] . "', 
         '" . $_SESSION['campus'] . "', 
         '" . $bolsa . "',
-        '" . $bolsaResumo . "',
-        '" . (isset($iniciacaoCientifica) ? "Sim" : "Não") . "',
-        '" . (isset($monitoria) ? "Sim" : "Não") . "',
-        '" . (isset($estagioNaoObrigatorio) ? "Sim" : "Não") . "',
-        '" . (isset($atividadeComunidade) ? "Sim" : "Não") . "',
-        '" . (isset($eventos) ? "Sim" : "Não") . "',
-        '" . (isset($empresaJunior) ? "Sim" : "Não") . "',
-        '" . (isset($diretorioAcademico) ? "Sim" : "Não") . "',
-        '" . (isset($outrasAtividades) ? "Sim" : "Não") . "'
+        '" . $resumoBolsa . "',
+        '" . (
+                (isset($iniciacaoCientifica) ? "Iniciação Científica, " : "")
+                . (isset($monitoria) ? "Monitoria, " : "")
+                . (isset($estagioNaoObrigatorio) ? "Estágio Não Obrigatório pertinente ao curso, " : "")
+                . (isset($atividadeComunidade) ? "Atividade Curricular em Comunidade - ACC, " : "")
+                . (isset($participouDeEventos) ? "Eventos: Congressos, Seminários, etc, " : "")
+                . (isset($empresaJunior) ? "Empresa Júnior, " : "")
+                . (isset($diretorioAcademico) ? "Diretório Acadêmico, " : "")
+                . (isset($outrasAtividades) ? "Outras Atividades " : "")
+            ) . "',
+        '" . $atividadeRemunerada . "',
+        '" . $cursoPosGraduacao . "',
+        '" . ($cursoPosGraduacao == "Nenhum" ? "" : $situacaoCursoPosGraduacao) . "',
+        '" . ($cursoPosGraduacao == "Nenhum" ? "" : $posGraduacaoUfpa) . "',
+        '" . $inseridoNoMercado . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $tipoDeEmprego) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $tempoFormaturaEmprego) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $trabalhaNaAreaDeFormacao) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $faixaSalarial) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $relacaoCursoTrabalho) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $recebeuOrientacao) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $disciplinasForamUteis) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $estagioContribuiuEmprego) . "',
+        '" . $resumoSituacaoProfissional . "',
+        '" . $satisfacaoComCurso . "',
+        '" . $resumoSatisfacaoComCurso . "',
+        '" . $recomendaCurso . "',
+        '" . $resumoRecomendacaoCurso . "',
+        '" . $participaDeEventos . "',
+        '" . ($participaDeEventos == "Não" ? "" : $resumoEventosAtuais) . "',
+        '" . $participaDeProjeto . "',
+        '" . ($participaDeProjeto == "Não" ? "" : $resumoProjetosAtuais) . "',
+        '" . $participaDeCurso . "',
+        '" . ($participaDeCurso == "Não" ? "" : $resumoCursosAtuais) . "',
+        '" . $resumoAtividadesInteresse . "',
+        '" . $resumoSugestaoQuestionario . "'
     );";
     
     if (!$conn) {

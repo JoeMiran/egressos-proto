@@ -55,9 +55,9 @@ definirDadosSessao();
 
 		<p>Obteve bolsa durante o curso?</p>
 		
-		<input type="radio" name="bolsa" id="bolsa1">
+		<input type="radio" name="bolsa" id="bolsa1" value="Sim">
 		<label for="bolsa1">Sim</label><br>
-		<input type="radio" name="bolsa" id="bolsa2">
+		<input type="radio" name="bolsa" id="bolsa2" value="Não">
 		<label for="bolsa2">Não</label><br>
 
 		<p>Se sim, qual(is)?</p>
@@ -92,8 +92,8 @@ definirDadosSessao();
 		<label for="atividadeComunidade">Atividade Curricular em Comunidade - 
 			ACC</label><br>
 
-		<input type=checkbox id="eventos" name="eventos">
-		<label for="eventos">Eventos: Congressos, Seminários, etc</label><br>
+		<input type=checkbox id="participouDeEventos" name="participouDeEventos">
+		<label for="participouDeEventos">Eventos: Congressos, Seminários, etc</label><br>
 
 		<input type=checkbox id="empresaJunior" name="empresaJunior">
 		<label for="empresaJunior">Empresa Júnior</label><br>
@@ -102,7 +102,7 @@ definirDadosSessao();
 		<label for="diretorioAcademico">Diretório Acadêmico</label><br>
 
 		<input type=checkbox id="outrasAtividades" name="outrasAtividades">
-		<label for="outrasAtividades">Outras</label><br>
+		<label for="outrasAtividades">Outras Atividades</label><br>
 
 		<p>Durante o curso, você desenvolveu atividade remunerada fora da 
 			Universidade?</p>
@@ -137,10 +137,10 @@ definirDadosSessao();
 		<p>Situação do curso:</p>
 				
 		<input type="radio" name="situacaoCursoPosGraduacao" 
-		id="posGraduacaoEmAndamento">
+		id="posGraduacaoEmAndamento" value="Em andamento">
 		<label for="posGraduacaoEmAndamento">Em andamento</label><br>
 		<input type="radio" name="situacaoCursoPosGraduacao" 
-		id="posGraduacaoConcluida">
+		id="posGraduacaoConcluida" value="Concluído">
 		<label for="posGraduacaoConcluida">Concluído</label><br>
 	
 		<p>Em caso de Curso Pós-Graduação, realizado ou andamento, é na 
@@ -157,7 +157,7 @@ definirDadosSessao();
 
 	<fieldset>
 		<!-- --------------------------------------------------------------- -->
-		<legend>Situação Profissional Atual</legend>
+		<legend>Situação Profissional Atual & Atividade Laboral</legend>
 
 		<p>Atualmente estão inserido/a no mercado de trabalho?</p>
 
@@ -168,19 +168,19 @@ definirDadosSessao();
 		value="Não">
 		<label for="">Não</label><br>
 
-		<p>Se estão, qual a forma de obtenção de emprego?</p>
+		<p>Se estão, qual a modalidade de emprego?</p>
 
-		<input type="checkbox" id="concursado" name="concursado">
-		<label for="concursado">Concursado</label><br>
-		<input type="checkbox" id="profissionalFormal" 
-		name="profissionalFormal">
-		<label for="profissionalFormal">Profissional formal</label><br>
-		<input type="checkbox" id="profissionalAutonomo" 
-		name="profissionalAutonomo">
-		<label for="profissionalAutonomo">Profissional autônomo</label><br>
-		<input type="checkbox" id="profissionalInformal" 
-		name="profissionalInformal">
-		<label for="profissionalInformal">Profissional informal</label><br>
+		<input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
+		<label for="tipoDeEmprego1">Concursado</label><br>
+		<input type="radio" id="tipoDeEmprego2" 
+		name="tipoDeEmprego" value="Profissional formal">
+		<label for="tipoDeEmprego2">Profissional formal</label><br>
+		<input type="radio" id="tipoDeEmprego3" 
+		name="tipoDeEmprego" value="Profissional autônomo">
+		<label for="tipoDeEmprego3">Profissional autônomo</label><br>
+		<input type="radio" id="tipoDeEmprego4" 
+		name="tipoDeEmprego" value="Profissional informal">
+		<label for="tipoDeEmprego4">Profissional informal</label><br>
 
 		<p>Tempo necessário para conseguir atividade remunerada após a 
 			formatura:</p>
@@ -214,14 +214,7 @@ definirDadosSessao();
 		<label for="faixaSalarial2">3 a 5 salários mínimos</label><br>
 		<input type=radio id="faixaSalarial3" name="faixaSalarial" 
 		value="mais de 5 salários">
-		<label for="faixaSalarial3">mais de 5 salários</label><br><br>
-		<!-- --------------------------------------------------------------- -->
-	</fieldset><br>
-
-	<fieldset>
-
-		<legend>Atividade Laboral</legend>
-		<!-- --------------------------------------------------------------- -->
+		<label for="faixaSalarial3">mais de 5 salários</label><br>
 
 		<p>Há uma relação entre o curso de graduação concluido e a atividade 
 			laboral que está exercendo?</p>
@@ -319,14 +312,14 @@ definirDadosSessao();
 		<legend>Relação atual com a Universidade</legend>
 		<!-- --------------------------------------------------------------- -->
 		<p>Participa de eventos acadêmicos da UFPA?</p>
-		<input type="radio" id="participaDeEventos1" name="participaDeEventos">
+		<input type="radio" id="participaDeEventos1" name="participaDeEventos" value="Sim">
 		<label for="participaDeEventos1">Sim</label><br>
-		<input type="radio" id="participaDeEventos2" name="participaDeEventos">
+		<input type="radio" id="participaDeEventos2" name="participaDeEventos" value="Não">
 		<label for="participaDeEventos2">Não</label><br>
 
 		<p>Caso sim, cite os principais:</p>
 
-		<textarea name="resumoEventosParticipados" cols=40 rows=6 
+		<textarea name="resumoEventosAtuais" cols=40 rows=6 
 		placeholder="Cite os eventos aos quais mais participa"
 		></textarea><br>
 
@@ -356,7 +349,7 @@ definirDadosSessao();
 		
 		<p>Caso sim, cite os principais:</p>
 
-		<textarea name="resumoParticipacaoCurso" cols=40 rows=6 
+		<textarea name="resumoCursosAtuais" cols=40 rows=6 
 		placeholder="Liste os cursos aos quais participa"
 		></textarea><br>
 		
