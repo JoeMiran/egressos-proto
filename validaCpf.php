@@ -43,7 +43,7 @@ definirDadosSessao();
                         <span class="erro">‎</span><br>
 						<?php seletorRedirecionamento()?>
                         <br><br>
-						<strong> <input class="submeter" type="button" name="botaoConfirmar" id="botaoConfirmar" value="Responder" onclick="return validarCpf(event)"></strong><br>
+						<strong><input class="submeter" type="submit" name="botaoConfirmar" id="botaoConfirmar" value="Responder" onclick="validarCpf(event)"></strong><br>
                     </div>
                 </div>
         </form>
@@ -53,22 +53,18 @@ definirDadosSessao();
         <script>
 
             function validarCpf(event) {
-                event.preventDefault();
-
+                
                 const cpfInput = document.querySelector('.cpf');
                 const cpf = cpfInput.value;
 				console.log(/^0*$/g.test(cpf));
 				console.log(cpfInput);
 				console.log(cpf);
-
+                
                 if(cpf.length !== 11 || isNaN(cpf) || /^0*$/.test(cpf)) {
                     const erroCpf = document.querySelector('.erro');
                     erroCpf.textContent = "Insira um CPF válido";
-                } else {
-					const erroCpf = document.querySelector('.erro');
-                    erroCpf.textContent = "‎";
-				}
-				return false;
+                    event.preventDefault();
+                } 
             }
 
         </script>
