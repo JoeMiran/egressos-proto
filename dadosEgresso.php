@@ -112,7 +112,11 @@ function seletorRedirecionamento()
                 die();
 
             }
-            else echo '<span class="erro">Egresso não encontrado</span>';
+            else 
+            {
+                session_destroy();
+                echo '<span class="erro">Egresso não encontrado</span>';
+            };
 
         }
     
