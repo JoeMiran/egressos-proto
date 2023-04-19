@@ -235,5 +235,5 @@ hr {
 }
 
 .nao_preenchido {
-    background-color: red;
+    border-color: red;
 }

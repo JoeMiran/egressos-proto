@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include_once 'dadosEgresso.php';
 definirDadosSessao();
 ?>
@@ -34,7 +34,7 @@ definirDadosSessao();
 	<body>
 					
 		<div id="area-principal">
-			<form action="salvaQuestionario.php" method="post" name="resposta">
+			<form onsubmit="return validaFormulario()" action="salvaQuestionario.php" method="post" name="resposta">
 
 				<!-- <h3>Perfil sócio demográfico: caracterização contextual do público pesquisado<br><br></h3> -->
 
@@ -343,31 +343,31 @@ definirDadosSessao();
 				<input class="submeter" type="submit" name="botaoConfirmar" id="botaoConfirmar" value="Enviar Resposta" onclick="envioSucesso(event)">										
 			</form>
 
+			<!-- <script src="validaFormulario.js"></script> -->
     <!--------------------- Início do código JavaScrip para tratamento de erro ---------------------------->
-    <script>
+	<script>
+		function envioSucesso(event) {
+			event.preventDefault();
+			var campos = document.querySelectorAll('input, select, textarea');
+			var todosPreenchidos = true;
 
-        function envioSucesso(event) {
-            
-            var campos = document.querySelectorAll('input, select, textearea');
-            var i = 0;
-            var campo = 0
-            
-            for (i = 0; i < campos.lenght; i++) {
-                campo = campos[i];
+			for (var i = 0; i < campos.length; i++) {
+				var campo = campos[i];
+				if (campo.value.trim() === '') {
+					campo.classList.add('nao_preenchido');
+					todosPreenchidos = false;
+				} else {
+					campo.classList.remove('nao_preenchido');
+				}
+			}
 
-                if (campo.value.trim() === '') {
-                    campo.classList.add('nao_preenchido')
-                    alert('Por favor, preencha o campo ' + campo.name)
-                    event.preventDefault();
-                } else {
-                    campo.classList.remove('nao_preenchido')
-                }
-
-            }
-       
-        }
-
-    </script>
+			if (!todosPreenchidos) {
+				alert('Por favor, preencha todos os campos.');
+			} else {
+				 window.location.href = 'consultaResposta.php';
+			}
+		}
+	</script>
     <!--------------------- Fim do código JavaScrip para tratamento de erro ---------------------------->
 
 		</div>	
