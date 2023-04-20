@@ -34,7 +34,8 @@ definirDadosSessao();
 	<body>
 					
 		<div id="area-principal">
-			<form onsubmit="return validaFormulario()" action="salvaQuestionario.php" method="post" name="resposta">
+			<!-- <form onsubmit="return validaFormulario()" action="salvaQuestionario.php" method="post" name="resposta"> -->
+			<form onsubmit="return validaFormulario()" method="post" name="resposta">
 
 				<!-- <h3>Perfil sócio demográfico: caracterização contextual do público pesquisado<br><br></h3> -->
 
@@ -171,10 +172,10 @@ definirDadosSessao();
 
 					<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa1" 
 					value="Sim">
-					<label for="">Sim</label><br>
+					<label for="posGraduacaoUfpa1">Sim</label><br>
 					<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa2" 
 					value="Não">
-					<label for="">Não</label><br><br>
+					<label for="posGraduacaoUfpa2">Não</label><br><br>
 					<!-- --------------------------------------------------------------- -->
 				</fieldset><br>
 
@@ -186,10 +187,10 @@ definirDadosSessao();
 
 					<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado1" 
 					value="Sim">
-					<label for="">Sim</label><br>
+					<label for="inseridoNoMercado1">Sim</label><br>
 					<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado2" 
 					value="Não">
-					<label for="">Não</label><br><br>
+					<label for="inseridoNoMercado2">Não</label><br><br>
 
 					<p>Se estão, qual a forma de obtenção de emprego?</p><br>
 
@@ -214,10 +215,10 @@ definirDadosSessao();
 					
 					<input type="radio" name="trabalhaNaAreaDeFormacao" 
 					id="trabalhaNaAreaDeFormacao1" value="Sim">
-					<label for="">Sim</label><br>
+					<label for="trabalhaNaAreaDeFormacao1">Sim</label><br>
 					<input type="radio" name="trabalhaNaAreaDeFormacao" 
 					id="trabalhaNaAreaDeFormacao2" value="Não">
-					<label for="">Não</label><br><br>
+					<label for="trabalhaNaAreaDeFormacao2">Não</label><br><br>
 				
 					<p>Faixa salarial:</p><br>
 					
@@ -348,13 +349,28 @@ definirDadosSessao();
 	  <script>
 		function envioSucesso(event) {
 			
-			var campos = document.querySelectorAll('textarea, input');
+			var campos = document.querySelectorAll('textarea');
+			var inputs = document.querySelectorAll('input');
 			var todosPreenchidos = true;
+			
+			inputs.forEach( 
+				function(inputNode) {
+					var labels = document.querySelectorAll("label[for=" + CSS.escape(inputNode.id) + "]");
+					console.log(inputNode.id);
+					// console.log(labels);
+					labels.forEach(
+						function(labelNode) {
+							labelNode.style.color = 'red';
+						}
+					);
+				}
+			);
 
 			for (var i = 0; i < campos.length; i++) {
 				var campo = campos[i];
-				
+
 				if (campo.value.trim() === '') {
+					event.preventDefault();
 					campo.classList.add('nao_preenchido');
 					//campo.setAttribute('required');
 					todosPreenchidos = false;
