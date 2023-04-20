@@ -1,3 +1,9 @@
+<?php
+include_once 'dadosEgresso.php';
+session_start();
+$dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,59 +39,46 @@
             <fieldset>
                     <legend><strong>SEUS DADOS CADASTRAIS</strong></legend><br>
 
-                    <?php
+                    <p>CPF: <?php echo $dados['cpf'];?></p>
+                    <p>Nome: <?php echo $dados['nome'];?></p>
+                    <p>Email: <?php echo $dados['email'];?></p>
+                    <p>Data de Nascimento: <?php echo $dados['dataNascimento'];?></p>
+                    <p>Idade: <?php echo $dados['idade'];?></p>
+                    <p>Genero: <?php echo $dados['genero'];?></p>
+                    <p>Cor: <?php echo $dados['cor'];?></p>
+                    <p>Curso: <?php echo $dados['curso'];?></p>
+                    <p>Ano de Ingresso: <?php echo $dados['anoIngresso'];?></p>
+                    <p>Campus: <?php echo $dados['campus'];?></p>
+                    <p>Obteve bolsa durante o curso?: <?php echo $dados['bolsa'];?></p>
+                    <p><?php echo $dados['resumoBolsa'];?></p>
+                    <p>Participou de atividades acadêmicas extracurriculares durante o curso? <?php echo $dados['atividadesExtracurriculares'];?></p>
+                    <p>Durante o curso, você desenvolveu atividade remunerada fora da Universidade? <?php echo $dados['atividadeRemunerada'];?></p>
+                    <p>Curso de Pós-Graduação concluído ou em andamento: <?php echo $dados['cursoPosGraduacao'];?></p>
+                    <p>Situação do curso: <?php echo $dados['situacaoCursoPosGraduacao'];?></p>
+                    <p>posGraduacaoUfpa: <?php echo $dados['posGraduacaoUfpa'];?></p>
+                    <p>inseridoNoMercado: <?php echo $dados['inseridoNoMercado'];?></p>
+                    <p>tipoDeEmprego: <?php echo $dados['tipoDeEmprego'];?></p>
+                    <p>tempoFormaturaEmprego: <?php echo $dados['tempoFormaturaEmprego'];?></p>
+                    <p>trabalhaNaAreaDeFormacao: <?php echo $dados['trabalhaNaAreaDeFormacao'];?></p>
+                    <p>faixaSalarial: <?php echo $dados['faixaSalarial'];?></p>
+                    <p>relacaoCursoTrabalho: <?php echo $dados['relacaoCursoTrabalho'];?></p>
+                    <p>recebeuOrientacao: <?php echo $dados['recebeuOrientacao'];?></p>
+                    <p>disciplinasForamUteis: <?php echo $dados['disciplinasForamUteis'];?></p>
+                    <p>estagioContribuiuEmprego: <?php echo $dados['estagioContribuiuEmprego'];?></p>
+                    <p>resumoSituacaoProfissional: <?php echo $dados['resumoSituacaoProfissional'];?></p>
+                    <p>satisfacaoComCurso: <?php echo $dados['satisfacaoComCurso'];?></p>
+                    <p>resumoSatisfacaoComCurso: <?php echo $dados['resumoSatisfacaoComCurso'];?></p>
+                    <p>recomendaCurso: <?php echo $dados['recomendaCurso'];?></p>
+                    <p>resumoRecomendacaoCurso: <?php echo $dados['resumoRecomendacaoCurso'];?></p>
+                    <p>participaDeEventos: <?php echo $dados['participaDeEventos'];?></p>
+                    <p>resumoEventosAtuais: <?php echo $dados['resumoEventosAtuais'];?></p>
+                    <p>participaDeProjeto: <?php echo $dados['participaDeProjeto'];?></p>
+                    <p>resumoProjetosAtuais: <?php echo $dados['resumoProjetosAtuais'];?></p>
+                    <p>participaDeCurso: <?php echo $dados['participaDeCurso'];?></p>
+                    <p>resumoCursosAtuais: <?php echo $dados['resumoCursosAtuais'];?></p>
+                    <p>resumoAtividadesInteresse: <?php echo $dados['resumoAtividadesInteresse'];?></p>
+                    <p>resumoSugestaoQuestionario: <?php echo $dados['resumoSugestaoQuestionario'];?></p>
 
-                    include_once 'dadosEgresso.php';
-                    session_start();
-
-                    $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
-
-                    echo 'CPF: ' . $dados['cpf'] . '<br><br>';
-
-                    echo 'Nome: ' . $dados['nome'] . '<br><br>';
-
-                    echo 'Data de Nascimento: ' . $dados['dataNascimento'] . '<br><br>';
-
-                    echo 'Email: ' . $dados['email'] . '<br><br>';
-
-                    echo 'Curso: ' . $dados['curso'] . '<br><br>';
-
-                    echo 'Ano de Ingresso: ' . $dados['anoIngresso'] . '<br><br>';
-
-                    echo 'Campus: ' . $dados['campus'] . '<br><br>';
-
-                    echo 'Respostas: <br><br>';
-
-                    echo 'Genero: ' . $dados['genero'] . '<br><br>';
-
-                    echo 'Cor: ' . $dados['cor'] . '<br><br>';
-
-                    echo 'Idade: ' . $dados['idade'] . '<br><br>';
-
-                    echo 'Obteve bolsa durante o curso? <br>' . $dados['bolsa'] . '<br><br>';
-
-                    echo 'Se sim, qual(is)? <br>' . $dados['bolsaResumo'] . '<br><br>';
-
-                    echo 'Participou de atividades acadêmicas extracurriculares durante o curso?<br><br>';
-
-                    echo 'Iniciação Científica <br>' . $dados['iniciacaoCientifica'] . '<br><br>';
-
-                    echo 'Monitoria <br>' . $dados['monitoria'] . '<br><br>';
-
-                    echo 'Estágio Não Obrigatório pertinente ao curso <br>' . $dados['estagioNaoObrigatorio'] . '<br><br>';
-
-                    echo 'Atividade Curricular em Comunidade - ACC <br>' . $dados['atividadeComunidade'] . '<br><br>';
-
-                    echo 'Eventos: Congressos, Seminários, etc <br>' . $dados['eventos'] . '<br><br>';
-
-                    echo 'Empresa Júnior <br>' . $dados['empresaJunior'] . '<br><br>';
-
-                    echo 'Diretório Acadêmico <br>' . $dados['diretorioAcademico'] . '<br><br>';
-
-                    echo 'Outras <br>' . $dados['outrasAtividades'] . '<br><br>';
-
-
-                    ?>
             </fieldset>
         </div>
         <!-------------------------- Fim da área de consulta de resposta ------------------------------------>
