@@ -38,7 +38,7 @@ definirDadosSessao();
                 <div id="borda">
                     <h2><strong>Verificar Credenciais</strong></h2>
                     <div class="elements" >
-                        <input class="cpf" placeholder=" Informe seu CPF..." type= "text" id="cpf" name="cpf" type="text" size="18" alt="  Informe seu CPF" title="CPF" required><br><br>
+                        <input class="cpf" placeholder=" Informe seu CPF..." type= "text" id="cpf" name="cpf" type="text" size="18" alt="  Informe seu CPF" title="CPF"><br><br>
                         <span class="erro"></span><br>
 						<?php seletorRedirecionamento()?>
 						<strong><input class="submeter" type="submit" name="botaoConfirmar" id="botaoConfirmar" value="Responder" onclick="validarCpf(event)"></strong><br>

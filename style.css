@@ -198,6 +198,7 @@ input:hover {
     cursor: pointer;
 }
 
+
 /************* Rodapù **************/
 
 footer {
@@ -234,6 +235,16 @@ hr {
     /* text-align: center; */
 }
 
-.nao_preenchido {
+ .nao_preenchido {
     border-color: red;
 }
+
+.obrigatorio {
+    color: red;
+}
+
+/* input:required, textarea:required {
+    border: 1px solid red;
+} */
+
+  

@@ -48,9 +48,9 @@ definirDadosSessao();
 					
 					<?php echo 'Idade: ' . $_SESSION['idade'] . ' anos<br><br>';?><br><br>
 					<!-- --------------------------------------------------------------- -->
-					<label for="genero" style="font-size: large;">Gênero: </label>
+					<label for="genero" style="font-size: large;"><span class="obrigatorio">*</span> Gênero: </label>
 					<select id="genero" name="genero">
-						<option>Selecione</option>
+						<option>Selecione <span class="obrigatorio">*</span></option><span class="obrigatorio">*</span>
 						<option value="Masculino">Masculino</option>
 						<option value="Feminino">Feminino</option>
 						<option value="Outro">Outro</option>	
@@ -58,7 +58,7 @@ definirDadosSessao();
 						
 					<label for="cor" style="font-size: large;">Cor/Raça: </label>
 					<select id="cor" name="cor">
-						<option>Selecione</option>
+						<option>Selecione<span class="obrigatorio">*</span></option>
 						<option value="Preto">Preto</option>
 						<option value="Branco">Branco</option>
 						<option value="Pardo">Pardo</option>
@@ -158,7 +158,7 @@ definirDadosSessao();
 						<option value="Doutorado">Doutorado</option>
 					</select><br><br>
 				
-					<p>Situação do curso:</p><br>
+					<p>Situação do curso: <span class="obrigatorio">*</span></p><br>
 							
 					<input type="radio" name="situacaoCursoPosGraduacao" 
 					id="posGraduacaoEmAndamento">
@@ -325,7 +325,7 @@ definirDadosSessao();
 					<p>Participa de algum curso?</p><br>
 					<input type="radio" id="partipaCurso" name="curso">
 					<label for="participaCurso">Sim</label><br>
-					<input type="radio" id="naoParticipaCurso" name="curso"  required>
+					<input type="radio" id="naoParticipaCurso" name="curso" >
 					<label for="naoParticipaCurso">Não</label><br><br>
 
 					<p>Caso tenha participe:</p><br>
@@ -345,16 +345,18 @@ definirDadosSessao();
 
 			<!-- <script src="validaFormulario.js"></script> -->
     <!--------------------- Início do código JavaScrip para tratamento de erro ---------------------------->
-	 <script>
+	  <script>
 		function envioSucesso(event) {
 			
-			var campos = document.querySelectorAll('textarea');
+			var campos = document.querySelectorAll('textarea, input');
 			var todosPreenchidos = true;
 
 			for (var i = 0; i < campos.length; i++) {
 				var campo = campos[i];
+				
 				if (campo.value.trim() === '') {
 					campo.classList.add('nao_preenchido');
+					//campo.setAttribute('required');
 					todosPreenchidos = false;
 				} else {
 					campo.classList.remove('nao_preenchido');
@@ -366,7 +368,7 @@ definirDadosSessao();
 				event.preventDefault();
 			 }
 		}
-	</script>
+	</script> 
     <!--------------------- Fim do código JavaScrip para tratamento de erro ---------------------------->
 
 		</div>	
