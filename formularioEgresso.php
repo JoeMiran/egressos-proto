@@ -316,7 +316,7 @@ definirDadosSessao();
 					<p>Participa de grupos de pesquisa e/ou projetos de extensão?</p><br>
 					<input type="radio" id="participaProjeto" name="projeto">
 					<label for="participaProjeto">Sim</label><br>
-					<input type="radio" id="naoParticipaProjeto" name="projeto">
+					<input class="nao_preenchido" type="radio" id="naoParticipaProjeto" name="projeto">
 					<label for="naoParticipaProjeto">Não</label><br><br>
 
 					<p>Caso participe:</p><br>
@@ -325,11 +325,11 @@ definirDadosSessao();
 					<p>Participa de algum curso?</p><br>
 					<input type="radio" id="partipaCurso" name="curso">
 					<label for="participaCurso">Sim</label><br>
-					<input type="radio" id="naoParticipaCurso" name="curso">
+					<input type="radio" id="naoParticipaCurso" name="curso"  required>
 					<label for="naoParticipaCurso">Não</label><br><br>
 
 					<p>Caso tenha participe:</p><br>
-					<textarea cols=40 rows=6 placeholder="Liste os cursos aos quais participa... "></textarea required><br><br>
+					<textarea cols=40 rows=6 placeholder="Liste os cursos aos quais participa... "></textarea><br><br>
 
 					<p>Indique atividades que você gostaria de participar:</p><br>
 					<textarea cols=40 rows=6 placeholder="Projetos de extensão e/ou pesquisa, eventos, cursos... "></textarea><br><br>
@@ -345,10 +345,10 @@ definirDadosSessao();
 
 			<!-- <script src="validaFormulario.js"></script> -->
     <!--------------------- Início do código JavaScrip para tratamento de erro ---------------------------->
-	<script>
+	 <script>
 		function envioSucesso(event) {
-			event.preventDefault();
-			var campos = document.querySelectorAll('input, select, textarea');
+			
+			var campos = document.querySelectorAll('textarea');
 			var todosPreenchidos = true;
 
 			for (var i = 0; i < campos.length; i++) {
@@ -363,9 +363,8 @@ definirDadosSessao();
 
 			if (!todosPreenchidos) {
 				alert('Por favor, preencha todos os campos.');
-			} else {
-				 window.location.href = 'consultaResposta.php';
-			}
+				event.preventDefault();
+			 }
 		}
 	</script>
     <!--------------------- Fim do código JavaScrip para tratamento de erro ---------------------------->

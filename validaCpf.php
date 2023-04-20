@@ -51,7 +51,7 @@ definirDadosSessao();
         <script>
 
             function validarCpf(event) {
-                
+                //event.preventDefault();
                 const cpfInput = document.querySelector('.cpf');
                 const cpf = cpfInput.value;
 				console.log(/^0*$/g.test(cpf));
