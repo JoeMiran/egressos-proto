@@ -245,7 +245,7 @@ hr {
 
 .obrigatorio::after {
     color: red;
-    content: " Selecione uma opção";
+    content: " *";
 }
 
 
