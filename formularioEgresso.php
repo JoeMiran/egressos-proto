@@ -38,7 +38,7 @@ definirDadosSessao();
 
         <div id="area-principal">
 
-            <form onsubmit="return validaFormulario()" method="post" name="resposta">
+            <form method="post" name="resposta">
 
                 <fieldset>
                     <!-- --------------------------------------------------------------- -->
@@ -50,7 +50,7 @@ definirDadosSessao();
 
                     <?php echo 'Idade: ' . $_SESSION['idade'] . ' anos<br><br>'; ?><br>
                     <!-- --------------------------------------------------------------- -->
-                    <label for="genero" style="font-size: large;"><span></span> Gênero: </label>
+                    <label for="genero" style="font-size: large;"><span> </span> Gênero: </label>
                     <select id="genero" name="genero">
                         <option>Selecione</option>
                         <option value="Masculino">Masculino</option>
@@ -147,7 +147,7 @@ definirDadosSessao();
                     <input type="radio" name="atividadeRemunerada" id="atividadeRemunerada4" value="Não">
                     <label for="atividadeRemunerada4">Não realizei atividade remunerada</label><br><br>
 
-                    <label style="font-size: large;"><span></span>Curso de Pós-Graduação: </label>
+                    <label style="font-size: large;">Curso de Pós-Graduação: </label>
                     <select name="cursoPosGraduacao" id="cursoPosGraduacao">
                         <option>Selecione</option>
                         <option value="Aperfeiçoamento">Aperfeiçoamento</option>
@@ -157,7 +157,7 @@ definirDadosSessao();
 						<option value="Nenhum">Nenhum</option>
                     </select><br><br>
 
-                    <p>Situação do curso:</p><br>
+                    <p>Situação do curso: <span></span></p><br>
 
                     <input type="radio" name="situacaoCursoPosGraduacao" id="posGraduacaoEmAndamento"
                         value="Em andamento">
@@ -179,14 +179,14 @@ definirDadosSessao();
                     <!-- --------------------------------------------------------------- -->
                     <legend><strong>SITUAÇÃO PROFISSIONAL</strong></legend>
 
-                    <p>Atualmente está inserido/a no mercado de trabalho?</p><br>
+                    <p>Atualmente está inserido/a no mercado de trabalho? <span></span></p><br>
 
                     <input type="radio" name="inseridoNoMercado" id="inseridoNoMercado1" value="Sim">
                     <label for="inseridoNoMercado1">Sim</label><br>
                     <input type="radio" name="inseridoNoMercado" id="inseridoNoMercado2" value="Não">
                     <label for="inseridoNoMercado2">Não</label><br><br>
 
-					<p>Se está, qual a modalidade de emprego?</p><br>
+					<p>Se está, qual a modalidade de emprego? <span></span></p><br>
 
                     <input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
                     <label for="tipoDeEmprego1">Concursado</label><br>
@@ -195,60 +195,60 @@ definirDadosSessao();
                     <input type="radio" id="tipoDeEmprego3" name="tipoDeEmprego" value="Profissional autônomo">
                     <label for="tipoDeEmprego3">Profissional autônomo</label><br>
                     <input type="radio" id="tipoDeEmprego4" name="tipoDeEmprego" value="Profissional informal">
-                    <label for="tipoDeEmprego4">Profissional informal</label><br>
+                    <label for="tipoDeEmprego4">Profissional informal</label><br><br>
 
                     <p>Tempo necessário para conseguir atividade remunerada após a
-                        formatura:</p>
+                        formatura: <span></span></p><br>
 
                     <input type=radio id="tempoFormaturaEmprego1" name="tempoFormaturaEmprego" value="0 a 6 meses">
                     <label for="tempoFormaturaEmprego1">0 a 6 meses</label><br>
                     <input type=radio id="tempoFormaturaEmprego2" name="tempoFormaturaEmprego" value="7 a 12 meses">
                     <label for="tempoFormaturaEmprego2">7 a 12 meses</label><br>
                     <input type=radio id="tempoFormaturaEmprego3" name="tempoFormaturaEmprego" value="mais de 12 meses">
-                    <label for="tempoFormaturaEmprego3">mais de 12 meses</label><br>
+                    <label for="tempoFormaturaEmprego3">mais de 12 meses</label><br><br>
 
-                    <p>Seu trabalho é na sua área de formação?</p>
+                    <p>Seu trabalho é na sua área de formação? <span></span></p><br>
 
                     <input type="radio" name="trabalhaNaAreaDeFormacao" id="trabalhaNaAreaDeFormacao1" value="Sim">
                     <label for="trabalhaNaAreaDeFormacao1">Sim</label><br>
                     <input type="radio" name="trabalhaNaAreaDeFormacao" id="trabalhaNaAreaDeFormacao2" value="Não">
                     <label for="trabalhaNaAreaDeFormacao2">Não</label><br><br>
 
-                    <p>Faixa salarial:</p>
+                    <p>Faixa salarial: <span></span></p><br>
 
                     <input type=radio id="faixaSalarial1" name="faixaSalarial" value="1 a 2 salários mínimos">
                     <label for="faixaSalarial1">1 a 2 salários mínimos</label><br>
                     <input type=radio id="faixaSalarial2" name="faixaSalarial" value="3 a 5 salários mínimos">
                     <label for="faixaSalarial2">3 a 5 salários mínimos</label><br>
                     <input type=radio id="faixaSalarial3" name="faixaSalarial" value="mais de 5 salários">
-                    <label for="faixaSalarial3">mais de 5 salários</label><br>
+                    <label for="faixaSalarial3">mais de 5 salários</label><br><br>
 
                     <p>Há uma relação entre o curso de graduação concluido e a atividade
-                        laboral que está exercendo?</p>
+                        laboral que está exercendo? <span></span></p><br>
 
                     <input type="radio" id="relacaoCursoTrabalho1" name="relacaoCursoTrabalho" value="Sim">
                     <label>Sim</label><br>
                     <input type="radio" id="relacaoCursoTrabalho2" name="relacaoCursoTrabalho" value="Não">
-                    <label>Não</label><br>
+                    <label>Não</label><br><br>
 
                     <p>Recebeu orientação, no âmbito do seu respectivo curso, para atuar no
-                        mercado de trabalho?</p>
+                        mercado de trabalho? <span></span></p><br>
 
                     <input type="radio" id="recebeuOrientacao1" name="recebeuOrientacao" value="Sim">
                     <label for="recebeuOrientacao1">Sim</label><br>
                     <input type="radio" id="recebeuOrientacao2" name="recebeuOrientacao" value="Não">
-                    <label for="recebeuOrientacao2">Não</label><br>
+                    <label for="recebeuOrientacao2">Não</label><br><br>
 
                     <p>As temáticas e/ou assuntos abordados nas várias disciplinas cursadas
-                        tiveram utilidade para o exercício profissional?</p>
+                        tiveram utilidade para o exercício profissional? <span></span></p><br>
 
                     <input type="radio" id="disciplinasForamUteis1" name="disciplinasForamUteis" value="Sim">
                     <label for="disciplinasForamUteis1">Sim</label><br>
                     <input type="radio" id="disciplinasForamUteis2" name="disciplinasForamUteis" value="Não">
-                    <label for="disciplinasForamUteis2">Não</label><br>
+                    <label for="disciplinasForamUteis2">Não</label><br><br>
 
                     <p>O(s) estágio(s) que cumpriu no curso contribuiu para a inserção
-                        profissional no mercado de trabalho?</p>
+                        profissional no mercado de trabalho? <span></span></p><br>
 
                     <input type="radio" id="estagioContribuiuEmprego1" name="estagioContribuiuEmprego" value="Sim">
                     <label for="estagioContribuiuEmprego1">Sim</label><br>
@@ -256,9 +256,9 @@ definirDadosSessao();
                     <label for="estagioContribuiuEmprego2">Não</label><br>
                     <input type="radio" id="estagioContribuiuEmprego3" name="estagioContribuiuEmprego"
                         value="Não fiz estágio">
-                    <label for="estagioContribuiuEmprego3">Não fiz estágio</label><br>
+                    <label for="estagioContribuiuEmprego3">Não fiz estágio</label><br><br>
 
-                    <p>Comente:</p>
+                    <p>Comente:</p><br>
 
                     <textarea name="resumoSituacaoProfissional" cols=40 rows=6
                         placeholder="Descreva mais sobre sua situação profissional"></textarea><br><br>
@@ -267,84 +267,84 @@ definirDadosSessao();
 
                 <fieldset>
 
-                    <legend>Nível de Satisfação</legend>
+                    <legend><strong>NÍVEL DE SATISFAÇÃO</strong></legend>
                     <!-- --------------------------------------------------------------- -->
-                    <p>Em relação à satisfação com seu curso, você está?</p>
+                    <p>Em relação à satisfação com seu curso, você está? <span></span></p><br>
 
                     <input type="radio" id="satisfacaoComCurso1" name="satisfacaoComCurso" value="Muito Satisfeito">
                     <label for="satisfacaoComCurso1">Muito Satisfeito</label><br>
                     <input type="radio" id="satisfacaoComCurso2" name="satisfacaoComCurso" value="Satisfeito">
                     <label for="satisfacaoComCurso2">Satisfeito</label><br>
                     <input type="radio" id="satisfacaoComCurso3" name="satisfacaoComCurso" value="Insatisfeito">
-                    <label for="satisfacaoComCurso3">Insatisfeito</label><br>
+                    <label for="satisfacaoComCurso3">Insatisfeito</label><br><br>
 
-                    <p>Justifique:</p>
+                    <p>Justifique:</p><br>
 
                     <textarea name="resumoSatisfacaoComCurso" cols=40 rows=6
-                        placeholder="Justifique sua satisfação com o curso"></textarea><br>
+                        placeholder="Justifique sua satisfação com o curso"></textarea><br><br>
 
-                    <p>Você recomendaria seu curso para outra pessoa?</p>
+                    <p>Você recomendaria seu curso para outra pessoa? <span></span></p><br>
 
                     <input type="radio" id="recomendaCurso1" name="recomendaCurso" value="Sim">
                     <label for="recomendaCurso1">Sim</label><br>
                     <input type="radio" id="recomendaCurso2" name="recomendaCurso" value="Não">
-                    <label for="recomendaCurso2">Não</label><br>
+                    <label for="recomendaCurso2">Não</label><br><br>
 
-                    <p>Justifique:</p>
+                    <p>Justifique:</p><br>
 
                     <textarea name="resumoRecomendacaoCurso" cols=40 rows=6
-                        placeholder="Justifique a posição da sua recomendação"></textarea><br><br>
+                        placeholder="Justifique a posição da sua recomendação"></textarea><br>
 
                     <!-- --------------------------------------------------------------- -->
                 </fieldset><br>
 
                 <fieldset>
 
-                    <legend>Relação atual com a Universidade</legend>
+                    <legend><strong>RELAÇÃO COM A UNIVERSIDADE</strong></legend>
                     <!-- --------------------------------------------------------------- -->
-                    <p>Participa de eventos acadêmicos da UFPA?</p>
+                    <p>Participa de eventos acadêmicos da UFPA? <span></span></p><br>
                     <input type="radio" id="participaDeEventos1" name="participaDeEventos" value="Sim">
                     <label for="participaDeEventos1">Sim</label><br>
                     <input type="radio" id="participaDeEventos2" name="participaDeEventos" value="Não">
-                    <label for="participaDeEventos2">Não</label><br>
+                    <label for="participaDeEventos2">Não</label><br><br>
 
-                    <p>Caso sim, cite os principais:</p>
+                    <p>Caso sim, cite os principais:</p><br>
 
                     <textarea name="resumoEventosAtuais" cols=40 rows=6
-                        placeholder="Cite os eventos aos quais mais participa"></textarea><br>
+                        placeholder="Cite os eventos aos quais mais participa"></textarea><br><br>
 
-                    <p>Participa de grupos de pesquisa e/ou projetos de extensão?</p>
+                    <p>Participa de grupos de pesquisa e/ou projetos de extensão? <span></span></p><br>
 
                     <input type="radio" id="participaDeProjeto1" name="participaDeProjeto" value="Sim">
                     <label for="participaDeProjeto1">Sim</label><br>
                     <input type="radio" id="participaDeProjeto2" name="participaDeProjeto" value="Não">
-                    <label for="participaDeProjeto2">Não</label><br>
+                    <label for="participaDeProjeto2">Não</label><br><br>
 
-                    <p>Caso sim, cite os principais:</p>
+                    <p>Caso sim, cite os principais:</p><br>
 
                     <textarea name="resumoProjetosAtuais" cols=40 rows=6
-                        placeholder="Projetos atuais de extensão e/ou pesquisa"></textarea><br>
+                        placeholder="Projetos atuais de extensão e/ou pesquisa"></textarea><br><br>
 
-                    <p>Participa de algum curso?</p>
+                    <p>Participa de algum curso? <span></span></p><br>
 
                     <input type="radio" id="participaDeCurso1" name="participaDeCurso" value="Sim">
                     <label for="participaDeCurso1">Sim</label><br>
                     <input type="radio" id="participaDeCurso2" name="participaDeCurso" value="Não">
-                    <label for="participaDeCurso2">Não</label><br>
+                    <label for="participaDeCurso2">Não</label><br><br>
 
-                    <p>Caso sim, cite os principais:</p>
+                    <p>Caso sim, cite os principais:</p><br>
 
                     <textarea name="resumoCursosAtuais" cols=40 rows=6
-                        placeholder="Liste os cursos aos quais participa"></textarea><br>
+                        placeholder="Liste os cursos aos quais participa"></textarea><br><br>
 
-                    <p>Indique atividades que você gostaria de participar:</p>
+                    <p>Indique atividades que você gostaria de participar: </p><br>
 
                     <textarea name="resumoAtividadesInteresse" cols=40 rows=6
-                        placeholder="Projetos de extensão e/ou pesquisa, eventos, cursos"></textarea><br>
+                        placeholder="Projetos de extensão e/ou pesquisa, eventos, cursos"></textarea><br><br>
 
                     <p>Agradecemos a sua participação, que foi de suma
                         importância. Caso tenha alguma sugestão que possa enriquecer
-                        este questionário, por favor, utilize o espaço abaixo:</p>
+                        este questionário, por favor, utilize o espaço abaixo:</p><br>
 
                     <textarea name="resumoSugestaoQuestionario" cols=40 rows=6
                         placeholder="Deixe aqui sua sugestão"></textarea><br><br>
@@ -356,52 +356,44 @@ definirDadosSessao();
             <!--------------------- Início do código JavaScrip para tratamento de erro ---------------------------->
             <script>
             function envioSucesso(event) {
+                const campos = document.querySelectorAll('textarea');
+                const inputs = document.querySelectorAll('input');
+                const spans = document.querySelectorAll('span');
+                let todosPreenchidos = true;
 
-                var campos = document.querySelectorAll('textarea');
-                var inputs = document.querySelectorAll('input');
-                var spans = document.querySelectorAll('span');
-                var todosPreenchidos = true;
-
-                inputs.forEach(
-                    function(inputNode) {
-                        var labels = document.querySelectorAll("label[for=" + CSS.escape(inputNode.id) + "]");
-                        console.log(inputNode.id);
-                        // console.log(labels);
-                        labels.forEach(
-                            function(labelNode) {
-                                labelNode.style.fontStyle = 'italic';
-                            }
-                        );
+                    for (const inputNode of inputs) {
+                        
+                        const labels = document.querySelectorAll(`label[for="${inputNode.id}"]`);
+                        
+                        for (const labelNode of labels) {
+                            labelNode.style.fontStyle = 'italic';
+                        }
                     }
-                );
 
-                for (var i = 0; i < campos.length; i++) {
-                    var campo = campos[i];
+                    for (const campo of campos) {
+                        
+                        if (campo.value.length === 0) {
+                            campo.classList.add('nao_preenchido');
+                            todosPreenchidos = false;
+                        } else {
+                            campo.classList.remove('nao_preenchido');
+                        }
+                    }
 
-                    if (campo.value.trim() === '') {
+                    for (const span of spans) {
+                        
+                        if (todosPreenchidos) {
+                            span.classList.remove('obrigatorio');
+                        } else {
+                            span.classList.add('obrigatorio');
+                        }
+                    }
+
+                    if (!todosPreenchidos) {
+                        alert('Por favor, preencha todos os campos.');
                         event.preventDefault();
-                        campo.classList.add('nao_preenchido');
-                        todosPreenchidos = false;
-                    } else {
-                        campo.classList.remove('nao_preenchido');
                     }
                 }
-
-                for (var i = 0; i < spans.length; i++) {
-                    var span = spans[i];
-
-                    if (todosPreenchidos) {
-                        span.classList.remove('obrigatorio');
-                    } else {
-                        span.classList.add('obrigatorio');
-                    }
-                }
-
-                if (!todosPreenchidos) {
-                    alert('Por favor, preencha todos os campos.');
-                    event.preventDefault();
-                }
-            }
             </script>
             <!--------------------- Fim do código JavaScrip para tratamento de erro ---------------------------->
 

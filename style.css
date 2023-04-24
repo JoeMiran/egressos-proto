@@ -235,18 +235,20 @@ hr {
     
 }
 
- .nao_preenchido {
+.nao_preenchido {
     border-color: red;
 }
 
 .obrigatorio::before {
-    content: ;
+    content: " obrigatorio";
 }
 
 .obrigatorio::after {
     color: red;
     content: " *";
 }
+
+
 
 
   
