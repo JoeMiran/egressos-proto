@@ -356,7 +356,6 @@ definirDadosSessao();
             <!--------------------- Início do código JavaScrip para tratamento de erro ---------------------------->
             <script>
             function envioSucesso(event) {
-                
                 const campos = document.querySelectorAll('textarea');
                 const inputs = document.querySelectorAll('input');
                 const spans = document.querySelectorAll('span');
@@ -382,16 +381,6 @@ definirDadosSessao();
                         }
                     }
 
-                    for (const select of selects) {
-                        
-                        if (select.selectedIndex === 0) {
-                            select.classList.add('nao_preenchido');
-                            todosPreenchidos = false;
-                        } else {
-                            select.classList.remove('nao_preenchido');
-                        }
-                    }
-
                     for (const span of spans) {
                         
                         if (todosPreenchidos) {
@@ -399,6 +388,15 @@ definirDadosSessao();
                         } else {
                             span.classList.add('obrigatorio');
                         }
+                    }
+
+                    for (const select of selects) {
+                    if (select.selectedIndex === 0) {
+                        select.classList.add('nao_preenchido');
+                        todosPreenchidos = false;
+                    } else {
+                        select.classList.remove('nao_preenchido');
+                    }
                     }
 
                     if (!todosPreenchidos) {
