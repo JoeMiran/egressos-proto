@@ -356,9 +356,11 @@ definirDadosSessao();
             <!--------------------- Início do código JavaScrip para tratamento de erro ---------------------------->
             <script>
             function envioSucesso(event) {
+                
                 const campos = document.querySelectorAll('textarea');
                 const inputs = document.querySelectorAll('input');
                 const spans = document.querySelectorAll('span');
+                const selects = document.querySelectorAll('select')
                 let todosPreenchidos = true;
 
                     for (const inputNode of inputs) {
@@ -377,6 +379,16 @@ definirDadosSessao();
                             todosPreenchidos = false;
                         } else {
                             campo.classList.remove('nao_preenchido');
+                        }
+                    }
+
+                    for (const select of selects) {
+                        
+                        if (select.selectedIndex === 0) {
+                            select.classList.add('nao_preenchido');
+                            todosPreenchidos = false;
+                        } else {
+                            select.classList.remove('nao_preenchido');
                         }
                     }
 
