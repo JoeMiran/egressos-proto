@@ -369,7 +369,7 @@ definirDadosSessao();
                         // console.log(labels);
                         labels.forEach(
                             function(labelNode) {
-                                labelNode.style.color = 'red';
+                                labelNode.style.fontStyle = 'italic';
                             }
                         );
                     }
