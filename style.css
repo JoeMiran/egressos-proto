@@ -243,15 +243,11 @@ hr {
     background-color: red;
 }
 
-.obrigatorio::before {
-    content: " ";
+.obrigatorio {
+    color: red;
+    font-style: italic;
 }
 
-.obrigatorio::after {
-    color: red;
-    content: " *";
-    font-weight: bold;
-}
 
 
 
