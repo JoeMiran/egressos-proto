@@ -49,24 +49,32 @@ definirDadosSessao();
 					
 					<?php echo 'Idade: ' . $_SESSION['idade'] . ' anos<br><br>';?><br>
 					<!-- --------------------------------------------------------------- -->
-					<label for="genero" style="font-size: large;"><span></span> Gênero: </label>
-					<select id="genero" name="genero">
-						<option>Selecione</option>
-						<option value="Masculino">Masculino</option>
-						<option value="Feminino">Feminino</option>
-						<option value="Outro">Outro</option>	
-					</select><br><br>
+					<div>
+						<p>Gênero: </p>
+						<div>
+							<select id="genero" name="genero">
+								<option>Selecione</option>
+								<option value="Masculino">Masculino</option>
+								<option value="Feminino">Feminino</option>
+								<option value="Outro">Outro</option>
+							</select><br><br>
+						</div>
+					</div>
 						
-					<label for="cor" style="font-size: large;"><span></span> Cor/Raça: </label>
-					<select id="cor" name="cor">
-						<option>Selecione</option>
-						<option value="Preto">Preto</option>
-						<option value="Branco">Branco</option>
-						<option value="Pardo">Pardo</option>
-						<option value="Amarelo">Amarelo</option>
-						<option value="Indigena">Indígena</option>
-						<option value="Não declarada">Não desejo declarar</option>		
-					</select>
+					<div>
+						<p>Cor/Raça: </p>
+						<div>
+							<select id="cor" name="cor">
+								<option>Selecione</option>
+								<option value="Preto">Preto</option>
+								<option value="Branco">Branco</option>
+								<option value="Pardo">Pardo</option>
+								<option value="Amarelo">Amarelo</option>
+								<option value="Indigena">Indígena</option>
+								<option value="Não declarada">Não desejo declarar</option>
+							</select>
+						</div>
+					</div>
 					<!-- --------------------------------------------------------------- -->
 				</fieldset><br>
 
@@ -81,18 +89,24 @@ definirDadosSessao();
 					<?php echo 'Ano de Ingresso: ' . $_SESSION['anoIngresso'];?><br><br>
 					
 					<!-- --------------------------------------------------------------- -->
-					<p>Obteve bolsa durante o curso?</p>
-		
-					<input type="radio" name="bolsa" id="bolsa1" value="Sim">
-					<label for="bolsa1">Sim</label><br>
-					<input type="radio" name="bolsa" id="bolsa2" value="Não">
-					<label for="bolsa2">Não</label><br>
+					<div>
+						<p>Obteve bolsa durante o curso?</p>
+						<div class="radio">
+							<input type="radio" name="bolsa" id="bolsa1" value="Sim">
+							<label for="bolsa1">Sim</label><br>
+							<input type="radio" name="bolsa" id="bolsa2" value="Não">
+							<label for="bolsa2">Não</label><br>
+						</div>
+					</div>
 
-					<p>Se sim, qual(is)?</p>
-
-					<textarea name="resumoBolsa" cols=40 rows=6 
-					placeholder="Descreva mais sobre a bolsa"
-					></textarea><br><br>
+					<div>
+						<p>Se sim, qual(is)?</p>
+						<div>
+							<textarea name="resumoBolsa" cols=40 rows=6
+							placeholder="Descreva mais sobre a bolsa"
+							></textarea><br><br>
+						</div>
+					</div>
 					<!-- --------------------------------------------------------------- -->
 				</fieldset><br>
 				
@@ -103,22 +117,17 @@ definirDadosSessao();
 					<p>Participou de atividades acadêmicas extracurriculares durante o 
 						curso?</p><br>
 
-					<input type=checkbox id="iniciacaoCientifica" name="iniciacaoCientifica"
-					value="">
+					<input type=checkbox id="iniciacaoCientifica" name="iniciacaoCientifica">
 					<label for="iniciacaoCientifica">Iniciação Científica</label><br>
 
 					<input type=checkbox id="monitoria" name="monitoria">
 					<label for="monitoria">Monitoria</label><br>
 
-					<input type=checkbox id="estagioNaoObrigatorio" 
-					name="estagioNaoObrigatorio">
-					<label for="estagioNaoObrigatorio">Estágio Não Obrigatório pertinente ao
-						curso</label><br>
+					<input type=checkbox id="estagioNaoObrigatorio" name="estagioNaoObrigatorio">
+					<label for="estagioNaoObrigatorio">Estágio Não Obrigatório pertinente ao curso</label><br>
 
-					<input type=checkbox id="atividadeComunidade" 
-					name="atividadeComunidade">
-					<label for="atividadeComunidade">Atividade Curricular em Comunidade - 
-						ACC</label><br>
+					<input type=checkbox id="atividadeComunidade" name="atividadeComunidade">
+					<label for="atividadeComunidade">Atividade Curricular em Comunidade - ACC</label><br>
 
 					<input type=checkbox id="participouDeEventos" name="participouDeEventos">
 					<label for="participouDeEventos">Eventos: Congressos, Seminários, etc</label><br>
@@ -132,54 +141,63 @@ definirDadosSessao();
 					<input type=checkbox id="outrasAtividades" name="outrasAtividades">
 					<label for="outrasAtividades">Outras Atividades</label><br>
 
-					<p>Durante o curso, você desenvolveu atividade remunerada fora da 
-						Universidade?</p>
-				
-					<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada1"
-					value="Todo o período do curso">
-					<label for="atividadeRemunerada1">Todo o período do curso</label><br>
-				
-					<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada2"
-					value="Na maior parte do curso">
-					<label for="atividadeRemunerada2">Na maior parte do curso</label><br>
+					<div>
+						<p>Durante o curso, você desenvolveu atividade remunerada fora da Universidade?</p>
+						<div class="radio">
+							<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada1"
+							value="Todo o período do curso">
+							<label for="atividadeRemunerada1">Todo o período do curso</label><br>
+							<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada2"
+							value="Na maior parte do curso">
+							<label for="atividadeRemunerada2">Na maior parte do curso</label><br>
 							
-					<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada3"
-					value="Por pouco tempo na trajetória do curso">
-					<label for="atividadeRemunerada3">Por pouco tempo na trajetória do 
-						curso</label><br>
-				
-					<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada4"
-					value="Não">
-					<label for="atividadeRemunerada4">Não</label><br><br>
+							<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada3"
+							value="Por pouco tempo na trajetória do curso">
+							<label for="atividadeRemunerada3">Por pouco tempo na trajetória do
+								curso</label><br>
+							<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada4"
+							value="Não">
+							<label for="atividadeRemunerada4">Não</label><br><br>
+						</div>
+					</div>
 
-					<p>Curso de Pós-Graduação concluído ou em andamento:</p><br>
+					<div>
+						<p>Curso de Pós-Graduação concluído ou em andamento:</p><br>
+						<div class="radio">
+							<select name="cursoPosGraduacao" id="cursoPosGraduacao">
+								<option value="Nenhum">Nenhum</option>
+								<option value="Aperfeiçoamento">Aperfeiçoamento</option>
+								<option value="Especialização">Especialização</option>
+								<option value="Mestrado">Mestrado</option>
+								<option value="Doutorado">Doutorado</option>
+							</select><br>
+						</div>
+					</div>
 				
-					<select name="cursoPosGraduacao" id="cursoPosGraduacao">
-						<option value="Nenhum">Nenhum</option>
-						<option value="Aperfeiçoamento">Aperfeiçoamento</option>
-						<option value="Especialização">Especialização</option>
-						<option value="Mestrado">Mestrado</option>
-						<option value="Doutorado">Doutorado</option>
-					</select><br>
+					<div>
+						<p>Situação do curso:</p>
+						<div class="radio">
+							<input type="radio" name="situacaoCursoPosGraduacao"
+							id="posGraduacaoEmAndamento" value="Em andamento">
+							<label for="posGraduacaoEmAndamento">Em andamento</label><br>
+							<input type="radio" name="situacaoCursoPosGraduacao"
+							id="posGraduacaoConcluida" value="Concluído">
+							<label for="posGraduacaoConcluida">Concluído</label><br><br>
+						</div>
+					</div>
 				
-					<p>Situação do curso:</p><br><br>
-							
-					<input type="radio" name="situacaoCursoPosGraduacao" 
-					id="posGraduacaoEmAndamento" value="Em andamento">
-					<label for="posGraduacaoEmAndamento">Em andamento</label><br>
-					<input type="radio" name="situacaoCursoPosGraduacao" 
-					id="posGraduacaoConcluida" value="Concluído">
-					<label for="posGraduacaoConcluida">Concluído</label><br><br>
-				
-					<p>Em caso de Curso Pós-Graduação, realizado ou andamento, é na 
-						UFPA?</p><br>
-
-					<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa1" 
-					value="Sim">
-					<label for="posGraduacaoUfpa1">Sim</label><br>
-					<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa2" 
-					value="Não">
-					<label for="posGraduacaoUfpa2">Não</label><br><br>
+					<div>
+						<p>Em caso de Curso Pós-Graduação, realizado ou andamento, é na
+							UFPA?</p>
+						<div class="radio">
+							<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa1"
+							value="Sim">
+							<label for="posGraduacaoUfpa1">Sim</label><br>
+							<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa2"
+							value="Não">
+							<label for="posGraduacaoUfpa2">Não</label><br><br>
+						</div>
+					</div>
 					<!-- --------------------------------------------------------------- -->
 				</fieldset><br>
 
@@ -187,103 +205,132 @@ definirDadosSessao();
 					<!-- --------------------------------------------------------------- -->
 					<legend>Situação Profissional Atual & Atividade Laboral</legend>
 
-					<p>Atualmente estão inserido/a no mercado de trabalho?</p>
+					<div>
+						<p>Atualmente estão inserido/a no mercado de trabalho?</p>
+						<div class="radio">
+							<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado1"
+							value="Sim">
+							<label for="inseridoNoMercado1">Sim</label><br>
+							<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado2"
+							value="Não">
+							<label for="inseridoNoMercado2">Não</label><br><br>
+						</div>
+					</div>
 
-					<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado1" 
-					value="Sim">
-					<label for="inseridoNoMercado1">Sim</label><br>
-					<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado2" 
-					value="Não">
-					<label for="inseridoNoMercado2">Não</label><br><br>
+					<div>
+						<p>Se sim, qual a modalidade de emprego?</p>
+						<div class="radio">
+							<input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
+							<label for="tipoDeEmprego1">Concursado</label><br>
+							<input type="radio" id="tipoDeEmprego2"
+							name="tipoDeEmprego" value="Profissional formal">
+							<label for="tipoDeEmprego2">Profissional formal</label><br>
+							<input type="radio" id="tipoDeEmprego3"
+							name="tipoDeEmprego" value="Profissional autônomo">
+							<label for="tipoDeEmprego3">Profissional autônomo</label><br>
+							<input type="radio" id="tipoDeEmprego4"
+							name="tipoDeEmprego" value="Profissional informal">
+							<label for="tipoDeEmprego4">Profissional informal</label><br>
+						</div>
+					</div>
 
-					<input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
-					<label for="tipoDeEmprego1">Concursado</label><br>
-					<input type="radio" id="tipoDeEmprego2" 
-					name="tipoDeEmprego" value="Profissional formal">
-					<label for="tipoDeEmprego2">Profissional formal</label><br>
-					<input type="radio" id="tipoDeEmprego3" 
-					name="tipoDeEmprego" value="Profissional autônomo">
-					<label for="tipoDeEmprego3">Profissional autônomo</label><br>
-					<input type="radio" id="tipoDeEmprego4" 
-					name="tipoDeEmprego" value="Profissional informal">
-					<label for="tipoDeEmprego4">Profissional informal</label><br>
-
-					<p>Tempo necessário para conseguir atividade remunerada após a 
-						formatura:</p>
-					
-					<input type=radio id="tempoFormaturaEmprego1" 
-					name="tempoFormaturaEmprego" value="0 a 6 meses">
-					<label for="tempoFormaturaEmprego1">0 a 6 meses</label><br>
-					<input type=radio id="tempoFormaturaEmprego2" 
-					name="tempoFormaturaEmprego" value="7 a 12 meses">
-					<label for="tempoFormaturaEmprego2">7 a 12 meses</label><br>
-					<input type=radio id="tempoFormaturaEmprego3" 
-					name="tempoFormaturaEmprego" value="mais de 12 meses">
-					<label for="tempoFormaturaEmprego3">mais de 12 meses</label><br>
+					<div>
+						<p>Tempo necessário para conseguir atividade remunerada após a
+							formatura:</p>
+						<div class="radio">
+							<input type=radio id="tempoFormaturaEmprego1"
+							name="tempoFormaturaEmprego" value="0 a 6 meses">
+							<label for="tempoFormaturaEmprego1">0 a 6 meses</label><br>
+							<input type=radio id="tempoFormaturaEmprego2"
+							name="tempoFormaturaEmprego" value="7 a 12 meses">
+							<label for="tempoFormaturaEmprego2">7 a 12 meses</label><br>
+							<input type=radio id="tempoFormaturaEmprego3"
+							name="tempoFormaturaEmprego" value="mais de 12 meses">
+							<label for="tempoFormaturaEmprego3">mais de 12 meses</label><br>
+						</div>
+					</div>
 				
-					<p>Seu trabalho é na sua área de formação?</p>
-					
-					<input type="radio" name="trabalhaNaAreaDeFormacao" 
-					id="trabalhaNaAreaDeFormacao1" value="Sim">
-					<label for="trabalhaNaAreaDeFormacao1">Sim</label><br>
-					<input type="radio" name="trabalhaNaAreaDeFormacao" 
-					id="trabalhaNaAreaDeFormacao2" value="Não">
-					<label for="trabalhaNaAreaDeFormacao2">Não</label><br><br>
+					<div>
+						<p>Seu trabalho é na sua área de formação?</p>
+						<div class="radio">
+							<input type="radio" name="trabalhaNaAreaDeFormacao"
+							id="trabalhaNaAreaDeFormacao1" value="Sim">
+							<label for="trabalhaNaAreaDeFormacao1">Sim</label><br>
+							<input type="radio" name="trabalhaNaAreaDeFormacao"
+							id="trabalhaNaAreaDeFormacao2" value="Não">
+							<label for="trabalhaNaAreaDeFormacao2">Não</label><br><br>
+						</div>
+					</div>
 				
-					<p>Faixa salarial:</p>
-					
-					<input type=radio id="faixaSalarial1" name="faixaSalarial" 
-					value="1 a 2 salários mínimos">
-					<label for="faixaSalarial1">1 a 2 salários mínimos</label><br>
-					<input type=radio id="faixaSalarial2" name="faixaSalarial" 
-					value="3 a 5 salários mínimos">
-					<label for="faixaSalarial2">3 a 5 salários mínimos</label><br>
-					<input type=radio id="faixaSalarial3" name="faixaSalarial" 
-					value="mais de 5 salários">
-					<label for="faixaSalarial3">mais de 5 salários</label><br>
+					<div>
+						<p>Faixa salarial:</p>
+						<div class="radio">
+							<input type=radio id="faixaSalarial1" name="faixaSalarial"
+							value="1 a 2 salários mínimos">
+							<label for="faixaSalarial1">1 a 2 salários mínimos</label><br>
+							<input type=radio id="faixaSalarial2" name="faixaSalarial"
+							value="3 a 5 salários mínimos">
+							<label for="faixaSalarial2">3 a 5 salários mínimos</label><br>
+							<input type=radio id="faixaSalarial3" name="faixaSalarial"
+							value="mais de 5 salários">
+							<label for="faixaSalarial3">mais de 5 salários</label><br>
+						</div>
+					</div>
 
-					<p>Há uma relação entre o curso de graduação concluido e a atividade 
-						laboral que está exercendo?</p>
-					
-					<input type="radio" id="relacaoCursoTrabalho1" 
-					name="relacaoCursoTrabalho" value="Sim">
-					<label>Sim</label><br>
-					<input type="radio" id="relacaoCursoTrabalho2" 
-					name="relacaoCursoTrabalho" value="Não">
-					<label>Não</label><br>
+					<div>
+						<p>Há uma relação entre o curso de graduação concluido e a atividade
+							laboral que está exercendo?</p>
+						<div class="radio">
+							<input type="radio" id="relacaoCursoTrabalho1"
+							name="relacaoCursoTrabalho" value="Sim">
+							<label>Sim</label><br>
+							<input type="radio" id="relacaoCursoTrabalho2"
+							name="relacaoCursoTrabalho" value="Não">
+							<label>Não</label><br>
+						</div>
+					</div>
 
-					<p>Recebeu orientação, no âmbito do seu respectivo curso, para atuar no 
-						mercado de trabalho?</p>
-					
-					<input type="radio" id="recebeuOrientacao1" name="recebeuOrientacao" 
-					value="Sim">
-					<label for="recebeuOrientacao1">Sim</label><br>
-					<input type="radio" id="recebeuOrientacao2" name="recebeuOrientacao" 
-					value="Não">
-					<label for="recebeuOrientacao2">Não</label><br>
+					<div>
+						<p>Recebeu orientação, no âmbito do seu respectivo curso, para atuar no
+							mercado de trabalho?</p>
+						<div class="radio">
+							<input type="radio" id="recebeuOrientacao1" name="recebeuOrientacao"
+							value="Sim">
+							<label for="recebeuOrientacao1">Sim</label><br>
+							<input type="radio" id="recebeuOrientacao2" name="recebeuOrientacao"
+							value="Não">
+							<label for="recebeuOrientacao2">Não</label><br>
+						</div>
+					</div>
 
-					<p>As temáticas e/ou assuntos abordados nas várias disciplinas cursadas 
-						tiveram utilidade para o exercício profissional?</p>
-					
-					<input type="radio" id="disciplinasForamUteis1" 
-					name="disciplinasForamUteis" value="Sim">
-					<label for="disciplinasForamUteis1">Sim</label><br>
-					<input type="radio" id="disciplinasForamUteis2" 
-					name="disciplinasForamUteis" value="Não">
-					<label for="disciplinasForamUteis2">Não</label><br>
+					<div>
+						<p>As temáticas e/ou assuntos abordados nas várias disciplinas cursadas
+							tiveram utilidade para o exercício profissional?</p>
+						<div class="radio">
+							<input type="radio" id="disciplinasForamUteis1"
+							name="disciplinasForamUteis" value="Sim">
+							<label for="disciplinasForamUteis1">Sim</label><br>
+							<input type="radio" id="disciplinasForamUteis2"
+							name="disciplinasForamUteis" value="Não">
+							<label for="disciplinasForamUteis2">Não</label><br>
+						</div>
+					</div>
 
-					<p>O(s) estágio(s) que cumpriu no curso contribuiu para a inserção 
-						profissional no mercado de trabalho?</p>
-					
-					<input type="radio" id="estagioContribuiuEmprego1" 
-					name="estagioContribuiuEmprego" value="Sim">
-					<label for="estagioContribuiuEmprego1">Sim</label><br>
-					<input type="radio" id="estagioContribuiuEmprego2" 
-					name="estagioContribuiuEmprego" value="Não">
-					<label for="estagioContribuiuEmprego2">Não</label><br>
-					<input type="radio" id="estagioContribuiuEmprego3" 
-					name="estagioContribuiuEmprego" value="Não fiz estágio">
-					<label for="estagioContribuiuEmprego3">Não fiz estágio</label><br>
+					<div>
+						<p>O(s) estágio(s) que cumpriu no curso contribuiu para a inserção
+							profissional no mercado de trabalho?</p>
+						<div class="radio">
+							<input type="radio" id="estagioContribuiuEmprego1"
+							name="estagioContribuiuEmprego" value="Sim">
+							<label for="estagioContribuiuEmprego1">Sim</label><br>
+							<input type="radio" id="estagioContribuiuEmprego2"
+							name="estagioContribuiuEmprego" value="Não">
+							<label for="estagioContribuiuEmprego2">Não</label><br>
+							<input type="radio" id="estagioContribuiuEmprego3"
+							name="estagioContribuiuEmprego" value="Não fiz estágio">
+							<label for="estagioContribuiuEmprego3">Não fiz estágio</label><br>
+						</div>
+					</div>
 
 					<p>Comente:</p>
 
@@ -297,17 +344,20 @@ definirDadosSessao();
 					
 					<legend>Nível de Satisfação</legend>
 					<!-- --------------------------------------------------------------- -->
-					<p>Em relação à satisfação com seu curso, você está?</p>
-
-					<input type="radio" id="satisfacaoComCurso1" name="satisfacaoComCurso" 
-					value="Muito Satisfeito">
-					<label for="satisfacaoComCurso1">Muito Satisfeito</label><br>
-					<input type="radio" id="satisfacaoComCurso2" name="satisfacaoComCurso" 
-					value="Satisfeito">
-					<label for="satisfacaoComCurso2">Satisfeito</label><br>
-					<input type="radio" id="satisfacaoComCurso3" name="satisfacaoComCurso" 
-					value="Insatisfeito">
-					<label for="satisfacaoComCurso3">Insatisfeito</label><br>
+					<div>
+						<p>Em relação à satisfação com seu curso, você está?</p>
+						<div class="radio">
+							<input type="radio" id="satisfacaoComCurso1" name="satisfacaoComCurso"
+							value="Muito Satisfeito">
+							<label for="satisfacaoComCurso1">Muito Satisfeito</label><br>
+							<input type="radio" id="satisfacaoComCurso2" name="satisfacaoComCurso"
+							value="Satisfeito">
+							<label for="satisfacaoComCurso2">Satisfeito</label><br>
+							<input type="radio" id="satisfacaoComCurso3" name="satisfacaoComCurso"
+							value="Insatisfeito">
+							<label for="satisfacaoComCurso3">Insatisfeito</label><br>
+						</div>
+					</div>
 
 					<p>Justifique:</p>
 
@@ -315,14 +365,17 @@ definirDadosSessao();
 					placeholder="Justifique sua satisfação com o curso"
 					></textarea><br>
 
-					<p>Você recomendaria seu curso para outra pessoa?</p>
-
-					<input type="radio" id="recomendaCurso1" name="recomendaCurso" 
-					value="Sim">
-					<label for="recomendaCurso1">Sim</label><br>
-					<input type="radio" id="recomendaCurso2" name="recomendaCurso" 
-					value="Não">
-					<label for="recomendaCurso2">Não</label><br>
+					<div>
+						<p>Você recomendaria seu curso para outra pessoa?</p>
+						<div class="radio">
+							<input type="radio" id="recomendaCurso1" name="recomendaCurso"
+							value="Sim">
+							<label for="recomendaCurso1">Sim</label><br>
+							<input type="radio" id="recomendaCurso2" name="recomendaCurso"
+							value="Não">
+							<label for="recomendaCurso2">Não</label><br>
+						</div>
+					</div>
 
 					<p>Justifique:</p>
 					
@@ -337,11 +390,15 @@ definirDadosSessao();
 
 					<legend>Relação atual com a Universidade</legend>
 					<!-- --------------------------------------------------------------- -->
-					<p>Participa de eventos acadêmicos da UFPA?</p>
-					<input type="radio" id="participaDeEventos1" name="participaDeEventos" value="Sim">
-					<label for="participaDeEventos1">Sim</label><br>
-					<input type="radio" id="participaDeEventos2" name="participaDeEventos" value="Não">
-					<label for="participaDeEventos2">Não</label><br>
+					<div>
+						<p>Participa de eventos acadêmicos da UFPA?</p>
+						<div class="radio">
+							<input type="radio" id="participaDeEventos1" name="participaDeEventos" value="Sim">
+							<label for="participaDeEventos1">Sim</label><br>
+							<input type="radio" id="participaDeEventos2" name="participaDeEventos" value="Não">
+							<label for="participaDeEventos2">Não</label><br>
+						</div>
+					</div>
 
 					<p>Caso sim, cite os principais:</p>
 
@@ -349,14 +406,17 @@ definirDadosSessao();
 					placeholder="Cite os eventos aos quais mais participa"
 					></textarea><br>
 
-					<p>Participa de grupos de pesquisa e/ou projetos de extensão?</p>
-
-					<input type="radio" id="participaDeProjeto1" name="participaDeProjeto" 
-					value="Sim">
-					<label for="participaDeProjeto1">Sim</label><br>
-					<input type="radio" id="participaDeProjeto2" name="participaDeProjeto" 
-					value="Não">
-					<label for="participaDeProjeto2">Não</label><br>
+					<div>
+						<p>Participa de grupos de pesquisa e/ou projetos de extensão?</p>
+						<div class="radio">
+							<input type="radio" id="participaDeProjeto1" name="participaDeProjeto"
+							value="Sim">
+							<label for="participaDeProjeto1">Sim</label><br>
+							<input type="radio" id="participaDeProjeto2" name="participaDeProjeto"
+							value="Não">
+							<label for="participaDeProjeto2">Não</label><br>
+						</div>
+					</div>
 
 					<p>Caso sim, cite os principais:</p>
 
@@ -364,14 +424,17 @@ definirDadosSessao();
 					placeholder="Projetos atuais de extensão e/ou pesquisa"
 					></textarea><br>
 					
-					<p>Participa de algum curso?</p>
-					
-					<input type="radio" id="participaDeCurso1" name="participaDeCurso" 
-					value="Sim">
-					<label for="participaDeCurso1">Sim</label><br>
-					<input type="radio" id="participaDeCurso2" name="participaDeCurso" 
-					value="Não">
-					<label for="participaDeCurso2">Não</label><br>
+					<div>
+						<p>Participa de algum curso?</p>
+						<div class="radio">
+							<input type="radio" id="participaDeCurso1" name="participaDeCurso"
+							value="Sim">
+							<label for="participaDeCurso1">Sim</label><br>
+							<input type="radio" id="participaDeCurso2" name="participaDeCurso"
+							value="Não">
+							<label for="participaDeCurso2">Não</label><br>
+						</div>
+					</div>
 					
 					<p>Caso sim, cite os principais:</p>
 
@@ -399,24 +462,43 @@ definirDadosSessao();
     <!--------------------- Início do código JavaScrip para tratamento de erro ---------------------------->
 	<script>
   		function envioSucesso(event) {
-			
+			event.preventDefault();
 			var campos = document.querySelectorAll('textarea');
-			var inputs = document.querySelectorAll('input');
+			var selects = document.querySelectorAll('select');
+			var radioDivs = document.querySelectorAll('.radio');
 			var spans = document.querySelectorAll('span');
 			var todosPreenchidos = true;
 			
-			inputs.forEach( 
-				function(inputNode) {
-					var labels = document.querySelectorAll("label[for=" + CSS.escape(inputNode.id) + "]");
-					console.log(inputNode.id);
-					// console.log(labels);
-					labels.forEach(
-						function(labelNode) {
-							labelNode.style.color = 'red';
+			radioDivs.forEach( 
+				function(divNode) {
+					respondido = false;
+					divNode.childNodes.forEach(
+						function(radioNode) {
+							if (radioNode.checked) {
+								respondido = true;
+							}
 						}
-					);
+					)
+					if (respondido == false) {
+						var pergunta = divNode.parentNode.textContent;
+						divNode.previousElementSibling.classList.add('obrigatorio');
+					} else {
+						divNode.previousElementSibling.classList.remove('obrigatorio');
+					}
 				}
-			);
+			)
+			// 		// var labels = document.querySelectorAll("label[for=" + CSS.escape(inputNode.id) + "]");
+			// 		labels.forEach(
+			// 			function(labelNode) {
+			// 				var spanDeObrigatoriedade = document.createElement('span');
+			// 				spanDeObrigatoriedade.textContent = "*";
+			// 				spanDeObrigatoriedade.classList.add('obrigatorio');
+			// 				labelNode.appendChild(spanDeObrigatoriedade);
+			// 				// labelNode.style.color = 'red';
+			// 			}
+			// 		);
+			// 	}
+			// );
 
 			for (var i = 0; i < campos.length; i++) {
 				var campo = campos[i];

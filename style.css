@@ -239,13 +239,18 @@ hr {
     border-color: red;
 }
 
+.obrigatorio {
+    color: red;
+    font-style: italic;
+}
+
 .obrigatorio::before {
-    content: ;
+    content: '';
 }
 
 .obrigatorio::after {
     color: red;
-    content: " Selecione uma opção";
+    /* content: " Selecione uma opção"; */
 }
 
 
