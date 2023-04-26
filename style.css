@@ -137,7 +137,7 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
     padding: 35px;
-    width: 40%;
+    width: 55%;
     height: 50%;
     border-radius: 5px;
     border: none;
@@ -180,7 +180,7 @@ textarea {
     width: 100%;
 }
 
-select {
+ select {
     background-color: rgb(52, 146, 209);
     color: #FFFFFF;
     height: 25px;
@@ -188,7 +188,7 @@ select {
     border-radius: 50px;
     font-weight: bold;
     padding: 5px;
-}
+} 
 
 select:hover {
     cursor: pointer;
@@ -232,11 +232,15 @@ hr {
     font-size: smaller;
     font-weight: bold;
     font-family: sans-serif;
-    /* text-align: center; */
+    
 }
 
- .nao_preenchido {
-    border-color: red;
+.nao_preenchido {
+    border: 1px solid red;
+}
+
+.select_vazio {
+    background-color: red;
 }
 
 .obrigatorio {
@@ -244,14 +248,8 @@ hr {
     font-style: italic;
 }
 
-.obrigatorio::before {
-    content: '';
-}
 
-.obrigatorio::after {
-    color: red;
-    /* content: " Selecione uma opção"; */
-}
+
 
 
   

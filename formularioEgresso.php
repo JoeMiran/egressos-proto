@@ -5,30 +5,34 @@ definirDadosSessao();
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Formulário - Egressos</title>
-    </head>
-    <body>
 
-	<header>
-         <div id="navbar">
-             <div class="resp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Formulário - Egressos</title>
+</head>
+
+<body>
+
+    <header>
+        <div id="navbar">
+            <div class="resp">
                 <h1>
                     <strong>Pesquisa de Egressos da UFPA</strong>
-                 </h1>
+                </h1>
             </div>
-        </div>   
-            
-        <div id="barra"> 
+        </div>
+
+        <div id="barra">
             <a href="https://egressos.ufpa.br/">
                 <img class="logo" src="images/logo_ufpa.png">
             </a>
-            	<button class="return" type="button"><strong><a style="font-size: larger;" class="link" href="validaCpf.php">🢀</a></strong></button>
+            <button class="return" type="button"><strong><a style="font-size: larger;" class="link"
+                        href="validaCpf.php">🢀</a></strong></button>
             </a>
         </div>
+        
 	</header>
 
 	<body>
@@ -487,45 +491,26 @@ definirDadosSessao();
 					}
 				}
 			)
-			// 		// var labels = document.querySelectorAll("label[for=" + CSS.escape(inputNode.id) + "]");
-			// 		labels.forEach(
-			// 			function(labelNode) {
-			// 				var spanDeObrigatoriedade = document.createElement('span');
-			// 				spanDeObrigatoriedade.textContent = "*";
-			// 				spanDeObrigatoriedade.classList.add('obrigatorio');
-			// 				labelNode.appendChild(spanDeObrigatoriedade);
-			// 				// labelNode.style.color = 'red';
-			// 			}
-			// 		);
-			// 	}
-			// );
+      for (const campo of campos) {
 
-			for (var i = 0; i < campos.length; i++) {
-				var campo = campos[i];
+          if (campo.value.length === 0) {
+              campo.classList.add('nao_preenchido');
+              todosPreenchidos = false;
+          } else {
+              campo.classList.remove('nao_preenchido');
+          }
+      }
+      for (const select of selects) {
 
-				if (campo.value.trim() === '') {
-					event.preventDefault();
-					campo.classList.add('nao_preenchido');
-					todosPreenchidos = false;
-				} else {
-					campo.classList.remove('nao_preenchido');
-				}
-			}
-
-			for (var i = 0; i < spans.length; i++) {
-				var span = spans[i];
-
-				if (todosPreenchidos) {
-					span.classList.remove('obrigatorio');
-				} else {
-					span.classList.add('obrigatorio');
-				}
-			}
-
-			if (!todosPreenchidos) {
-				alert('Por favor, preencha todos os campos.');
-				event.preventDefault();
-			}
+          if (select.selectedIndex === 0) {
+              select.classList.add('select_vazio');
+              todosPreenchidos = false;
+          } else {
+              select.classList.remove('select_vazio');
+          }
+      }
+      if (!todosPreenchidos) {
+          alert(' Todos os campos indicados com " * " são obrigatórios.');
   		}
 	</script> 
     <!--------------------- Fim do código JavaScrip para tratamento de erro ---------------------------->
@@ -536,4 +521,4 @@ definirDadosSessao();
 				<a>Copyright @ 2023 Portal do Egresso da Universidade Federal do Pará</a>
 			</footer> 
     </body>
-<html>
+  <html>
