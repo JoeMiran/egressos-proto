@@ -37,7 +37,7 @@ definirDadosSessao();
 				
 	<div id="area-principal">
 		<!-- <form onsubmit="return validaFormulario()" action="salvaQuestionario.php" method="post" name="resposta"> -->
-		<form onsubmit="return validaFormulario()" method="post" name="resposta">
+		<form action="salvaQuestionario.php" method="post" name="resposta">
 
 			<!-- <h3>Perfil sócio demográfico: caracterização contextual do público pesquisado</h3> -->
 

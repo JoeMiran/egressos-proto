@@ -42,7 +42,7 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
             <fieldset>
                 <legend><strong>SEUS DADOS CADASTRAIS</strong></legend><br>
             
-                <div class="consulta">
+                <div class="dados">
                     <p>CPF: <?php echo $dados['cpf']; ?></p><br>
                     <p>Nome: <?php echo $dados['nome']; ?></p><br>
                     <p>Email: <?php echo $dados['email']; ?></p><br>
