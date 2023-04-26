@@ -43,7 +43,7 @@ definirDadosSessao();
 
 			<fieldset>
 				<!-- --------------------------------------------------------------- -->
-				<legend>Dados Pessoais</legend>
+				<legend><strong>DADOS PESSOAIS</strong></legend>
 				<div class="dados">
 					<p>Nome: <?php echo $_SESSION['nome'];?></p>
 					<p>Email: <?php echo $_SESSION['email'];?></p>
@@ -81,7 +81,7 @@ definirDadosSessao();
 
 			<fieldset>
 				<!-- --------------------------------------------------------------- -->
-				<legend>Sobre sua formação na Univesidade</legend>
+				<legend><strong>FORMAÇÃO</strong></legend>
 				<div class="dados">
 					<p>Curso: <?php echo $_SESSION['curso'];?></p>
 					<p>Campus: <?php echo $_SESSION['campus'];?></p>
@@ -112,7 +112,7 @@ definirDadosSessao();
 			
 			<fieldset>
 			
-				<legend>Dados Complementares</legend>
+				<legend><strong>DADOS COMPLEMENTARES</strong></legend>
 				<!-- --------------------------------------------------------------- -->
 				<div class="pergunta">
 					<p>Participou de atividades acadêmicas extracurriculares durante o
@@ -199,7 +199,7 @@ definirDadosSessao();
 
 			<fieldset>
 				<!-- --------------------------------------------------------------- -->
-				<legend>Situação Profissional</legend>
+				<legend><strong>SITUAÇÃO PROFISSIONAL</strong></legend>
 
 				<div class="pergunta">
 					<p>Atualmente está inserido/a no mercado de trabalho?</p>
@@ -338,7 +338,7 @@ definirDadosSessao();
 
 			<fieldset>
 				
-				<legend>Nível de Satisfação</legend>
+				<legend><strong>NÍVEL DE SATISFAÇÃO</strong></legend>
 				<!-- --------------------------------------------------------------- -->
 				<div class="pergunta">
 					<p>Em relação à satisfação com seu curso, você está?</p>
@@ -384,7 +384,7 @@ definirDadosSessao();
 
 			<fieldset>
 
-				<legend>Relação atual com a Universidade</legend>
+				<legend><strong>RELAÇÃO ATUAL COM A UNIVERSIDADE</strong></legend>
 				<!-- --------------------------------------------------------------- -->
 				<div class="pergunta">
 					<p>Participa de eventos acadêmicos da UFPA?</p>
