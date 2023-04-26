@@ -468,7 +468,6 @@ definirDadosSessao();
 			var campos = document.querySelectorAll('textarea');
 			var selects = document.querySelectorAll('select');
 			var radioDivs = document.querySelectorAll('.radio');
-			var spans = document.querySelectorAll('span');
 			var todosPreenchidos = true;
 			
 			radioDivs.forEach( 
@@ -510,7 +509,7 @@ definirDadosSessao();
 			if (!todosPreenchidos) {
 				alert('Por favor responda as perguntas em destaque.');
 				}
-	}
+		}
 	</script> 
 	<!--------------------- Fim do código JavaScrip para tratamento de erro ---------------------------->
 
