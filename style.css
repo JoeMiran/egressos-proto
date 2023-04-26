@@ -180,7 +180,7 @@ textarea {
     width: 100%;
 }
 
- select {
+select {
     background-color: rgb(52, 146, 209);
     color: #FFFFFF;
     height: 25px;
@@ -248,6 +248,20 @@ hr {
     font-style: italic;
 }
 
+.dados {
+    margin: 40px 0 0 0;
+}
+
+.dados p{
+    margin: 0 0 15px 0;
+}
+
+.dados span{
+    color: rgb(59, 59, 59);
+    font-family: sans-serif;
+    font-size: medium;
+}
+
 .pergunta {
     margin: 40px 0;
 }
@@ -256,19 +270,14 @@ hr {
     margin: 15px 0 0 15px;
 }
 
-.checkbox {
-    margin: 15px 0 0 15px;
-}
-
 .radio input { 
     margin: 0 0 16px 0;
+}
+
+.checkbox {
+    margin: 15px 0 0 15px;
 }
 
 .checkbox input { 
     margin: 0 0 18px 0;
 }
-
-
-
-
-  

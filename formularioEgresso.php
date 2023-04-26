@@ -45,9 +45,9 @@ definirDadosSessao();
 				<!-- --------------------------------------------------------------- -->
 				<legend><strong>DADOS PESSOAIS</strong></legend>
 				<div class="dados">
-					<p>Nome: <?php echo $_SESSION['nome'];?></p>
-					<p>Email: <?php echo $_SESSION['email'];?></p>
-					<p>Idade: <?php echo $_SESSION['idade'];?></p>
+					<p>Nome: <span><?php echo $_SESSION['nome'];?></span></p>
+					<p>Email: <span><?php echo $_SESSION['email'];?></span></p>
+					<p>Idade: <span><?php echo $_SESSION['idade'];?></span></p>
 				</div>
 				<!-- --------------------------------------------------------------- -->
 				<div class="pergunta">
@@ -83,9 +83,9 @@ definirDadosSessao();
 				<!-- --------------------------------------------------------------- -->
 				<legend><strong>FORMAÇÃO</strong></legend>
 				<div class="dados">
-					<p>Curso: <?php echo $_SESSION['curso'];?></p>
-					<p>Campus: <?php echo $_SESSION['campus'];?></p>
-					<p>Ano de Ingresso: <?php echo $_SESSION['anoIngresso'];?></p>
+					<p>Curso: <span><?php echo $_SESSION['curso'];?></span></p>
+					<p>Campus: <span><?php echo $_SESSION['campus'];?></span></p>
+					<p>Ano de Ingresso: <span><?php echo $_SESSION['anoIngresso'];?></span></p>
 				</div>
 				
 				<!-- --------------------------------------------------------------- -->
