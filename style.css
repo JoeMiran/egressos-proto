@@ -254,10 +254,11 @@ hr {
 
 .dados p{
     margin: 0 0 15px 0;
+    color: #796d6d;
 }
 
 .dados span{
-    color: rgb(59, 59, 59);
+    color: #796d6d;
     font-family: sans-serif;
     font-size: medium;
 }
