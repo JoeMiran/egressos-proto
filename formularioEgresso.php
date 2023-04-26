@@ -51,8 +51,8 @@ definirDadosSessao();
 				</div>
 				<!-- --------------------------------------------------------------- -->
 				<div class="pergunta">
-					<p>Gênero: </p>
 					<div>
+						<label style="font-size: larger;">Gênero: </label>
 						<select id="genero" name="genero">
 							<option>Selecione</option>
 							<option value="Masculino">Masculino</option>
@@ -63,8 +63,8 @@ definirDadosSessao();
 				</div>
 					
 				<div class="pergunta">
-					<p>Cor/Raça: </p>
 					<div>
+					<label style="font-size: larger;">Cor/Raça: </label>
 						<select id="cor" name="cor">
 							<option>Selecione</option>
 							<option value="Preto">Preto</option>
@@ -158,8 +158,8 @@ definirDadosSessao();
 				</div>
 
 				<div class="pergunta">
-					<p>Curso de Pós-Graduação concluído ou em andamento:</p>
-					<div class="radio">
+					<div>
+					<label style="font-size: larger;">Curso de Pós-Graduação:</label>
 						<select name="cursoPosGraduacao" id="cursoPosGraduacao">
 							<option value="Nenhum">Nenhum</option>
 							<option value="Aperfeiçoamento">Aperfeiçoamento</option>
@@ -199,10 +199,10 @@ definirDadosSessao();
 
 			<fieldset>
 				<!-- --------------------------------------------------------------- -->
-				<legend>Situação Profissional Atual & Atividade Laboral</legend>
+				<legend>Situação Profissional</legend>
 
 				<div class="pergunta">
-					<p>Atualmente estão inserido/a no mercado de trabalho?</p>
+					<p>Atualmente está inserido/a no mercado de trabalho?</p>
 					<div class="radio">
 						<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado1"
 						value="Sim">
@@ -434,13 +434,13 @@ definirDadosSessao();
 				
 				<p>Caso sim, cite os principais:</p>
 
-				<textarea name="resumoCursosAtuais" cols=40 rows=6 
+				<textarea style="margin:0 0 40px 0;" name="resumoCursosAtuais" cols=40 rows=6 
 				placeholder="Liste os cursos aos quais participa"
 				></textarea>
 				
 				<p>Indique atividades que você gostaria de participar:</p>
 
-				<textarea name="resumoAtividadesInteresse" cols=40 rows=6 
+				<textarea style="margin:0 0 40px 0;" name="resumoAtividadesInteresse" cols=40 rows=6 
 				placeholder="Projetos de extensão e/ou pesquisa, eventos, cursos"
 				></textarea>
 				
