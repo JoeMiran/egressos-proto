@@ -458,7 +458,6 @@ definirDadosSessao();
 <!--------------------- Início do código JavaScrip para tratamento de erro ---------------------------->
 	<script>
 		function envioSucesso(event) {
-			event.preventDefault();
 			var campos = document.querySelectorAll('textarea');
 			var selects = document.querySelectorAll('select');
 			var radioDivs = document.querySelectorAll('.radio');
@@ -501,8 +500,9 @@ definirDadosSessao();
 				}
 			}
 			if (!todosPreenchidos) {
+				event.preventDefault();
 				alert('Por favor responda as perguntas em destaque.');
-				}
+			}
 		}
 	</script> 
 	<!--------------------- Fim do código JavaScrip para tratamento de erro ---------------------------->
