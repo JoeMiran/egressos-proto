@@ -51,12 +51,9 @@ definirDadosSessao();
         <script>
 
             function validarCpf(event) {
-                //event.preventDefault();
+                
                 const cpfInput = document.querySelector('.cpf');
                 const cpf = cpfInput.value;
-				console.log(/^0*$/g.test(cpf));
-				console.log(cpfInput);
-				console.log(cpf);
                 
                 if(cpf.length !== 11 || isNaN(cpf) || /^0*$/.test(cpf)) {
                     const erroCpf = document.querySelector('.erro');
