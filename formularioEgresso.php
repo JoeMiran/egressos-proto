@@ -383,15 +383,6 @@ definirDadosSessao();
                         }
                     }
 
-                    for (const span of spans) {
-                        
-                        if (todosPreenchidos) {
-                            span.classList.remove('obrigatorio');
-                        } else {
-                           span.classList.add('obrigatorio');
-                        }
-                   }
-
                     if (!todosPreenchidos) {
                         alert(' Todos os campos indicados com " * " são obrigatórios.');
                         event.preventDefault();
