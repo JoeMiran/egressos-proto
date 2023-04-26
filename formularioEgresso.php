@@ -39,19 +39,18 @@ definirDadosSessao();
 		<!-- <form onsubmit="return validaFormulario()" action="salvaQuestionario.php" method="post" name="resposta"> -->
 		<form onsubmit="return validaFormulario()" method="post" name="resposta">
 
-			<!-- <h3>Perfil sócio demográfico: caracterização contextual do público pesquisado<br><br></h3> -->
+			<!-- <h3>Perfil sócio demográfico: caracterização contextual do público pesquisado</h3> -->
 
 			<fieldset>
 				<!-- --------------------------------------------------------------- -->
-				<legend><strong>DADOS PESSOAIS</strong></legend><br>
-
-				<?php echo 'Nome: ' . $_SESSION['nome'] . '<br><br>';?>
-				
-				<?php echo 'Email: '.$_SESSION['email'] .'<br><br>';?>
-				
-				<?php echo 'Idade: ' . $_SESSION['idade'] . ' anos<br><br>';?><br>
+				<legend>Dados Pessoais</legend>
+				<div class="dados">
+					<p>Nome: <?php echo $_SESSION['nome'];?></p>
+					<p>Email: <?php echo $_SESSION['email'];?></p>
+					<p>Idade: <?php echo $_SESSION['idade'];?></p>
+				</div>
 				<!-- --------------------------------------------------------------- -->
-				<div>
+				<div class="pergunta">
 					<p>Gênero: </p>
 					<div>
 						<select id="genero" name="genero">
@@ -59,11 +58,11 @@ definirDadosSessao();
 							<option value="Masculino">Masculino</option>
 							<option value="Feminino">Feminino</option>
 							<option value="Outro">Outro</option>
-						</select><br><br>
+						</select>
 					</div>
 				</div>
 					
-				<div>
+				<div class="pergunta">
 					<p>Cor/Raça: </p>
 					<div>
 						<select id="cor" name="cor">
@@ -78,20 +77,19 @@ definirDadosSessao();
 					</div>
 				</div>
 				<!-- --------------------------------------------------------------- -->
-			</fieldset><br>
+			</fieldset>
 
 			<fieldset>
 				<!-- --------------------------------------------------------------- -->
-				<legend><strong>SOBRE SUA FORMAÇÃO NA UNIVERSIDADE</strong></legend><br>
-
-				<?php echo 'Curso: ' . $_SESSION['curso'];?><br><br>
-				
-				<?php echo 'Campus: ' . $_SESSION['campus'];?><br><br>
-
-				<?php echo 'Ano de Ingresso: ' . $_SESSION['anoIngresso'];?><br><br>
+				<legend>Sobre sua formação na Univesidade</legend>
+				<div class="dados">
+					<p>Curso: <?php echo $_SESSION['curso'];?></p>
+					<p>Campus: <?php echo $_SESSION['campus'];?></p>
+					<p>Ano de Ingresso: <?php echo $_SESSION['anoIngresso'];?></p>
+				</div>
 				
 				<!-- --------------------------------------------------------------- -->
-				<div>
+				<div class="pergunta">
 					<p>Obteve bolsa durante o curso?</p>
 					<div class="radio">
 						<input type="radio" name="bolsa" id="bolsa1" value="Sim">
@@ -101,49 +99,45 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div>
+				<div class="pergunta">
 					<p>Se sim, qual(is)?</p>
 					<div>
 						<textarea name="resumoBolsa" cols=40 rows=6
 						placeholder="Descreva mais sobre a bolsa"
-						></textarea><br><br>
+						></textarea>
 					</div>
 				</div>
 				<!-- --------------------------------------------------------------- -->
-			</fieldset><br>
+			</fieldset>
 			
 			<fieldset>
 			
 				<legend>Dados Complementares</legend>
 				<!-- --------------------------------------------------------------- -->
-				<p>Participou de atividades acadêmicas extracurriculares durante o 
-					curso?</p><br>
+				<div class="pergunta">
+					<p>Participou de atividades acadêmicas extracurriculares durante o
+						curso?</p>
+					<div class="checkbox">
+						<input type=checkbox id="iniciacaoCientifica" name="iniciacaoCientifica">
+						<label for="iniciacaoCientifica">Iniciação Científica</label><br>
+						<input type=checkbox id="monitoria" name="monitoria">
+						<label for="monitoria">Monitoria</label><br>
+						<input type=checkbox id="estagioNaoObrigatorio" name="estagioNaoObrigatorio">
+						<label for="estagioNaoObrigatorio">Estágio Não Obrigatório pertinente ao curso</label><br>
+						<input type=checkbox id="atividadeComunidade" name="atividadeComunidade">
+						<label for="atividadeComunidade">Atividade Curricular em Comunidade - ACC</label><br>
+						<input type=checkbox id="participouDeEventos" name="participouDeEventos">
+						<label for="participouDeEventos">Eventos: Congressos, Seminários, etc</label><br>
+						<input type=checkbox id="empresaJunior" name="empresaJunior">
+						<label for="empresaJunior">Empresa Júnior</label><br>
+						<input type=checkbox id="diretorioAcademico" name="diretorioAcademico">
+						<label for="diretorioAcademico">Diretório Acadêmico</label><br>
+						<input type=checkbox id="outrasAtividades" name="outrasAtividades">
+						<label for="outrasAtividades">Outras Atividades</label><br>
+					</div>
+				</div>
 
-				<input type=checkbox id="iniciacaoCientifica" name="iniciacaoCientifica">
-				<label for="iniciacaoCientifica">Iniciação Científica</label><br>
-
-				<input type=checkbox id="monitoria" name="monitoria">
-				<label for="monitoria">Monitoria</label><br>
-
-				<input type=checkbox id="estagioNaoObrigatorio" name="estagioNaoObrigatorio">
-				<label for="estagioNaoObrigatorio">Estágio Não Obrigatório pertinente ao curso</label><br>
-
-				<input type=checkbox id="atividadeComunidade" name="atividadeComunidade">
-				<label for="atividadeComunidade">Atividade Curricular em Comunidade - ACC</label><br>
-
-				<input type=checkbox id="participouDeEventos" name="participouDeEventos">
-				<label for="participouDeEventos">Eventos: Congressos, Seminários, etc</label><br>
-
-				<input type=checkbox id="empresaJunior" name="empresaJunior">
-				<label for="empresaJunior">Empresa Júnior</label><br>
-
-				<input type=checkbox id="diretorioAcademico" name="diretorioAcademico">
-				<label for="diretorioAcademico">Diretório Acadêmico</label><br>
-
-				<input type=checkbox id="outrasAtividades" name="outrasAtividades">
-				<label for="outrasAtividades">Outras Atividades</label><br>
-
-				<div>
+				<div class="pergunta">
 					<p>Durante o curso, você desenvolveu atividade remunerada fora da Universidade?</p>
 					<div class="radio">
 						<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada1"
@@ -159,12 +153,12 @@ definirDadosSessao();
 							curso</label><br>
 						<input type="radio" name="atividadeRemunerada" id="atividadeRemunerada4"
 						value="Não">
-						<label for="atividadeRemunerada4">Não</label><br><br>
+						<label for="atividadeRemunerada4">Não</label><br>
 					</div>
 				</div>
 
-				<div>
-					<p>Curso de Pós-Graduação concluído ou em andamento:</p><br>
+				<div class="pergunta">
+					<p>Curso de Pós-Graduação concluído ou em andamento:</p>
 					<div class="radio">
 						<select name="cursoPosGraduacao" id="cursoPosGraduacao">
 							<option value="Nenhum">Nenhum</option>
@@ -172,11 +166,11 @@ definirDadosSessao();
 							<option value="Especialização">Especialização</option>
 							<option value="Mestrado">Mestrado</option>
 							<option value="Doutorado">Doutorado</option>
-						</select><br>
+						</select>
 					</div>
 				</div>
 			
-				<div>
+				<div class="pergunta">
 					<p>Situação do curso:</p>
 					<div class="radio">
 						<input type="radio" name="situacaoCursoPosGraduacao"
@@ -184,11 +178,11 @@ definirDadosSessao();
 						<label for="posGraduacaoEmAndamento">Em andamento</label><br>
 						<input type="radio" name="situacaoCursoPosGraduacao"
 						id="posGraduacaoConcluida" value="Concluído">
-						<label for="posGraduacaoConcluida">Concluído</label><br><br>
+						<label for="posGraduacaoConcluida">Concluído</label><br>
 					</div>
 				</div>
 			
-				<div>
+				<div class="pergunta">
 					<p>Em caso de Curso Pós-Graduação, realizado ou andamento, é na
 						UFPA?</p>
 					<div class="radio">
@@ -197,17 +191,17 @@ definirDadosSessao();
 						<label for="posGraduacaoUfpa1">Sim</label><br>
 						<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa2"
 						value="Não">
-						<label for="posGraduacaoUfpa2">Não</label><br><br>
+						<label for="posGraduacaoUfpa2">Não</label><br>
 					</div>
 				</div>
 				<!-- --------------------------------------------------------------- -->
-			</fieldset><br>
+			</fieldset>
 
 			<fieldset>
 				<!-- --------------------------------------------------------------- -->
 				<legend>Situação Profissional Atual & Atividade Laboral</legend>
 
-				<div>
+				<div class="pergunta">
 					<p>Atualmente estão inserido/a no mercado de trabalho?</p>
 					<div class="radio">
 						<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado1"
@@ -215,11 +209,11 @@ definirDadosSessao();
 						<label for="inseridoNoMercado1">Sim</label><br>
 						<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado2"
 						value="Não">
-						<label for="inseridoNoMercado2">Não</label><br><br>
+						<label for="inseridoNoMercado2">Não</label><br>
 					</div>
 				</div>
 
-				<div>
+				<div class="pergunta">
 					<p>Se sim, qual a modalidade de emprego?</p>
 					<div class="radio">
 						<input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
@@ -236,7 +230,7 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div>
+				<div class="pergunta">
 					<p>Tempo necessário para conseguir atividade remunerada após a
 						formatura:</p>
 					<div class="radio">
@@ -252,7 +246,7 @@ definirDadosSessao();
 					</div>
 				</div>
 			
-				<div>
+				<div class="pergunta">
 					<p>Seu trabalho é na sua área de formação?</p>
 					<div class="radio">
 						<input type="radio" name="trabalhaNaAreaDeFormacao"
@@ -260,11 +254,11 @@ definirDadosSessao();
 						<label for="trabalhaNaAreaDeFormacao1">Sim</label><br>
 						<input type="radio" name="trabalhaNaAreaDeFormacao"
 						id="trabalhaNaAreaDeFormacao2" value="Não">
-						<label for="trabalhaNaAreaDeFormacao2">Não</label><br><br>
+						<label for="trabalhaNaAreaDeFormacao2">Não</label><br>
 					</div>
 				</div>
 			
-				<div>
+				<div class="pergunta">
 					<p>Faixa salarial:</p>
 					<div class="radio">
 						<input type=radio id="faixaSalarial1" name="faixaSalarial"
@@ -279,7 +273,7 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div>
+				<div class="pergunta">
 					<p>Há uma relação entre o curso de graduação concluido e a atividade
 						laboral que está exercendo?</p>
 					<div class="radio">
@@ -292,7 +286,7 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div>
+				<div class="pergunta">
 					<p>Recebeu orientação, no âmbito do seu respectivo curso, para atuar no
 						mercado de trabalho?</p>
 					<div class="radio">
@@ -305,7 +299,7 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div>
+				<div class="pergunta">
 					<p>As temáticas e/ou assuntos abordados nas várias disciplinas cursadas
 						tiveram utilidade para o exercício profissional?</p>
 					<div class="radio">
@@ -318,7 +312,7 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div>
+				<div class="pergunta">
 					<p>O(s) estágio(s) que cumpriu no curso contribuiu para a inserção
 						profissional no mercado de trabalho?</p>
 					<div class="radio">
@@ -338,15 +332,15 @@ definirDadosSessao();
 
 				<textarea name="resumoSituacaoProfissional" cols=40 rows=6 
 				placeholder="Descreva mais sobre sua situação profissional"
-				></textarea><br><br>
+				></textarea>
 				<!-- --------------------------------------------------------------- -->
-			</fieldset><br>
+			</fieldset>
 
 			<fieldset>
 				
 				<legend>Nível de Satisfação</legend>
 				<!-- --------------------------------------------------------------- -->
-				<div>
+				<div class="pergunta">
 					<p>Em relação à satisfação com seu curso, você está?</p>
 					<div class="radio">
 						<input type="radio" id="satisfacaoComCurso1" name="satisfacaoComCurso"
@@ -359,15 +353,15 @@ definirDadosSessao();
 						value="Insatisfeito">
 						<label for="satisfacaoComCurso3">Insatisfeito</label><br>
 					</div>
-				</div>
+				</div class="pergunta">
 
 				<p>Justifique:</p>
 
 				<textarea name="resumoSatisfacaoComCurso" cols=40 rows=6 
 				placeholder="Justifique sua satisfação com o curso"
-				></textarea><br>
+				></textarea>
 
-				<div>
+				<div class="pergunta">
 					<p>Você recomendaria seu curso para outra pessoa?</p>
 					<div class="radio">
 						<input type="radio" id="recomendaCurso1" name="recomendaCurso"
@@ -383,16 +377,16 @@ definirDadosSessao();
 				
 				<textarea name="resumoRecomendacaoCurso" cols=40 rows=6 
 				placeholder="Justifique a posição da sua recomendação"
-				></textarea><br><br>
+				></textarea>
 				
 				<!-- --------------------------------------------------------------- -->
-			</fieldset><br>
+			</fieldset>
 
 			<fieldset>
 
 				<legend>Relação atual com a Universidade</legend>
 				<!-- --------------------------------------------------------------- -->
-				<div>
+				<div class="pergunta">
 					<p>Participa de eventos acadêmicos da UFPA?</p>
 					<div class="radio">
 						<input type="radio" id="participaDeEventos1" name="participaDeEventos" value="Sim">
@@ -406,9 +400,9 @@ definirDadosSessao();
 
 				<textarea name="resumoEventosAtuais" cols=40 rows=6 
 				placeholder="Cite os eventos aos quais mais participa"
-				></textarea><br>
+				></textarea>
 
-				<div>
+				<div class="pergunta">
 					<p>Participa de grupos de pesquisa e/ou projetos de extensão?</p>
 					<div class="radio">
 						<input type="radio" id="participaDeProjeto1" name="participaDeProjeto"
@@ -424,9 +418,9 @@ definirDadosSessao();
 
 				<textarea name="resumoProjetosAtuais" cols=40 rows=6 
 				placeholder="Projetos atuais de extensão e/ou pesquisa"
-				></textarea><br>
+				></textarea>
 				
-				<div>
+				<div class="pergunta">
 					<p>Participa de algum curso?</p>
 					<div class="radio">
 						<input type="radio" id="participaDeCurso1" name="participaDeCurso"
@@ -442,13 +436,13 @@ definirDadosSessao();
 
 				<textarea name="resumoCursosAtuais" cols=40 rows=6 
 				placeholder="Liste os cursos aos quais participa"
-				></textarea><br>
+				></textarea>
 				
 				<p>Indique atividades que você gostaria de participar:</p>
 
 				<textarea name="resumoAtividadesInteresse" cols=40 rows=6 
 				placeholder="Projetos de extensão e/ou pesquisa, eventos, cursos"
-				></textarea><br>
+				></textarea>
 				
 				<p>Agradecemos a sua participação, que foi de suma 
 				importância. Caso tenha alguma sugestão que possa enriquecer 
@@ -456,7 +450,7 @@ definirDadosSessao();
 
 				<textarea name="resumoSugestaoQuestionario" cols=40 rows=6 
 				placeholder="Deixe aqui sua sugestão"
-				></textarea><br><br>
+				></textarea>
 
 			</fieldset>
 			<input class="submeter" type="submit" name="botaoConfirmar" id="botaoConfirmar" value="Enviar Resposta" onclick="envioSucesso(event)">										
