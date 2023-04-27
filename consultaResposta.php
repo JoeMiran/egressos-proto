@@ -169,7 +169,7 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
     <!--------------------------------- InÃ­Â­cio da área do rodapÃ© --------------------------------------->
     <footer>
         <hr>
-        <a>Copyright @ 2023 Portal do Egresso da Universidade Federal do ParÃƒÂ¡</a>
+        <a>Copyright @ 2023 Portal do Egresso da Universidade Federal do Pará</a>
     </footer>
     <!--------------------------------- Fim da área do rodapÃ© --------------------------------------->
 
