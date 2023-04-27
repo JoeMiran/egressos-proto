@@ -189,6 +189,8 @@ select {
     border-radius: 50px;
     font-weight: bold;
     padding: 5px;
+    width: 115px;
+    padding: 0 5px 0 5px;
 } 
 
 select:hover {

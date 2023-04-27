@@ -64,7 +64,7 @@ definirDadosSessao();
 					
 				<div class="pergunta">
 					<div>
-					<label style="font-size: larger;">Cor/Raça: </label>
+					<label style="font-size: larger; max-width: cal(100% - 98px);">Cor/Raça: </label>
 						<select id="cor" name="cor">
 							<option>Selecione</option>
 							<option value="Preto">Preto</option>
