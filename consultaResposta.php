@@ -39,10 +39,12 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
     <!------------------------ InÃ­Â­cio da área de consulta de resposta ---------------------------------->
     <section>
         <div id="area-principal">
-            <fieldset>
-                <legend><strong>SEUS DADOS CADASTRAIS</strong></legend><br>
+            <div class="dados">
+               
+                <fieldset>
+                    
+                    <legend><strong>DADOS PESSOAIS</strong></legend><br>
             
-                <div class="dados">
                     <p>CPF: 
                         <span><?php echo $dados['cpf']; ?></span></p><br>
                     <p>Nome: 
@@ -57,6 +59,13 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                         <span><?php echo $dados['genero']; ?></span></p><br>
                     <p>Cor: 
                         <span><?php echo $dados['cor']; ?></span></p><br>
+                
+                </fieldset>
+             
+                <fieldset>
+                    
+                    <legend><strong>FORMAÇÃO</strong></legend><br>
+                    
                     <p>Curso: 
                         <span><?php echo $dados['curso']; ?></span></p><br>
                     <p>Ano de Ingresso: 
@@ -67,17 +76,31 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                         <span><?php echo $dados['bolsa']; ?></span></p><br>
                     <p>Resumo da bolsa:</p>
                         <span><?php echo $dados['resumoBolsa']; ?></span></p><br>
-                    <p>Participou de atividades acadêmicas extracurriculares durante o curso:
+                
+                </fieldset>
+
+                <fieldset>
+                    
+                    <legend><strong>DADOS COMPLEMENTARES</strong></legend><br>        
+                        
+                    <p>Atividades acadêmicas extracurriculares durante o curso:
                         <span><?php echo $dados['atividadesExtracurriculares']; ?></span></p><br>
-                    <p>Durante o curso, você desenvolveu atividade remunerada fora da Universidade:
+                    <p>Atividade remunerada fora da Universidade:
                         <span><?php echo $dados['atividadeRemunerada']; ?></span></p><br>
                     <p>Curso de Pós-Graduação: 
                         <span><?php echo $dados['cursoPosGraduacao']; ?></span></p><br>
                     <p>Situação do curso: 
                         <span><?php echo $dados['situacaoCursoPosGraduacao']; ?></span></p><br>
-                    <p>O curso de Pós-Gradução é na UFPA:
+                    <p>Pós-Gradução na UFPA:
                         <span><?php echo $dados['posGraduacaoUfpa']; ?></span></p><br>
-                    <p>Atualmente está inserido no mercado de trabalho: 
+                
+                </fieldset>
+                
+                <fieldset>
+                    
+                    <legend><strong>SITUAÇÃO PROFISSIONAL</strong></legend><br>        
+                    
+                    <p>Inserido no mercado de trabalho: 
                         <span><?php echo $dados['inseridoNoMercado']; ?></span></p><br>
                     <p>Modalidade de emprego: 
                         <span><?php echo $dados['tipoDeEmprego']; ?></span></p><br>
@@ -87,16 +110,24 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                         <span><?php echo $dados['trabalhaNaAreaDeFormacao']; ?></span></p><br>
                     <p>Faixa salarial: 
                         <span><?php echo $dados['faixaSalarial']; ?></span></p><br>
-                    <p>Há relação entre seu trabalho e sua formação: 
+                    <p>Há relação entre trabalho e área de formação: 
                         <span><?php echo $dados['relacaoCursoTrabalho']; ?></span></p><br>
-                    <p>Recebeu orientação para atuar no mercado de trabalho: 
+                    <p>Orientação para atuar no mercado de trabalho: 
                         <span><?php echo $dados['recebeuOrientacao']; ?></span></p><br>
-                    <p>As disciplinas ministradas tiveram alguma utilidade no âmbito profissional: 
+                    <p>As disciplinas do curso foram úteis para inserção no mercado: 
                         <span><?php echo $dados['disciplinasForamUteis']; ?></span></p><br>
-                    <p>O(s) estágio(s) que cumpriu no curso, tiveram alguma utilidade para a inserção no mercado de trabalho? 
+                    <p>O(s) estágio supervisionado teve utilidade para a inserção no mercado:
                         <span><?php echo $dados['estagioContribuiuEmprego']; ?></span></p><br>
                     <p>Descrição da situação profissional: </p>
-                        <span><?php echo $dados['resumoSituacaoProfissional']; ?></span></p><br>
+                        <span><?php echo $dados['resumoSituacaoProfissional']; ?></span>
+                    </p><br>
+                
+                </fieldset>
+
+                <fieldset>
+                    
+                    <legend><strong>NÍVEL DE SATISFAÇÃO</strong></legend><br>   
+                    
                     <p>Satisfação com o curso:
                         <span><?php echo $dados['satisfacaoComCurso']; ?></span></p><br>
                     <p>Resumo da satisfação: </p>
@@ -105,6 +136,13 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                         <span><?php echo $dados['recomendaCurso']; ?></span></p><br>
                     <p>Justificativa: </p>
                         <span><?php echo $dados['resumoRecomendacaoCurso']; ?></span></p><br>
+                
+                </fieldset>
+                
+                <fieldset>
+                    
+                    <legend><strong>RELAÇÃO ATUAL COM A UNIVERSIDADE</strong></legend><br>
+                    
                     <p>Paticipa de eventos na UFPA: 
                         <span><?php echo $dados['participaDeEventos']; ?></span></p><br>
                     <p>Resumo do(s) evento(s) que participa: </p>
@@ -121,8 +159,9 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                         <span><?php echo $dados['resumoAtividadesInteresse']; ?></span></p><br>
                     <p>Sugestão para o questionário: </p>
                         <span><?php echo $dados['resumoSugestaoQuestionario']; ?></span></p><br>
-                </div>
-            </fieldset>
+                
+                </fieldset>
+            </div>            
         </div>
     </section>
     <!-------------------------- Fim da área de consulta de resposta ------------------------------------>
