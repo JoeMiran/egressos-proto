@@ -21,7 +21,7 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
         <div id="navbar">
             <div class="resp">
                 <h1>
-                    <strong>Consulta de Egressos da UFPA</strong>
+                    <strong>Consulta de Egressos UFPA</strong>
                 </h1>
             </div>
         </div>
@@ -141,7 +141,7 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                 
                 <fieldset>
                     
-                    <legend><strong>RELAÇÃO ATUAL COM A UNIVERSIDADE</strong></legend><br>
+                    <legend><strong>RELAÇÃO COM A UNIVERSIDADE</strong></legend><br>
                     
                     <p>Paticipa de eventos na UFPA: 
                         <span><?php echo $dados['participaDeEventos']; ?></span></p><br>
