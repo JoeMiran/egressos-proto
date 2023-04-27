@@ -167,6 +167,7 @@ legend {
 }
 
 fieldset {
+    flex-wrap: wrap;
     border-radius: 10px;
     border: 1px solid rgba(2, 116, 190);
     padding: 1.25rem;
