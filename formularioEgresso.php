@@ -64,7 +64,7 @@ definirDadosSessao();
 					
 				<div class="pergunta">
 					<div>
-					<label style="font-size: larger; max-width: cal(100% - 98px);">Cor/Raça: </label>
+					<label style="font-size: larger; max-width: cal(100% - 98px);">Etnia/Cor: </label>
 						<select id="cor" name="cor">
 							<option>Selecione</option>
 							<option value="Preto">Preto</option>
@@ -72,7 +72,7 @@ definirDadosSessao();
 							<option value="Pardo">Pardo</option>
 							<option value="Amarelo">Amarelo</option>
 							<option value="Indigena">Indígena</option>
-							<option value="Não declarada">Não desejo declarar</option>
+							<option value="Não declarada">Outro</option>
 						</select>
 					</div>
 				</div>
