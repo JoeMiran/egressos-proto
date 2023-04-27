@@ -159,7 +159,7 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                         <span><?php echo $dados['resumoAtividadesInteresse']; ?></span></p><br>
                     <p>Sugestão para o questionário: </p>
                         <span><?php echo $dados['resumoSugestaoQuestionario']; ?></span></p><br>
-                
+                        
                 </fieldset>
             </div>            
         </div>

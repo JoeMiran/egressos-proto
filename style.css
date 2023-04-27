@@ -130,16 +130,16 @@ button:hover {
     background-color: rgb(20, 135, 212) ;
 }
 
-/************* �rea principal **************/
+/************* Área principal **************/
 
 #area-principal {
     margin-top: 7rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 35px;
+    padding: 2.188rem;
     width: 55%;
     height: 50%;
-    border-radius: 5px;
+    border-radius: 0.313rem;
     border: none;
     background: whitesmoke;
     box-shadow: 15px 15px 55px rgb(172, 170, 170);
@@ -169,7 +169,7 @@ legend {
 fieldset {
     border-radius: 10px;
     border: 1px solid rgba(2, 116, 190);
-    padding: 20px;
+    padding: 1.25rem;
     margin-bottom: 25px;
 }
 
@@ -199,7 +199,7 @@ input[type="radio"]:hover {
 }
 
 
-/************* Rodap� **************/
+/************* Rodapé **************/
 
 footer {
     text-align: center;
@@ -215,7 +215,7 @@ hr {
     opacity: 30%;
 }
 
- a {
+a {
     font-size: 100%;
     font-style: inherit;
     font-family: sans-serif;
@@ -249,7 +249,7 @@ hr {
 }
 
 .dados {
-    margin: 40px 0 0 0;
+    margin: 2.5rem 0 0 0;
 }
 
 .dados p{
