@@ -201,7 +201,7 @@ definirDadosSessao();
 				<!-- --------------------------------------------------------------- -->
 				<legend><strong>SITUAÇÃO PROFISSIONAL</strong></legend>
 
-				<div class="pergunta">
+				<div id="main" class="pergunta">
 					<p>Atualmente está inserido/a no mercado de trabalho?</p>
 					<div class="radio">
 						<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado1"
@@ -213,7 +213,7 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div class="pergunta">
+				<div id="dep" class="pergunta">
 					<p>Se sim, qual a modalidade de emprego?</p>
 					<div class="radio">
 						<input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
@@ -230,7 +230,7 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div class="pergunta">
+				<div id="dep" class="pergunta">
 					<p>Tempo necessário para conseguir atividade remunerada após a
 						formatura:</p>
 					<div class="radio">
@@ -246,7 +246,7 @@ definirDadosSessao();
 					</div>
 				</div>
 			
-				<div class="pergunta">
+				<div id="dep" class="pergunta">
 					<p>Seu trabalho é na sua área de formação?</p>
 					<div class="radio">
 						<input type="radio" name="trabalhaNaAreaDeFormacao"
@@ -258,7 +258,7 @@ definirDadosSessao();
 					</div>
 				</div>
 			
-				<div class="pergunta">
+				<div id="dep" class="pergunta">
 					<p>Faixa salarial:</p>
 					<div class="radio">
 						<input type=radio id="faixaSalarial1" name="faixaSalarial"
@@ -273,7 +273,7 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div class="pergunta">
+				<div id="dep" class="pergunta">
 					<p>Há uma relação entre o curso de graduação concluido e a atividade
 						laboral que está exercendo?</p>
 					<div class="radio">
@@ -312,7 +312,7 @@ definirDadosSessao();
 					</div>
 				</div>
 
-				<div class="pergunta">
+				<div id="dep" class="pergunta">
 					<p>O(s) estágio(s) que cumpriu no curso contribuiu para a inserção
 						profissional no mercado de trabalho?</p>
 					<div class="radio">
@@ -461,7 +461,21 @@ definirDadosSessao();
 			var campos = document.querySelectorAll('textarea');
 			var selects = document.querySelectorAll('select');
 			var radioDivs = document.querySelectorAll('.radio');
+			// let pergunta = document.getElementById('main');
+			// let perguntasDependentes = document.querySelectorAll('.pergunta')
 			var todosPreenchidos = true;
+			
+			// pergunta.addEventListener('change', function() {
+			// 	if (main.checked) {
+			// 		perguntasDependentes.forEach(function() {
+			// 			pergunta.disabled = false;
+			// 		});
+			// 	} else {
+			// 		perguntasDependentes.forEach(function() {
+			// 			pergunta.disabled = true;
+			// 		})
+			// 	}
+			// })
 			
 			radioDivs.forEach( 
 				function(divNode) {
@@ -481,6 +495,7 @@ definirDadosSessao();
 					}
 				}
 			)
+
 			for (const campo of campos) {
 
 				if (campo.value.length === 0) {
