@@ -268,7 +268,7 @@ a {
     font-size: large;
 }
 
-.pergunta {
+.pergunta, .sel-pergunta {
     margin: 40px 0;
 }
 
