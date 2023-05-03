@@ -1,24 +1,3 @@
-// function seletorPergunta() {
-//     let inseridoNoMercado = document.querySelector('input[name="inseridoNoMercado"]');
-//     let descartar = document.getElementsById("descartar").querySelectorAll('input[type="radio"]');
-    
-//     inseridoNoMercado.addEventListener('change', function() {
-//         if(this.value === 'sim') {
-//             descartar.forEach(function(pergunta) {
-//                 pergunta.disabled = false;
-//             });
-//             document.getElementById('descartar').disabled = false;
-//         } else {
-//             perguntasDependentes.forEach(function(pergunta) {
-//                 if (pergunta.checked === false) {
-//                   pergunta.disabled = true;
-//                 }
-//             });
-//             document.getElementById('descartar').disabled = true;
-//         }
-//     });
-// }
-
 function envioSucesso(event) {
     var campos = document.querySelectorAll('textarea');
     var selects = document.querySelectorAll('select');

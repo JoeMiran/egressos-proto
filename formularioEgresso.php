@@ -207,14 +207,14 @@ definirDadosSessao();
 							<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado1"
 							value="Sim">
 							<label for="inseridoNoMercado1">Sim</label><br>
-							<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado2"
+							<input type="radio" onclick="naoTrabalha('nao')" name="inseridoNoMercado" id="inseridoNoMercado2"
 							value="Não">
 							<label for="inseridoNoMercado2">Não</label><br>
 						</div>
 					</div>
-
-					<div id="descartar" class="pergunta">
-						<p>Se sim, qual a modalidade de emprego?</p>
+					
+					<div id="pergunta1" class="pergunta">
+						<p>Qual a modalidade de emprego?</p>
 						<div class="radio">
 							<input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
 							<label for="tipoDeEmprego1">Concursado</label><br>
@@ -229,8 +229,8 @@ definirDadosSessao();
 							<label for="tipoDeEmprego4">Profissional informal</label><br>
 						</div>
 					</div>
-
-					<div class="pergunta">
+					
+					<div id="pergunta2" class="pergunta">
 						<p>Tempo necessário para conseguir atividade remunerada após a
 							formatura:</p>
 						<div class="radio">
@@ -460,6 +460,7 @@ definirDadosSessao();
 				<hr>
 				<a>Copyright @ 2023 Portal do Egresso da Universidade Federal do Pará</a>
 			</footer> 
-		<script src="validaFormulario.js"></script>
+		<script src="validaFormulario.js"></script>	
+		<script src="validaPergunta.js"></script>
 	</body>
 <html>
