@@ -92,15 +92,15 @@ definirDadosSessao();
 					<div class="pergunta">
 						<p>Obteve bolsa durante o curso?</p>
 						<div class="radio">
-							<input type="radio" name="bolsa" id="bolsa1" value="Sim">
-							<label for="bolsa1" onclick="obteveBolsa('sim')">Sim</label><br>
-							<input type="radio" onclick="naoObteveBolsa('nao')" name="bolsa" id="bolsa2" value="Não">
+							<input type="radio" name="bolsa" id="bolsa1" value="Sim" onclick="bolsa('sim')">
+							<label for="bolsa1">Sim</label><br>
+							<input type="radio" name="bolsa" id="bolsa2" value="Não" onclick="bolsa('nao')">
 							<label for="bolsa2">Não</label><br>
 						</div>
 					</div>
 
 					<div class="pergunta">
-						<p>Se sim, qual(is)?</p>
+						<p>Qual(is)?</p>
 						<div>
 							<textarea name="resumoBolsa" cols=40 rows=6
 							placeholder="Descreva mais sobre a bolsa"
