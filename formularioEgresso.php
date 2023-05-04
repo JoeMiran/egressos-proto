@@ -204,7 +204,7 @@ definirDadosSessao();
 					<div class="pergunta">
 						<p>Atualmente está inserido/a no mercado de trabalho?</p>
 						<div class="radio">
-							<input type="radio" name="inseridoNoMercado" id="inseridoNoMercado1"
+							<input type="radio" onclick="trabalha('sim')" name="inseridoNoMercado" id="inseridoNoMercado1"
 							value="Sim">
 							<label for="inseridoNoMercado1">Sim</label><br>
 							<input type="radio" onclick="naoTrabalha('nao')" name="inseridoNoMercado" id="inseridoNoMercado2"
