@@ -213,7 +213,7 @@ definirDadosSessao();
 						</div>
 					</div>
 					
-					<div id="pergunta1" class="pergunta">
+					<div class="pergunta">
 						<p>Qual a modalidade de emprego?</p>
 						<div class="radio">
 							<input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
@@ -230,7 +230,7 @@ definirDadosSessao();
 						</div>
 					</div>
 					
-					<div id="pergunta2" class="pergunta">
+					<div class="pergunta">
 						<p>Tempo necessário para conseguir atividade remunerada após a
 							formatura:</p>
 						<div class="radio">
