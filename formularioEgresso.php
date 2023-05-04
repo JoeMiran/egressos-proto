@@ -93,8 +93,8 @@ definirDadosSessao();
 						<p>Obteve bolsa durante o curso?</p>
 						<div class="radio">
 							<input type="radio" name="bolsa" id="bolsa1" value="Sim">
-							<label for="bolsa1">Sim</label><br>
-							<input type="radio" name="bolsa" id="bolsa2" value="Não">
+							<label for="bolsa1" onclick="obteveBolsa('sim')">Sim</label><br>
+							<input type="radio" onclick="naoObteveBolsa('nao')" name="bolsa" id="bolsa2" value="Não">
 							<label for="bolsa2">Não</label><br>
 						</div>
 					</div>
@@ -204,10 +204,10 @@ definirDadosSessao();
 					<div class="pergunta">
 						<p>Atualmente está inserido/a no mercado de trabalho?</p>
 						<div class="radio">
-							<input type="radio" onclick="trabalha('sim')" name="inseridoNoMercado" id="inseridoNoMercado1"
+							<input type="radio" onclick="trabalho('sim')" name="inseridoNoMercado" id="inseridoNoMercado1"
 							value="Sim">
 							<label for="inseridoNoMercado1">Sim</label><br>
-							<input type="radio" onclick="naoTrabalha('nao')" name="inseridoNoMercado" id="inseridoNoMercado2"
+							<input type="radio" onclick="trabalho('nao')" name="inseridoNoMercado" id="inseridoNoMercado2"
 							value="Não">
 							<label for="inseridoNoMercado2">Não</label><br>
 						</div>
