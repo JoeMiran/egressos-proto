@@ -213,76 +213,107 @@ definirDadosSessao();
 						</div>
 					</div>
 					
-					<div class="pergunta">
-						<p>Qual a modalidade de emprego?</p>
-						<div class="radio">
-							<input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
-							<label for="tipoDeEmprego1">Concursado</label><br>
-							<input type="radio" id="tipoDeEmprego2"
-							name="tipoDeEmprego" value="Profissional formal">
-							<label for="tipoDeEmprego2">Profissional formal</label><br>
-							<input type="radio" id="tipoDeEmprego3"
-							name="tipoDeEmprego" value="Profissional autônomo">
-							<label for="tipoDeEmprego3">Profissional autônomo</label><br>
-							<input type="radio" id="tipoDeEmprego4"
-							name="tipoDeEmprego" value="Profissional informal">
-							<label for="tipoDeEmprego4">Profissional informal</label><br>
+					<div class="dependente">
+						<div class="pergunta">
+							<p>Qual a modalidade de emprego?</p>
+							<div class="radio">
+								<input type="radio" id="tipoDeEmprego1" name="tipoDeEmprego" value="Concursado">
+								<label for="tipoDeEmprego1">Concursado</label><br>
+								<input type="radio" id="tipoDeEmprego2"
+								name="tipoDeEmprego" value="Profissional formal">
+								<label for="tipoDeEmprego2">Profissional formal</label><br>
+								<input type="radio" id="tipoDeEmprego3"
+								name="tipoDeEmprego" value="Profissional autônomo">
+								<label for="tipoDeEmprego3">Profissional autônomo</label><br>
+								<input type="radio" id="tipoDeEmprego4"
+								name="tipoDeEmprego" value="Profissional informal">
+								<label for="tipoDeEmprego4">Profissional informal</label><br>
+							</div>
 						</div>
-					</div>
 					
-					<div class="pergunta">
-						<p>Tempo necessário para conseguir atividade remunerada após a
-							formatura:</p>
-						<div class="radio">
-							<input type=radio id="tempoFormaturaEmprego1"
-							name="tempoFormaturaEmprego" value="0 a 6 meses">
-							<label for="tempoFormaturaEmprego1">0 a 6 meses</label><br>
-							<input type=radio id="tempoFormaturaEmprego2"
-							name="tempoFormaturaEmprego" value="7 a 12 meses">
-							<label for="tempoFormaturaEmprego2">7 a 12 meses</label><br>
-							<input type=radio id="tempoFormaturaEmprego3"
-							name="tempoFormaturaEmprego" value="mais de 12 meses">
-							<label for="tempoFormaturaEmprego3">mais de 12 meses</label><br>
+						<div class="pergunta">
+							<p>Tempo necessário para conseguir atividade remunerada após a
+								formatura:</p>
+							<div class="radio">
+								<input type=radio id="tempoFormaturaEmprego1"
+								name="tempoFormaturaEmprego" value="0 a 6 meses">
+								<label for="tempoFormaturaEmprego1">0 a 6 meses</label><br>
+								<input type=radio id="tempoFormaturaEmprego2"
+								name="tempoFormaturaEmprego" value="7 a 12 meses">
+								<label for="tempoFormaturaEmprego2">7 a 12 meses</label><br>
+								<input type=radio id="tempoFormaturaEmprego3"
+								name="tempoFormaturaEmprego" value="mais de 12 meses">
+								<label for="tempoFormaturaEmprego3">mais de 12 meses</label><br>
+							</div>
 						</div>
-					</div>
 				
-					<div class="pergunta">
-						<p>Seu trabalho é na sua área de formação?</p>
-						<div class="radio">
-							<input type="radio" name="trabalhaNaAreaDeFormacao"
-							id="trabalhaNaAreaDeFormacao1" value="Sim">
-							<label for="trabalhaNaAreaDeFormacao1">Sim</label><br>
-							<input type="radio" name="trabalhaNaAreaDeFormacao"
-							id="trabalhaNaAreaDeFormacao2" value="Não">
-							<label for="trabalhaNaAreaDeFormacao2">Não</label><br>
+						<div class="pergunta">
+							<p>Seu trabalho é na sua área de formação?</p>
+							<div class="radio">
+								<input type="radio" name="trabalhaNaAreaDeFormacao"
+								id="trabalhaNaAreaDeFormacao1" value="Sim">
+								<label for="trabalhaNaAreaDeFormacao1">Sim</label><br>
+								<input type="radio" name="trabalhaNaAreaDeFormacao"
+								id="trabalhaNaAreaDeFormacao2" value="Não">
+								<label for="trabalhaNaAreaDeFormacao2">Não</label><br>
+							</div>
 						</div>
-					</div>
 				
-					<div class="pergunta">
-						<p>Faixa salarial:</p>
-						<div class="radio">
-							<input type=radio id="faixaSalarial1" name="faixaSalarial"
-							value="1 a 2 salários mínimos">
-							<label for="faixaSalarial1">1 a 2 salários mínimos</label><br>
-							<input type=radio id="faixaSalarial2" name="faixaSalarial"
-							value="3 a 5 salários mínimos">
-							<label for="faixaSalarial2">3 a 5 salários mínimos</label><br>
-							<input type=radio id="faixaSalarial3" name="faixaSalarial"
-							value="mais de 5 salários">
-							<label for="faixaSalarial3">mais de 5 salários</label><br>
+						<div class="pergunta">
+							<p>Faixa salarial:</p>
+							<div class="radio">
+								<input type=radio id="faixaSalarial1" name="faixaSalarial"
+								value="1 a 2 salários mínimos">
+								<label for="faixaSalarial1">1 a 2 salários mínimos</label><br>
+								<input type=radio id="faixaSalarial2" name="faixaSalarial"
+								value="3 a 5 salários mínimos">
+								<label for="faixaSalarial2">3 a 5 salários mínimos</label><br>
+								<input type=radio id="faixaSalarial3" name="faixaSalarial"
+								value="mais de 5 salários">
+								<label for="faixaSalarial3">mais de 5 salários</label><br>
+							</div>
 						</div>
-					</div>
 
-					<div class="pergunta">
-						<p>Há uma relação entre o curso de graduação concluido e a atividade
-							laboral que está exercendo?</p>
-						<div class="radio">
-							<input type="radio" id="relacaoCursoTrabalho1"
-							name="relacaoCursoTrabalho" value="Sim">
-							<label>Sim</label><br>
-							<input type="radio" id="relacaoCursoTrabalho2"
-							name="relacaoCursoTrabalho" value="Não">
-							<label>Não</label><br>
+						<div class="pergunta">
+							<p>Há uma relação entre o curso de graduação concluido e a atividade
+								laboral que está exercendo?</p>
+							<div class="radio">
+								<input type="radio" id="relacaoCursoTrabalho1"
+								name="relacaoCursoTrabalho" value="Sim">
+								<label>Sim</label><br>
+								<input type="radio" id="relacaoCursoTrabalho2"
+								name="relacaoCursoTrabalho" value="Não">
+								<label>Não</label><br>
+							</div>
+						</div>
+
+						<div class="pergunta">
+							<p>As temáticas e/ou assuntos abordados nas várias disciplinas cursadas
+								tiveram utilidade para o exercício profissional?</p>
+							<div class="radio">
+								<input type="radio" id="disciplinasForamUteis1"
+								name="disciplinasForamUteis" value="Sim">
+								<label for="disciplinasForamUteis1">Sim</label><br>
+								<input type="radio" id="disciplinasForamUteis2"
+								name="disciplinasForamUteis" value="Não">
+								<label for="disciplinasForamUteis2">Não</label><br>
+							</div>
+						</div>
+
+						<div class="pergunta">
+							<p>O(s) estágio(s) que cumpriu no curso contribuiu para a inserção
+								profissional no mercado de trabalho?</p>
+							<div class="radio">
+								<input type="radio" id="estagioContribuiuEmprego1"
+								name="estagioContribuiuEmprego" value="Sim">
+								<label for="estagioContribuiuEmprego1">Sim</label><br>
+								<input type="radio" id="estagioContribuiuEmprego2"
+								name="estagioContribuiuEmprego" value="Não">
+								<label for="estagioContribuiuEmprego2">Não</label><br>
+								<input type="radio" id="estagioContribuiuEmprego3"
+								name="estagioContribuiuEmprego" value="Não fiz estágio">
+								<label for="estagioContribuiuEmprego3">Não fiz estágio</label><br>
+							</div>
 						</div>
 					</div>
 
@@ -296,35 +327,6 @@ definirDadosSessao();
 							<input type="radio" id="recebeuOrientacao2" name="recebeuOrientacao"
 							value="Não">
 							<label for="recebeuOrientacao2">Não</label><br>
-						</div>
-					</div>
-
-					<div class="pergunta">
-						<p>As temáticas e/ou assuntos abordados nas várias disciplinas cursadas
-							tiveram utilidade para o exercício profissional?</p>
-						<div class="radio">
-							<input type="radio" id="disciplinasForamUteis1"
-							name="disciplinasForamUteis" value="Sim">
-							<label for="disciplinasForamUteis1">Sim</label><br>
-							<input type="radio" id="disciplinasForamUteis2"
-							name="disciplinasForamUteis" value="Não">
-							<label for="disciplinasForamUteis2">Não</label><br>
-						</div>
-					</div>
-
-					<div class="pergunta">
-						<p>O(s) estágio(s) que cumpriu no curso contribuiu para a inserção
-							profissional no mercado de trabalho?</p>
-						<div class="radio">
-							<input type="radio" id="estagioContribuiuEmprego1"
-							name="estagioContribuiuEmprego" value="Sim">
-							<label for="estagioContribuiuEmprego1">Sim</label><br>
-							<input type="radio" id="estagioContribuiuEmprego2"
-							name="estagioContribuiuEmprego" value="Não">
-							<label for="estagioContribuiuEmprego2">Não</label><br>
-							<input type="radio" id="estagioContribuiuEmprego3"
-							name="estagioContribuiuEmprego" value="Não fiz estágio">
-							<label for="estagioContribuiuEmprego3">Não fiz estágio</label><br>
 						</div>
 					</div>
 

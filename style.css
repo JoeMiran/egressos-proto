@@ -287,3 +287,6 @@ a {
 .checkbox input { 
     margin: 0 0 18px 0;
 }
+.desabilitado {
+    color: #969191;
+}
