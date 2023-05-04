@@ -11,7 +11,6 @@ function trabalho(pergunta) {
   inputs.forEach(function(input) {
     if (pergunta === 'sim') {
       input.disabled = false;
-      input.a
     } else {
       input.disabled = true;
     }
