@@ -52,7 +52,7 @@ definirDadosSessao();
 					<!-- --------------------------------------------------------------- -->
 					<div class="pergunta">
 						<div>
-							<label style="font-size: larger;">Gênero: </label>
+							<label style="font-size: larger; max-width: cal(100% - 98px);">Gênero: </label>
 							<select id="genero" name="genero">
 								<option>Selecione</option>
 								<option value="Masculino">Masculino</option>
@@ -92,21 +92,23 @@ definirDadosSessao();
 					<div class="pergunta">
 						<p>Obteve bolsa durante o curso?</p>
 						<div class="radio">
-							<input type="radio" name="bolsa" id="bolsa1" value="Sim" onclick="bolsa('sim')">
+							<input type="radio" name="bolsa" id="bolsa1" value="Sim" onclick="recebeBolsa()">
 							<label for="bolsa1">Sim</label><br>
-							<input type="radio" name="bolsa" id="bolsa2" value="Não" onclick="bolsa('nao')">
+							<input type="radio" name="bolsa" id="bolsa2" value="nao" onclick="recebeBolsa()">
 							<label for="bolsa2">Não</label><br>
 						</div>
 					</div>
 
-					<div class="pergunta">
-						<p>Qual(is)?</p>
-						<div>
-							<textarea name="resumoBolsa" cols=40 rows=6
-							placeholder="Descreva mais sobre a bolsa"
-							></textarea>
-						</div>
-					</div>
+                    <div class= "dependente">
+                        <div class="pergunta">
+                            <p>Qual(is)?</p>
+                            <div>
+                                <textarea name="resumoBolsa" cols=40 rows=6
+                                placeholder="Descreva mais sobre a bolsa"
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
 					<!-- --------------------------------------------------------------- -->
 				</fieldset>
 				
@@ -159,28 +161,31 @@ definirDadosSessao();
 
 					<div class="pergunta">
 						<div>
-						<label style="font-size: larger;">Curso de Pós-Graduação:</label>
-							<select name="cursoPosGraduacao" id="cursoPosGraduacao">
-								<option value="Nenhum">Nenhum</option>
+						<label  style="font-size: larger; max-width: cal(100% - 98px);">Curso de Pós-Graduação:</label>
+							<select name="cursoPosGraduacao" id="cursoPosGraduacao" onchange="posGraduacao()">
+								<option>Selecione</option>
 								<option value="Aperfeiçoamento">Aperfeiçoamento</option>
 								<option value="Especialização">Especialização</option>
 								<option value="Mestrado">Mestrado</option>
 								<option value="Doutorado">Doutorado</option>
+                                <option value="Nenhum">Nenhum</option>
 							</select>
 						</div>
 					</div>
-				
-					<div class="pergunta">
-						<p>Situação do curso:</p>
-						<div class="radio">
-							<input type="radio" name="situacaoCursoPosGraduacao"
-							id="posGraduacaoEmAndamento" value="Em andamento">
-							<label for="posGraduacaoEmAndamento">Em andamento</label><br>
-							<input type="radio" name="situacaoCursoPosGraduacao"
-							id="posGraduacaoConcluida" value="Concluído">
-							<label for="posGraduacaoConcluida">Concluído</label><br>
-						</div>
-					</div>
+
+                    <div class="dependente">
+                        <div class="pergunta">
+                            <p>Situação do curso:</p>
+                            <div class="radio">
+                                <input type="radio" name="situacaoCursoPosGraduacao"
+                                id="posGraduacaoEmAndamento" value="Em andamento">
+                                <label for="posGraduacaoEmAndamento">Em andamento</label><br>
+                                <input type="radio" name="situacaoCursoPosGraduacao"
+                                id="posGraduacaoConcluida" value="Concluído">
+                                <label for="posGraduacaoConcluida">Concluído</label><br>
+                            </div>
+                        </div>
+                    </div>
 				
 					<div class="pergunta">
 						<p>Em caso de Curso Pós-Graduação, realizado ou andamento, é na
