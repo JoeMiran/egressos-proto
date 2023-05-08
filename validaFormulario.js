@@ -4,28 +4,24 @@ function envioSucesso(event) {
     var radioDivs = document.querySelectorAll('.radio');
     var todosPreenchidos = true;
     
-    radioDivs.forEach( 
-        function(divNode) {
-            respondido = false;
-            divNode.childNodes.forEach(
-                function(radioNode) {
-                    if (radioNode.checked) {
-                        respondido = true;
-                    }
-                }
-            )
-            if (respondido == false) {
-                var pergunta = divNode.parentNode.textContent;
-                divNode.previousElementSibling.classList.add('obrigatorio');
-            } else {
-                divNode.previousElementSibling.classList.remove('obrigatorio');
+    radioDivs.forEach(function(divNode) {
+        var respondido = false;
+        divNode.childNodes.forEach(function(radioNode) {
+            if (radioNode.checked && !radioNode.disabled) {
+                respondido = true;
             }
+        });
+        if (!respondido) {
+            divNode.previousElementSibling.classList.add('obrigatorio');
+            todosPreenchidos = false;
+        } else {
+            divNode.previousElementSibling.classList.remove('obrigatorio');
         }
-    )
+    });
 
     for (const campo of campos) {
 
-        if (campo.value.length === 0) {
+        if (campo.value.length === 0 && campo.disabled == false) {
             campo.classList.add('nao_preenchido');
             todosPreenchidos = false;
         } else {

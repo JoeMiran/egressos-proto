@@ -476,7 +476,7 @@ definirDadosSessao();
 				<hr>
 				<a>Copyright @ 2023 Portal do Egresso da Universidade Federal do Pará</a>
 			</footer> 
-		<script src="validaFormulario.js"></script>	
-		<script src="validaPergunta.js"></script>
+			<script src="validaPergunta.js"></script>			
+			<script src="validaFormulario.js"></script>	
 	</body>
 <html>
