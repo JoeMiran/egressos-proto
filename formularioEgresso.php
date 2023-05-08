@@ -173,7 +173,7 @@ definirDadosSessao();
 						</div>
 					</div>
 
-                    <div class="dependente">
+                    <div class="dependente1">
                         <div class="pergunta">
                             <p>Situação do curso:</p>
                             <div class="radio">
@@ -185,18 +185,19 @@ definirDadosSessao();
                                 <label for="posGraduacaoConcluida">Concluído</label><br>
                             </div>
                         </div>
-                    </div>
+                    
 				
-					<div class="pergunta">
-						<p>Em caso de Curso Pós-Graduação, realizado ou andamento, é na
-							UFPA?</p>
-						<div class="radio">
-							<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa1"
-							value="Sim">
-							<label for="posGraduacaoUfpa1">Sim</label><br>
-							<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa2"
-							value="Não">
-							<label for="posGraduacaoUfpa2">Não</label><br>
+						<div class="pergunta">
+							<p>O curso de Pós-Graduação, é na
+								UFPA?</p>
+							<div class="radio">
+								<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa1"
+								value="Sim">
+								<label for="posGraduacaoUfpa1">Sim</label><br>
+								<input type="radio" name="posGraduacaoUfpa" id="posGraduacaoUfpa2"
+								value="Não">
+								<label for="posGraduacaoUfpa2">Não</label><br>
+							</div>
 						</div>
 					</div>
 					<!-- --------------------------------------------------------------- -->
@@ -218,7 +219,7 @@ definirDadosSessao();
 						</div>
 					</div>
 					
-					<div class="dependente">
+					<div class="dependente2">
 						<div class="pergunta">
 							<p>Qual a modalidade de emprego?</p>
 							<div class="radio">
@@ -396,55 +397,63 @@ definirDadosSessao();
 					<div class="pergunta">
 						<p>Participa de eventos acadêmicos da UFPA?</p>
 						<div class="radio">
-							<input type="radio" id="participaDeEventos1" name="participaDeEventos" value="Sim">
+							<input type="radio" id="participaDeEventos1" name="participaDeEventos" value="sim"  onclick="eventos()">
 							<label for="participaDeEventos1">Sim</label><br>
-							<input type="radio" id="participaDeEventos2" name="participaDeEventos" value="Não">
+							<input type="radio" id="participaDeEventos2" name="participaDeEventos" value="nao" onclick="eventos()">
 							<label for="participaDeEventos2">Não</label><br>
 						</div>
 					</div>
 
-					<p>Caso sim, cite os principais:</p>
-
-					<textarea name="resumoEventosAtuais" cols=40 rows=6 
-					placeholder="Cite os eventos aos quais mais participa"
-					></textarea>
-
+					<div class="dependente3">
+						<div class="pergunta">
+							<p>Cite os principais:</p>
+							<div>
+							<textarea name="resumoEventosAtuais" cols=40 rows=6 placeholder="Cite os eventos aos quais mais participa"></textarea>
+							</div>
+						</div>
+					</div>
+					
 					<div class="pergunta">
 						<p>Participa de grupos de pesquisa e/ou projetos de extensão?</p>
 						<div class="radio">
 							<input type="radio" id="participaDeProjeto1" name="participaDeProjeto"
-							value="Sim">
+							value="Sim" onclick="grupoPesquisa()">
 							<label for="participaDeProjeto1">Sim</label><br>
 							<input type="radio" id="participaDeProjeto2" name="participaDeProjeto"
-							value="Não">
+							value="nao" onclick="grupoPesquisa()">
 							<label for="participaDeProjeto2">Não</label><br>
 						</div>
 					</div>
-
-					<p>Caso sim, cite os principais:</p>
-
-					<textarea name="resumoProjetosAtuais" cols=40 rows=6 
-					placeholder="Projetos atuais de extensão e/ou pesquisa"
-					></textarea>
+						
+					<div class="dependente4">
+						<div class="pergunta">
+							<p>Cite os principais:</p>
+							<textarea name="resumoProjetosAtuais" cols=40 rows=6 
+							placeholder="Projetos atuais de extensão e/ou pesquisa"
+							></textarea>
+						</div>						
+					</div>
 					
 					<div class="pergunta">
 						<p>Participa de algum curso?</p>
 						<div class="radio">
 							<input type="radio" id="participaDeCurso1" name="participaDeCurso"
-							value="Sim">
+							value="Sim" onclick="curso()">
 							<label for="participaDeCurso1">Sim</label><br>
 							<input type="radio" id="participaDeCurso2" name="participaDeCurso"
-							value="Não">
+							value="nao" onclick="curso()">
 							<label for="participaDeCurso2">Não</label><br>
 						</div>
 					</div>
 					
-					<p>Caso sim, cite os principais:</p>
-
-					<textarea style="margin:0 0 40px 0;" name="resumoCursosAtuais" cols=40 rows=6 
-					placeholder="Liste os cursos aos quais participa"
-					></textarea>
-					
+					<div class="dependente5">
+						<div class="pergunta">
+							<p>Cite os principais:</p>
+							<textarea style="margin:0 0 40px 0;" name="resumoCursosAtuais" cols=40 rows=6 
+							placeholder="Liste os cursos aos quais participa"
+							></textarea>
+						</div>
+					</div>
 					<p>Indique atividades que você gostaria de participar:</p>
 
 					<textarea style="margin:0 0 40px 0;" name="resumoAtividadesInteresse" cols=40 rows=6 
