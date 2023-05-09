@@ -68,7 +68,7 @@ if (isset($_POST['botaoConfirmar'])) {
                 (isset($iniciacaoCientifica) ? "Iniciação Científica; " : "")
                 . (isset($monitoria) ? "Monitoria; " : "")
                 . (isset($estagioNaoObrigatorio) ? "Estágio Não Obrigatório pertinente ao curso; " : "")
-                . (isset($atividadeComunidade) ? "Atividade Curricular em Comunidade - ACC; " : "")
+                . (isset($atividadeComunidade) ? "Atividade Curricular em Comunidade; " : "")
                 . (isset($participouDeEventos) ? "Eventos: Congressos, Seminários, etc; " : "")
                 . (isset($empresaJunior) ? "Empresa Júnior; " : "")
                 . (isset($diretorioAcademico) ? "Diretório Acadêmico; " : "")

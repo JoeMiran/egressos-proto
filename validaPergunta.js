@@ -2,7 +2,7 @@
 /******************************************** FORMAÇÃO ******************************************/
 function recebeBolsa() {
 
-  let naoInput = document.querySelector('input[name="bolsa"][value="nao"]');
+  let naoInput = document.querySelector('input[name="bolsa"][value="Não"]');
   let textarea = document.querySelector('textarea[name=resumoBolsa]');
   let p = document.querySelector('.dependente p')
 
@@ -49,7 +49,7 @@ function trabalho(empregado) {
   let labels = document.querySelectorAll('.dependente2 label, .dependente2 p')
   
   inputs.forEach(input => {
-    if (empregado === 'sim') {
+    if (empregado === 'Sim') {
       input.disabled = false;
     } else {
       input.disabled = true;
@@ -57,7 +57,7 @@ function trabalho(empregado) {
   });
 
   labels.forEach(label => {
-    if (empregado === 'nao') {
+    if (empregado === 'Não') {
       label.classList.add('desabilitado2');
     } else {
       label.classList.remove('desabilitado2');
@@ -69,7 +69,7 @@ function trabalho(empregado) {
 
 function eventos() {
 
-  let participa = document.querySelector('input[name="participaDeEventos"][value="nao"]');
+  let participa = document.querySelector('input[name="participaDeEventos"][value="Não"]');
   let textarea = document.querySelector('textarea[name=resumoEventosAtuais]');
   let p = document.querySelector('.dependente3 p');
 
@@ -85,7 +85,7 @@ function eventos() {
 
 function grupoPesquisa() {
 
-  let projeto = document.querySelector('input[name="participaDeProjeto"][value="nao"]');
+  let projeto = document.querySelector('input[name="participaDeProjeto"][value="Não"]');
   let textarea = document.querySelector('textarea[name=resumoProjetosAtuais]');
   let p = document.querySelector('.dependente4 p');
 
@@ -101,7 +101,7 @@ function grupoPesquisa() {
 
 function curso() {
 
-  let curso = document.querySelector('input[name="participaDeCurso"][value="nao"]');
+  let curso = document.querySelector('input[name="participaDeCurso"][value="Não"]');
   let textarea = document.querySelector('textarea[name=resumoCursosAtuais]');
   let p = document.querySelector('.dependente5 p');
 

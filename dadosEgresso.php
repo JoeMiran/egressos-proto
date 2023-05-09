@@ -115,7 +115,7 @@ function seletorRedirecionamento()
             else 
             {
                 session_destroy();
-                 echo "<script>alert('Egresso n„o encontrado');</script>";
+                 echo "<script>alert('Egresso n√£o encontrado');</script>";
             };
 
         }

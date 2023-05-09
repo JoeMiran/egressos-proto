@@ -94,7 +94,7 @@ definirDadosSessao();
 						<div class="radio">
 							<input type="radio" name="bolsa" id="bolsa1" value="Sim" onclick="recebeBolsa()">
 							<label for="bolsa1">Sim</label><br>
-							<input type="radio" name="bolsa" id="bolsa2" value="nao" onclick="recebeBolsa()">
+							<input type="radio" name="bolsa" id="bolsa2" value="Não" onclick="recebeBolsa()">
 							<label for="bolsa2">Não</label><br>
 						</div>
 					</div>
@@ -213,7 +213,7 @@ definirDadosSessao();
 							<input type="radio" onclick="trabalho('sim')" name="inseridoNoMercado" id="inseridoNoMercado1"
 							value="Sim">
 							<label for="inseridoNoMercado1">Sim</label><br>
-							<input type="radio" onclick="trabalho('nao')" name="inseridoNoMercado" id="inseridoNoMercado2"
+							<input type="radio" onclick="trabalho('Não')" name="inseridoNoMercado" id="inseridoNoMercado2"
 							value="Não">
 							<label for="inseridoNoMercado2">Não</label><br>
 						</div>
@@ -399,7 +399,7 @@ definirDadosSessao();
 						<div class="radio">
 							<input type="radio" id="participaDeEventos1" name="participaDeEventos" value="sim"  onclick="eventos()">
 							<label for="participaDeEventos1">Sim</label><br>
-							<input type="radio" id="participaDeEventos2" name="participaDeEventos" value="nao" onclick="eventos()">
+							<input type="radio" id="participaDeEventos2" name="participaDeEventos" value="Não" onclick="eventos()">
 							<label for="participaDeEventos2">Não</label><br>
 						</div>
 					</div>
@@ -420,7 +420,7 @@ definirDadosSessao();
 							value="Sim" onclick="grupoPesquisa()">
 							<label for="participaDeProjeto1">Sim</label><br>
 							<input type="radio" id="participaDeProjeto2" name="participaDeProjeto"
-							value="nao" onclick="grupoPesquisa()">
+							value="Não" onclick="grupoPesquisa()">
 							<label for="participaDeProjeto2">Não</label><br>
 						</div>
 					</div>
@@ -441,7 +441,7 @@ definirDadosSessao();
 							value="Sim" onclick="curso()">
 							<label for="participaDeCurso1">Sim</label><br>
 							<input type="radio" id="participaDeCurso2" name="participaDeCurso"
-							value="nao" onclick="curso()">
+							value="Não" onclick="curso()">
 							<label for="participaDeCurso2">Não</label><br>
 						</div>
 					</div>
