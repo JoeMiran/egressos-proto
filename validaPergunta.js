@@ -49,10 +49,10 @@ function trabalho(empregado) {
   let labels = document.querySelectorAll('.dependente2 label, .dependente2 p')
   
   inputs.forEach(input => {
-    if (empregado === 'Sim') {
-      input.disabled = false;
-    } else {
+    if (empregado === 'Não') {
       input.disabled = true;
+    } else {
+      input.disabled = false;
     }
   });
 
