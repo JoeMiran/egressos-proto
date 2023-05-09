@@ -36,7 +36,7 @@ definirDadosSessao();
         <!------------------------ Início da area para a confirmação do CPF ---------------------------------->
         <form method="POST" name="form" action="validaCpf.php">
                 <div id="borda">
-                    <h2><strong>Verificar Credenciais</strong></h2>
+                    <h2><strong>VERIFICAR CREDÊNCIAS</strong></h2>
                     <div class="elements" >
                         <input class="cpf" placeholder=" Informe seu CPF..." type= "text" id="cpf" name="cpf" type="text" size="18" alt="  Informe seu CPF" title="CPF"><br><br>
                         <span class="erro"></span><br>

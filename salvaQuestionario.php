@@ -65,13 +65,13 @@ if (isset($_POST['botaoConfirmar'])) {
         '" . $bolsa . "',
         '" . $resumoBolsa . "',
         '" . (
-                (isset($iniciacaoCientifica) ? "Inicia��o Cient�fica; " : "")
+                (isset($iniciacaoCientifica) ? "Iniciação Científica; " : "")
                 . (isset($monitoria) ? "Monitoria; " : "")
-                . (isset($estagioNaoObrigatorio) ? "Est�gio N�o Obrigat�rio pertinente ao curso; " : "")
+                . (isset($estagioNaoObrigatorio) ? "Estágio Não Obrigatório pertinente ao curso; " : "")
                 . (isset($atividadeComunidade) ? "Atividade Curricular em Comunidade - ACC; " : "")
-                . (isset($participouDeEventos) ? "Eventos: Congressos, Semin�rios, etc; " : "")
-                . (isset($empresaJunior) ? "Empresa J�nior; " : "")
-                . (isset($diretorioAcademico) ? "Diret�rio Acad�mico; " : "")
+                . (isset($participouDeEventos) ? "Eventos: Congressos, Seminários, etc; " : "")
+                . (isset($empresaJunior) ? "Empresa Júnior; " : "")
+                . (isset($diretorioAcademico) ? "Diretório Acadêmico; " : "")
                 . (isset($outrasAtividades) ? "Outras Atividades; " : "")
             ) . "',
         '" . $atividadeRemunerada . "',
@@ -79,25 +79,25 @@ if (isset($_POST['botaoConfirmar'])) {
         '" . ($cursoPosGraduacao == "Nenhum" ? "" : $situacaoCursoPosGraduacao) . "',
         '" . ($cursoPosGraduacao == "Nenhum" ? "" : $posGraduacaoUfpa) . "',
         '" . $inseridoNoMercado . "',
-        '" . ($inseridoNoMercado == "N�o" ? "" : $tipoDeEmprego) . "',
-        '" . ($inseridoNoMercado == "N�o" ? "" : $tempoFormaturaEmprego) . "',
-        '" . ($inseridoNoMercado == "N�o" ? "" : $trabalhaNaAreaDeFormacao) . "',
-        '" . ($inseridoNoMercado == "N�o" ? "" : $faixaSalarial) . "',
-        '" . ($inseridoNoMercado == "N�o" ? "" : $relacaoCursoTrabalho) . "',
-        '" . ($inseridoNoMercado == "N�o" ? "" : $recebeuOrientacao) . "',
-        '" . ($inseridoNoMercado == "N�o" ? "" : $disciplinasForamUteis) . "',
-        '" . ($inseridoNoMercado == "N�o" ? "" : $estagioContribuiuEmprego) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $tipoDeEmprego) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $tempoFormaturaEmprego) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $trabalhaNaAreaDeFormacao) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $faixaSalarial) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $relacaoCursoTrabalho) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $recebeuOrientacao) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $disciplinasForamUteis) . "',
+        '" . ($inseridoNoMercado == "Não" ? "" : $estagioContribuiuEmprego) . "',
         '" . $resumoSituacaoProfissional . "',
         '" . $satisfacaoComCurso . "',
         '" . $resumoSatisfacaoComCurso . "',
         '" . $recomendaCurso . "',
         '" . $resumoRecomendacaoCurso . "',
         '" . $participaDeEventos . "',
-        '" . ($participaDeEventos == "N�o" ? "" : $resumoEventosAtuais) . "',
+        '" . ($participaDeEventos == "Não" ? "" : $resumoEventosAtuais) . "',
         '" . $participaDeProjeto . "',
-        '" . ($participaDeProjeto == "N�o" ? "" : $resumoProjetosAtuais) . "',
+        '" . ($participaDeProjeto == "Não" ? "" : $resumoProjetosAtuais) . "',
         '" . $participaDeCurso . "',
-        '" . ($participaDeCurso == "N�o" ? "" : $resumoCursosAtuais) . "',
+        '" . ($participaDeCurso == "Não" ? "" : $resumoCursosAtuais) . "',
         '" . $resumoAtividadesInteresse . "',
         '" . $resumoSugestaoQuestionario . "'
     );";

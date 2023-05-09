@@ -3,15 +3,23 @@ function envioSucesso(event) {
     var selects = document.querySelectorAll('select');
     var radioDivs = document.querySelectorAll('.radio');
     var todosPreenchidos = true;
-    
+
     radioDivs.forEach(function(divNode) {
         var respondido = false;
-        divNode.childNodes.forEach(function(radioNode) {
-            if (radioNode.checked && !radioNode.disabled) {
+        var peloMenosUmInputNaoPreenchido = false;
+    
+        Array.from(divNode.querySelectorAll('input')).forEach(function(input) {
+
+            if (input.checked || input.disabled) {
                 respondido = true;
             }
+            if (input.value.trim() === '') {
+                peloMenosUmInputNaoPreenchido = true;
+            }
+
         });
-        if (!respondido) {
+    
+        if (!respondido || peloMenosUmInputNaoPreenchido) {
             divNode.previousElementSibling.classList.add('obrigatorio');
             todosPreenchidos = false;
         } else {
@@ -19,24 +27,24 @@ function envioSucesso(event) {
         }
     });
 
-    for (const campo of campos) {
-
-        if (campo.value.length === 0 && campo.disabled == false) {
+    campos.forEach(function(campo) {
+        if (campo.value.trim() === '' && !campo.disabled) {
             campo.classList.add('nao_preenchido');
             todosPreenchidos = false;
         } else {
             campo.classList.remove('nao_preenchido');
         }
-    }
-    for (const select of selects) {
+    });
 
+    selects.forEach(function(select) {
         if (select.selectedIndex === 0) {
             select.classList.add('select_vazio');
             todosPreenchidos = false;
         } else {
             select.classList.remove('select_vazio');
         }
-    }
+    });
+
     if (!todosPreenchidos) {
         event.preventDefault();
         alert('Por favor, responda todas as perguntas.');

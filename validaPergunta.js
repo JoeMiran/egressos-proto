@@ -1,5 +1,5 @@
 
-/******************************************** FORMA«√O ******************************************/
+/******************************************** FORMA√á√ÉO ******************************************/
 function recebeBolsa() {
 
   let naoInput = document.querySelector('input[name="bolsa"][value="nao"]');
@@ -42,7 +42,7 @@ function posGraduacao() {
 
 }
 
-/****************************************** SITUA«√O PROFISSIONAL  ****************************************/
+/****************************************** SITUA√á√ÉO PROFISSIONAL  ****************************************/
 
 function trabalho(empregado) {
   let inputs = document.querySelectorAll('input[name=tipoDeEmprego], input[name=tempoFormaturaEmprego], input[name=trabalhaNaAreaDeFormacao], input[name=faixaSalarial], input[name=relacaoCursoTrabalho], input[name=disciplinasForamUteis], input[name=estagioContribuiuEmprego]');
@@ -65,7 +65,7 @@ function trabalho(empregado) {
   });
 }
 
-/************************************* RELA«√O ATUAL COM A UNIVERSIDADE *************************************/
+/************************************* RELA√á√ÉO ATUAL COM A UNIVERSIDADE *************************************/
 
 function eventos() {
 
