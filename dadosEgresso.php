@@ -115,7 +115,7 @@ function seletorRedirecionamento()
             else 
             {
                 session_destroy();
-                echo '<span class="erro">Egresso não encontrado</span>';
+                 echo "<script>alert('Egresso não encontrado');</script>";
             };
 
         }
@@ -123,4 +123,3 @@ function seletorRedirecionamento()
     }
     
 }
-
