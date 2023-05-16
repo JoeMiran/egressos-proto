@@ -4,6 +4,12 @@ function destroySession() {
     session_destroy();
 }
 
+function startSession() {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+}
+
 function dataDiferenca($dataNascimento = NULL)
 {
     if (isset($dataNascimento))
@@ -11,11 +17,9 @@ function dataDiferenca($dataNascimento = NULL)
         $tempo = new DateTime(date('Y-m-d', time()));
         $dataNascimento = new DateTime($dataNascimento);
         $idade = $tempo->diff($dataNascimento)->format('%y');
-
+        
         return $idade;
-
     }
-
 }
 
 function getDadosEgressoFromDatabase($cpf = NULL) 
@@ -71,7 +75,7 @@ function getDadosEgressoJson()
 
 function definirDadosSessao()
 {
-    session_start();
+    startSession();
 
     if (isset($_POST['cpf']))
     {
@@ -100,7 +104,6 @@ function seletorRedirecionamento()
     if (isset($_POST['cpf']))
     {
         $resultadoConsulta = getDadosEgressoFromDatabase($_SESSION['cpf']);
-        // echo var_dump($_POST['cpf']);
 
         if (isset($resultadoConsulta)) 
         {
@@ -118,10 +121,10 @@ function seletorRedirecionamento()
             }
             else 
             {
+                startSession();
                 destroySession();
-                echo "<meta http-equiv='refresh' content='0";
                 echo "<script>alert('Egresso não encontrado');</script>";
-                die();
+                echo "<meta http-equiv='refresh' content='1'";
             };
 
         }
@@ -141,6 +144,8 @@ function cpfSecurity()
 
 function returnButtonSessionDestroy() {
     if(isset($_POST['returnButton'])) {
+        startSession();
         destroySession();
+        echo "<meta http-equiv='refresh' content='1'";
     }
 }

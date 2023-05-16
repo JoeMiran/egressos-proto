@@ -1,8 +1,9 @@
 ﻿<?php 
 include_once 'dadosEgresso.php';
-returnButtonSessionDestroy();
 definirDadosSessao();
-var_dump($_POST);
+returnButtonSessionDestroy();
+// var_dump($_SESSION['cpf'].'<br>');
+// var_dump($_POST['returnButton']);
 ?>
 
 <!DOCTYPE html>

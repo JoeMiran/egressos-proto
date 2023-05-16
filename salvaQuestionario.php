@@ -1,7 +1,8 @@
 <?php
+include_once "dadosEgresso.php";
 
 if (isset($_POST['botaoConfirmar'])) {
-    session_start();
+    startSession();
     extract($_POST);
     $servername = "localhost";
     $username = "root";
