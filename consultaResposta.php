@@ -1,5 +1,6 @@
 ﻿<?php
 include_once 'dadosEgresso.php';
+cpfSecurity();
 session_start();
 $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
 ?>
@@ -30,7 +31,7 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
             <a href="https://egressos.ufpa.br/">
                 <img class="logo" src="images/logo_ufpa.png">
             </a>
-            <button class="return" type="button"><strong><a style="font-size: larger;" class="link" href="validaCpf.php">🢀</a></strong></button>
+            <button class="return" type="button" name="returnButton" value="1"><strong><a style="font-size: larger;" class="link" href="validaCpf.php">🢀</a></strong></button>
             </a>
         </div>
     </header>

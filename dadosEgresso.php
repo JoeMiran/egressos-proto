@@ -1,5 +1,9 @@
 <?php
 
+function destroySession() {
+    session_destroy();
+}
+
 function dataDiferenca($dataNascimento = NULL)
 {
     if (isset($dataNascimento))
@@ -114,12 +118,29 @@ function seletorRedirecionamento()
             }
             else 
             {
-                session_destroy();
-                 echo "<script>alert('Egresso não encontrado');</script>";
+                destroySession();
+                echo "<meta http-equiv='refresh' content='0";
+                echo "<script>alert('Egresso não encontrado');</script>";
+                die();
             };
 
         }
     
     }
     
+}
+
+function cpfSecurity()
+{
+    if(!isset($_SESSION['cpf'])) {
+        echo "<script>alert('Acesso indevido: Para ter acesso, é necessário inserir o CPF');</script>";
+        echo "<meta http-equiv='refresh' content='0;url=validaCpf.php'>";
+        die();
+    }
+}
+
+function returnButtonSessionDestroy() {
+    if(isset($_POST['returnButton'])) {
+        destroySession();
+    }
 }

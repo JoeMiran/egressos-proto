@@ -1,6 +1,8 @@
 ﻿<?php 
 include_once 'dadosEgresso.php';
+returnButtonSessionDestroy();
 definirDadosSessao();
+var_dump($_POST);
 ?>
 
 <!DOCTYPE html>
