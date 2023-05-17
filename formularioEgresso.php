@@ -46,8 +46,12 @@ definirDadosSessao();
 					<legend><strong>DADOS PESSOAIS</strong></legend>
 					<div class="dados">
 						<p>Nome: <span><?php echo $_SESSION['nome'];?></span></p>
-						<p>Email: <span><?php echo $_SESSION['email'];?></span></p>
+						<!--<p>Email: <span> echo $_SESSION['email'];</span></p>-->
 						<p>Idade: <span><?php echo $_SESSION['idade'];?></span></p>
+						<p>
+							Email: <input type="email" name="email" value=<?php echo $_SESSION['email'];?> >
+							<input type="button" name="atualizaEmail" value="✓" onclick="mudarCor()">
+						</p>
 					</div>
 					<!-- --------------------------------------------------------------- -->
 					<div class="pergunta">
