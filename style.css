@@ -191,6 +191,7 @@ select {
     padding: 5px;
     width: 115px;
     padding: 0 5px 0 5px;
+    margin-top: 9px;
 } 
 
 select:hover {
@@ -268,37 +269,8 @@ a {
     font-size: large;
 }
 
-.dados input[type="button"] {
-    padding: 5px;
-    height: 30px;
-    width: 30px;
-    background-color: rgb(2,116,190);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 3px;
-    font-weight: bold;
-}
-
-.dados input[type="button"]:hover {
-    cursor: pointer;
-}
-
-.dados input[type="button"]:checked {
-    padding: 5px;
-    height: 30px;
-    width: 30px;
-    background-color: rgb(9, 197, 9);
-    color: #FFFFFF;
-    border: none;
-    border-radius: 3px;
-    font-weight: bold;
-}
-
-.dados input[type="button"]:hover {
-    cursor: pointer;
-}
-
-.dados input[type="email"] {
+.dados input[type="email"], 
+.dados input[type="tel"] {
     padding: 7px 0px 6px 7px;
     border: none;
     border-radius: 5px;

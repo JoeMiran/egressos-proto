@@ -83,12 +83,8 @@ function definirDadosSessao()
             $_SESSION['anoIngresso'] = $ultimaMatricula->anoIngresso;
             $_SESSION['curso'] = $ultimaMatricula->curso->nome;
             $_SESSION['campus'] = $ultimaMatricula->curso->campus->nome;
-            
-            if(isset($_POST['atualizarEmail'])) {
-                $_SESSION['email'] = $_POST['email'];
-            } else {
-                $_SESSION['email'] = $ultimaMatricula->email;
-            }
+            $_SESSION['email'] = $ultimaMatricula->email;
+    
         }
         
 

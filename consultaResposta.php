@@ -51,6 +51,8 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                         <span><?php echo $dados['nome']; ?></span></p><br>
                     <p>Email: 
                         <span><?php echo $dados['email']; ?></span></p><br>
+                    <p>Telefone:
+                        <span><?php echo $dados['telefone']?></span></p><br>
                     <p>Data de Nascimento: 
                         <span><?php echo $dados['dataNascimento']; ?></span></p><br>
                     <p>Idade: 
