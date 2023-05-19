@@ -155,7 +155,7 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                         </p><br>
             
                     <?php endif; ?>
-
+<!--  -->
                     <p><strong>Recebeu orientação para atuar no mercado de trabalho: </strong>
                             <span><?php echo $dados['recebeuOrientacao']; ?></span>
                     </p><br>
