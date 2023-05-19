@@ -45,14 +45,15 @@ definirDadosSessao();
 					<!-- --------------------------------------------------------------- -->
 					<legend><strong>DADOS PESSOAIS</strong></legend>
 					<div class="dados">
-						<p>Nome: <span><?php echo $_SESSION['nome'];?></span></p>
-						<p>Email: <span><?php echo $_SESSION['email'];?></span></p>
-						<p>Idade: <span><?php echo $_SESSION['idade'];?></span></p>
+						<p><strong>Nome:</strong> <span><?php echo $_SESSION['nome'];?></span></p>
+						<p><strong>Idade: </strong> <span><?php echo $_SESSION['idade'];?></span></p><br>
+						<p><strong>Email:</strong></p> <input type="email" name="email" value="<?php echo $_SESSION['email'];?>"></p>
+						<p><strong>Telefone:</strong></p> <input type="tel" name="telefone" placeholder="(91) 99999-9999" required></p>
 					</div>
 					<!-- --------------------------------------------------------------- -->
 					<div class="pergunta">
 						<div>
-							<label style="font-size: larger; max-width: cal(100% - 98px);">Gênero: </label>
+							<strong><label style="font-size: larger; max-width: cal(100% - 98px);">Gênero: </label></strong><br>
 							<select id="genero" name="genero">
 								<option>Selecione</option>
 								<option value="Masculino">Masculino</option>
@@ -64,7 +65,7 @@ definirDadosSessao();
 						
 					<div class="pergunta">
 						<div>
-						<label style="font-size: larger; max-width: cal(100% - 98px);">Etnia/Cor: </label>
+						<strong><label style="font-size: larger; max-width: cal(100% - 98px);">Etnia/Cor: </label></strong><br>
 							<select id="cor" name="cor">
 								<option>Selecione</option>
 								<option value="Preto">Preto</option>
@@ -83,9 +84,9 @@ definirDadosSessao();
 					<!-- --------------------------------------------------------------- -->
 					<legend><strong>FORMAÇÃO</strong></legend>
 					<div class="dados">
-						<p>Curso: <span><?php echo $_SESSION['curso'];?></span></p>
-						<p>Campus: <span><?php echo $_SESSION['campus'];?></span></p>
-						<p>Ano de Ingresso: <span><?php echo $_SESSION['anoIngresso'];?></span></p>
+						<p><strong> Curso:</strong>  <span><?php echo $_SESSION['curso'];?></span></p>
+						<p><strong> Campus:</strong>  <span><?php echo $_SESSION['campus'];?></span></p>
+						<p><strong> Ano de Ingresso: </strong> <span><?php echo $_SESSION['anoIngresso'];?></span></p>
 					</div>
 					
 					<!-- --------------------------------------------------------------- -->
@@ -161,7 +162,7 @@ definirDadosSessao();
 
 					<div class="pergunta">
 						<div>
-						<label  style="font-size: larger; max-width: cal(100% - 98px);">Curso de Pós-Graduação:</label>
+						<label  style="font-size: larger; max-width: cal(100% - 98px);">Curso de Pós-Graduação:</label><br>
 							<select name="cursoPosGraduacao" id="cursoPosGraduacao" onchange="posGraduacao()">
 								<option>Selecione</option>
 								<option value="Aperfeiçoamento">Aperfeiçoamento</option>
@@ -335,12 +336,6 @@ definirDadosSessao();
 							<label for="recebeuOrientacao2">Não</label><br>
 						</div>
 					</div>
-
-					<p>Comente:</p>
-
-					<textarea name="resumoSituacaoProfissional" cols=40 rows=6 
-					placeholder="Descreva mais sobre sua situação profissional"
-					></textarea>
 					<!-- --------------------------------------------------------------- -->
 				</fieldset>
 

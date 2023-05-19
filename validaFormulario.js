@@ -1,5 +1,5 @@
 function envioSucesso(event) {
-    var campos = document.querySelectorAll('textarea');
+    var campos = document.querySelectorAll('textarea:not([name="resumoRecomendacaoCurso"]):not([name="resumoSatisfacaoComCurso"])');
     var selects = document.querySelectorAll('select');
     var radioDivs = document.querySelectorAll('.radio');
     var todosPreenchidos = true;

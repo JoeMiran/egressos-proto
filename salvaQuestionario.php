@@ -13,7 +13,8 @@ if (isset($_POST['botaoConfirmar'])) {
     (
         cpf, 
         nome, 
-        email, 
+        email,
+        telefone, 
         dataNascimento, 
         idade, 
         genero, 
@@ -37,7 +38,6 @@ if (isset($_POST['botaoConfirmar'])) {
         recebeuOrientacao,
         disciplinasForamUteis,
         estagioContribuiuEmprego,
-        resumoSituacaoProfissional,
         satisfacaoComCurso,
         resumoSatisfacaoComCurso,
         recomendaCurso,
@@ -54,7 +54,8 @@ if (isset($_POST['botaoConfirmar'])) {
     (
         '" . $_SESSION['cpf'] . "', 
         '" . $_SESSION['nome'] . "', 
-        '" . $_SESSION['email'] . "',
+        '" . $email . "',
+        '" . $telefone . "',
         '" . $_SESSION['dataNascimento'] . "', 
         '" . $_SESSION['idade'] . "', 
         '" . $genero . "',
@@ -67,9 +68,9 @@ if (isset($_POST['botaoConfirmar'])) {
         '" . (
                 (isset($iniciacaoCientifica) ? "Iniciação Científica; " : "")
                 . (isset($monitoria) ? "Monitoria; " : "")
-                . (isset($estagioNaoObrigatorio) ? "Estágio Não Obrigatório pertinente ao curso; " : "")
+                . (isset($estagioNaoObrigatorio) ? "Estágio naõ obrigatório pertinente ao curso; " : "")
                 . (isset($atividadeComunidade) ? "Atividade Curricular em Comunidade; " : "")
-                . (isset($participouDeEventos) ? "Eventos: Congressos, Seminários, etc; " : "")
+                . (isset($participouDeEventos) ? "Eventos: Congressos, Seminários e etc; " : "")
                 . (isset($empresaJunior) ? "Empresa Júnior; " : "")
                 . (isset($diretorioAcademico) ? "Diretório Acadêmico; " : "")
                 . (isset($outrasAtividades) ? "Outras Atividades; " : "")
@@ -87,7 +88,6 @@ if (isset($_POST['botaoConfirmar'])) {
         '" . ($inseridoNoMercado == "Não" ? "" : $recebeuOrientacao) . "',
         '" . ($inseridoNoMercado == "Não" ? "" : $disciplinasForamUteis) . "',
         '" . ($inseridoNoMercado == "Não" ? "" : $estagioContribuiuEmprego) . "',
-        '" . $resumoSituacaoProfissional . "',
         '" . $satisfacaoComCurso . "',
         '" . $resumoSatisfacaoComCurso . "',
         '" . $recomendaCurso . "',

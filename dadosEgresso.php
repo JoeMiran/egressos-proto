@@ -84,8 +84,9 @@ function definirDadosSessao()
             $_SESSION['curso'] = $ultimaMatricula->curso->nome;
             $_SESSION['campus'] = $ultimaMatricula->curso->campus->nome;
             $_SESSION['email'] = $ultimaMatricula->email;
-        
+    
         }
+        
 
     }
 

@@ -186,11 +186,12 @@ select {
     color: #FFFFFF;
     height: 25px;
     border: none;
-    border-radius: 50px;
+    border-radius: 15px;
     font-weight: bold;
     padding: 5px;
     width: 115px;
     padding: 0 5px 0 5px;
+    margin-top: 9px;
 } 
 
 select:hover {
@@ -266,6 +267,14 @@ a {
     color: #796d6d;
     font-family: sans-serif;
     font-size: large;
+}
+
+.dados input[type="email"], 
+.dados input[type="tel"] {
+    padding: 7px 0px 6px 7px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid rgb(209, 204, 204);
 }
 
 .pergunta, .sel-pergunta {
