@@ -45,21 +45,21 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                     
                     <legend><strong>DADOS PESSOAIS</strong></legend><br>
             
-                    <p>CPF: 
+                    <p><strong>CPF: </strong>
                         <span><?php echo $dados['cpf']; ?></span></p><br>
-                    <p>Nome: 
+                    <p><strong>Nome: </strong>
                         <span><?php echo $dados['nome']; ?></span></p><br>
-                    <p>Email: 
+                    <p><strong>Email: </strong>
                         <span><?php echo $dados['email']; ?></span></p><br>
-                    <p>Telefone:
+                    <p><strong>Telefone:</strong>
                         <span><?php echo $dados['telefone']?></span></p><br>
-                    <p>Data de Nascimento: 
+                    <p><strong>Data de Nascimento: </strong>
                         <span><?php echo $dados['dataNascimento']; ?></span></p><br>
-                    <p>Idade: 
+                    <p><strong>Idade: </strong>
                         <span> <?php echo $dados['idade']; ?></span></p><br>
-                    <p>Genero: 
+                    <p><strong>Genero: </strong>
                         <span><?php echo $dados['genero']; ?></span></p><br>
-                    <p>Cor: 
+                    <p><strong>Cor: </strong>
                         <span><?php echo $dados['cor']; ?></span></p><br>
                 
                 </fieldset>
@@ -68,16 +68,20 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                     
                     <legend><strong>FORMAÇÃO</strong></legend><br>
                     
-                    <p>Curso: 
+                    <p><strong>Curso: </strong>
                         <span><?php echo $dados['curso']; ?></span></p><br>
-                    <p>Ano de Ingresso: 
+                    <p><strong>Ano de Ingresso: </strong>
                         <span><?php echo $dados['anoIngresso']; ?></span></p><br>
-                    <p>Campus: 
+                    <p><strong>Campus: </strong>
                         <span><?php echo $dados['campus']; ?></span></p><br>
-                    <p>Obteve bolsa durante o curso?: 
+                    <p><strong>Obteve bolsa durante o curso?: </strong>
                         <span><?php echo $dados['bolsa']; ?></span></p><br>
-                    <p>Resumo da bolsa:</p>
-                        <span><?php echo $dados['resumoBolsa']; ?></span></p><br>
+                    
+                    <?php if (!empty($dados['resumoBolsa'])): ?>
+                        <p><strong>Resumo da bolsa:</strong></p>
+                        <span><?php echo $dados['resumoBolsa']; ?></span>
+                    </p><br>
+                    <?php endif; ?>      
                 
                 </fieldset>
 
@@ -85,16 +89,29 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                     
                     <legend><strong>DADOS COMPLEMENTARES</strong></legend><br>        
                         
-                    <p>Atividades acadêmicas extracurriculares durante o curso:
-                        <span><?php echo $dados['atividadesExtracurriculares']; ?></span></p><br>
-                    <p>Atividade remunerada fora da Universidade:
+                    <?php if(!empty($dados['atividadesExtracurriculares'])): ?>
+                        <p><strong>Atividades acadêmicas extracurriculares durante o curso:</strong>
+                            <span><?php echo $dados['atividadesExtracurriculares']; ?></span>
+                        </p><br>
+                    <?php endif; ?>
+                    
+                    <p><strong>Atividade remunerada fora da Universidade:</strong>
                         <span><?php echo $dados['atividadeRemunerada']; ?></span></p><br>
-                    <p>Curso de Pós-Graduação: 
+                    
+                    <p><strong>Curso de Pós-Graduação: </strong>
                         <span><?php echo $dados['cursoPosGraduacao']; ?></span></p><br>
-                    <p>Situação do curso: 
-                        <span><?php echo $dados['situacaoCursoPosGraduacao']; ?></span></p><br>
-                    <p>Pós-Gradução na UFPA:
-                        <span><?php echo $dados['posGraduacaoUfpa']; ?></span></p><br>
+                    
+                    <?php if(!empty(
+                        $dados['situacaoCursoPosGraduacao'] && 
+                        $dados['situacaoCursoPosGraduacao']
+                    )): ?>
+                        <p><strong>Situação do curso: </strong>
+                            <span><?php echo $dados['situacaoCursoPosGraduacao']; ?></span>
+                        </p><br>
+                            <p><strong>Pós-Gradução na UFPA:</strong>
+                            <span><?php echo $dados['posGraduacaoUfpa']; ?></span>
+                        </p><br>
+                    <?php endif; ?>
                 
                 </fieldset>
                 
@@ -102,65 +119,114 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
                     
                     <legend><strong>SITUAÇÃO PROFISSIONAL</strong></legend><br>        
                     
-                    <p>Inserido no mercado de trabalho: 
-                        <span><?php echo $dados['inseridoNoMercado']; ?></span></p><br>
-                    <p>Modalidade de emprego: 
-                        <span><?php echo $dados['tipoDeEmprego']; ?></span></p><br>
-                    <p>Tempo necessário para conseguir atividade remunerada: 
-                        <span><?php echo $dados['tempoFormaturaEmprego']; ?></span></p><br>
-                    <p>Trabalha na área de formação: 
-                        <span><?php echo $dados['trabalhaNaAreaDeFormacao']; ?></span></p><br>
-                    <p>Faixa salarial: 
-                        <span><?php echo $dados['faixaSalarial']; ?></span></p><br>
-                    <p>Há relação entre trabalho e área de formação: 
-                        <span><?php echo $dados['relacaoCursoTrabalho']; ?></span></p><br>
-                    <p>Orientação para atuar no mercado de trabalho: 
-                        <span><?php echo $dados['recebeuOrientacao']; ?></span></p><br>
-                    <p>As disciplinas do curso foram úteis para inserção no mercado: 
-                        <span><?php echo $dados['disciplinasForamUteis']; ?></span></p><br>
-                    <p>O(s) estágio supervisionado teve utilidade para a inserção no mercado:
-                        <span><?php echo $dados['estagioContribuiuEmprego']; ?></span></p><br>
-                    <p>Descrição da situação profissional: </p>
-                        <span><?php echo $dados['resumoSituacaoProfissional']; ?></span>
+                    <p><strong>Inserido no mercado de trabalho: </strong>
+                        <span><?php echo $dados['inseridoNoMercado']; ?></span>
                     </p><br>
-                
+                    
+                    <?php if (!empty(
+                            $dados['tipoDeEmprego'] && 
+                            $dados['tempoFormaturaEmprego'] &&
+                            $dados['trabalhaNaAreaDeFormacao'] &&
+                            $dados['faixaSalarial'] &&
+                            $dados['relacaoCursoTrabalho'] &&
+                            $dados['disciplinasForamUteis'] &&
+                            $dados['estagioContribuiuEmprego'] 
+                    )): ?>
+                        <p><strong>Modalidade de emprego:</strong> 
+                            <span><?php echo $dados['tipoDeEmprego']; ?></span>
+                        </p><br>
+                        <p><strong>Tempo necessário para conseguir atividade remunerada: </strong>
+                            <span><?php echo $dados['tempoFormaturaEmprego']; ?></span>
+                        </p><br>
+                        <p><strong>Trabalha na área de formação: </strong>
+                            <span><?php echo $dados['trabalhaNaAreaDeFormacao']; ?></span>
+                        </p><br>
+                        <p><strong>Faixa salarial: </strong>
+                            <span><?php echo $dados['faixaSalarial']; ?></span>
+                        </p><br>
+                        <p><strong>Há relação entre trabalho e área de formação: </strong>
+                            <span><?php echo $dados['relacaoCursoTrabalho']; ?></span>
+                        </p><br>
+                        <p><strong>As disciplinas do curso foram úteis para inserção no mercado:</strong> 
+                            <span><?php echo $dados['disciplinasForamUteis']; ?></span>
+                        </p><br>
+                        <p><strong>O(s) estágio supervisionado teve utilidade para a inserção no mercado:</strong>
+                            <span><?php echo $dados['estagioContribuiuEmprego']; ?></span>
+                        </p><br>
+            
+                    <?php endif; ?>
+
+                    <p><strong>Recebeu orientação para atuar no mercado de trabalho: </strong>
+                            <span><?php echo $dados['recebeuOrientacao']; ?></span>
+                    </p><br>
+            
                 </fieldset>
 
                 <fieldset>
                     
                     <legend><strong>NÍVEL DE SATISFAÇÃO</strong></legend><br>   
                     
-                    <p>Satisfação com o curso:
+                    <p><strong>Satisfação com o curso:</strong>
                         <span><?php echo $dados['satisfacaoComCurso']; ?></span></p><br>
-                    <p>Resumo da satisfação: </p>
-                        <span><?php echo $dados['resumoSatisfacaoComCurso']; ?></span></p><br>
-                    <p>Recomendaria o curso para outra pessoa: 
-                        <span><?php echo $dados['recomendaCurso']; ?></span></p><br>
-                    <p>Justificativa: </p>
-                        <span><?php echo $dados['resumoRecomendacaoCurso']; ?></span></p><br>
+                    
+                    <?php if (!empty($dados['resumoSatisfacaoComCurso'] )): ?>
+                        <p><strong>Resumo da satisfação:</strong> </p>
+                            <span><?php echo $dados['resumoSatisfacaoComCurso']; ?></span>
+                        </p><br>
+                    <?php endif; ?>
+                    <p><strong>Recomendaria o curso para outra pessoa:</strong> 
+                        <span><?php echo $dados['recomendaCurso']; ?></span>
+                    </p><br>
+
+                    <?php if (!empty($dados['resumoRecomendacaoCurso'] )): ?>
+                        <p><strong>Justificativa: </strong></p>
+                            <span><?php echo $dados['resumoRecomendacaoCurso']; ?></span>
+                        </p><br>
+                    <?php endif; ?>
                 
                 </fieldset>
                 
                 <fieldset>
                     
                     <legend><strong>RELAÇÃO COM A UNIVERSIDADE</strong></legend><br>
+
+                    <p><strong>Paticipa de eventos acadêmicos na UFPA:</strong> 
+                        <span><?php echo $dados['participaDeEventos']; ?></span>
+                    </p><br>
                     
-                    <p>Paticipa de eventos na UFPA: 
-                        <span><?php echo $dados['participaDeEventos']; ?></span></p><br>
-                    <p>Resumo do(s) evento(s) que participa: </p>
-                        <span><?php echo $dados['resumoEventosAtuais']; ?></span></p><br>
-                    <p>Participa de projetos na UFPA:
-                        <span><?php echo $dados['participaDeProjeto']; ?></span></p><br>
-                    <p>Resumo do(s) projeto(s) que participa: </p>
-                        <span><?php echo $dados['resumoProjetosAtuais']; ?></span></p><br>
-                    <p>Participa de algum curso da UFPA: 
-                        <span><?php echo $dados['participaDeCurso']; ?></span></p><br>
-                    <p>Resumo do(s) curso(s): </p>
-                        <span><?php echo $dados['resumoCursosAtuais']; ?></span></p><br>
-                    <p>Atividades que você gostaria de participar: </p>
-                        <span><?php echo $dados['resumoAtividadesInteresse']; ?></span></p><br>
-                    <p>Sugestão para o questionário: </p>
-                        <span><?php echo $dados['resumoSugestaoQuestionario']; ?></span></p><br>
+                    <?php if (!empty($dados['resumoEventosAtuais'])): ?>
+                        <p><strong>Resumo do(s) evento(s) que participa: </strong></p>
+                            <span><?php echo $dados['resumoEventosAtuais']; ?></span>
+                        </p><br>  
+                    <?php endif; ?>
+
+                    <p><strong>Participa de grupo de pesquisa ou projetos de extensão na UFPA:</strong>
+                        <span><?php echo $dados['participaDeProjeto']; ?></span>
+                    </p><br>
+                    
+                    <?php if (!empty($dados['resumoProjetosAtuais'])): ?>
+                        <p><strong>Resumo do(s) projeto(s) que participa:</strong> </p>
+                            <span><?php echo $dados['resumoProjetosAtuais']; ?></span>
+                        </p><br>
+                    <?php endif; ?>
+
+                    <p><strong>Participa de algum curso na UFPA:</strong>
+                        <span><?php echo $dados['participaDeCurso']; ?></span>
+                    </p><br>
+                    
+                    <?php if (!empty($dados['resumoCursosAtuais'])): ?>
+                    <p><strong>Resumo do(s) curso(s):</strong> </p>
+                        <span><?php echo $dados['resumoCursosAtuais']; ?></span>
+                    </p><br>
+                    <?php endif; ?>
+                    
+                    <p><strong>Atividades que você gostaria de participar: </strong></p>
+                        <span><?php echo $dados['resumoAtividadesInteresse']; ?></span>
+                    </p><br>
+                    
+                    <p><strong>Sugestão para o questionário:</strong> </p>
+                        <span><?php echo $dados['resumoSugestaoQuestionario']; ?></span>
+                    </p><br>
                         
                 </fieldset>
             </div>            
