@@ -125,3 +125,22 @@ function seletorRedirecionamento()
     
 }
 
+function cpfSecurity()
+{
+    if(!isset($_SESSION['cpf'])) {
+        echo "<script language='javascript'>";
+        echo 'if(!alert("Acesso indevido: Para ter acesso, é necessário inserir o CPF")) {
+            window.location.replace("validaCpf.php");
+        };';
+        echo "</script>";
+        die();
+    }
+}
+
+function returnButtonSessionDestroy() {
+    if(isset($_POST['returnButton'])) {
+        startSession();
+        destroySession();
+        echo "<meta http-equiv='refresh' content='1'";
+    }
+}
