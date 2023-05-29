@@ -1,6 +1,7 @@
 ﻿<?php 
 include_once 'dadosEgresso.php';
 definirDadosSessao();
+returnButtonSessionDestroy();
 ?>
 
 <!DOCTYPE html>

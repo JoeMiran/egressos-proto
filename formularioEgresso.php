@@ -27,8 +27,10 @@ cpfSecurity();
 			<a href="https://egressos.ufpa.br/">
 				<img class="logo" src="images/logo_ufpa.png">
 			</a>
-			<button class="return" type="button"><strong><a style="font-size: larger;" class="link"
-						href="validaCpf.php">🢀</a></strong></button>
+			<form action="validaCpf.php" method="POST" name="returnForm" class="return">
+				<button class="return" type="submit" name="returnButton" value="1"><strong><p style="font-size: larger;" 
+				class="link">🢀</p></strong></button>
+			</form>
 			</a>
 		</div>
 		

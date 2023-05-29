@@ -17,7 +17,7 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
 
 <body>
 
-    <!-------------------------------- InÃƒÂ­cio da area de cabeÃçalho ------------------------------------>
+    <!-------------------------------- Iní­cio da area de cabeçalho ------------------------------------>
     <header>
         <div id="navbar">
             <div class="resp">
@@ -31,13 +31,16 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
             <a href="https://egressos.ufpa.br/">
                 <img class="logo" src="images/logo_ufpa.png">
             </a>
-            <button class="return" type="button"><strong><a style="font-size: larger;" class="link" href="validaCpf.php">🢀</a></strong></button>
+            <form action="validaCpf.php" method="POST" name="returnForm" class="return">
+				<button class="return" type="submit" name="returnButton" value="1"><strong><p style="font-size: larger;" 
+				class="link">🢀</p></strong></button>
+			</form>
             </a>
         </div>
     </header>
-    <!-------------------------------- Fim da area de cabeÃçalho ------------------------------------------>
+    <!-------------------------------- Fim da area de cabeçalho ------------------------------------------>
 
-    <!------------------------ InÃ­Â­cio da área de consulta de resposta ---------------------------------->
+    <!------------------------ Início da área de consulta de resposta ---------------------------------->
     <section>
         <div id="area-principal">
             <div class="dados">
@@ -235,12 +238,12 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
     </section>
     <!-------------------------- Fim da área de consulta de resposta ------------------------------------>
 
-    <!--------------------------------- InÃ­Â­cio da área do rodapÃ© --------------------------------------->
+    <!--------------------------------- Início da área do rodapé --------------------------------------->
     <footer>
         <hr>
         <a>Copyright @ 2023 Portal do Egresso da Universidade Federal do Pará</a>
     </footer>
-    <!--------------------------------- Fim da área do rodapÃ© --------------------------------------->
+    <!--------------------------------- Fim da área do rodapé --------------------------------------->
 
 </body>
 
