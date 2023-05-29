@@ -1,5 +1,17 @@
 <?php
 
+function destroySession() {
+    if (session_status() === PHP_SESSION_ACTIVE) {
+        session_destroy();
+    }
+}
+
+function startSession() {
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+}
+
 function dataDiferenca($dataNascimento = NULL)
 {
     if (isset($dataNascimento))
@@ -67,7 +79,7 @@ function getDadosEgressoJson()
 
 function definirDadosSessao()
 {
-    session_start();
+    startSession();
 
     if (isset($_POST['cpf']))
     {
@@ -115,8 +127,8 @@ function seletorRedirecionamento()
             }
             else 
             {
-                session_destroy();
-                 echo "<script>alert('Egresso não encontrado');</script>";
+                destroySession();
+                echo "<script>alert('Egresso não encontrado');</script>";
             };
 
         }
@@ -128,11 +140,8 @@ function seletorRedirecionamento()
 function cpfSecurity()
 {
     if(!isset($_SESSION['cpf'])) {
-        echo "<script language='javascript'>";
-        echo 'if(!alert("Acesso indevido: Para ter acesso, é necessário inserir o CPF")) {
-            window.location.replace("validaCpf.php");
-        };';
-        echo "</script>";
+        echo '<script>alert("Acesso indevido: Para ter acesso, é necessário inserir o CPF");</script>';
+        echo "<meta http-equiv='refresh' content='0;url=validaCpf.php'>";
         die();
     }
 }
