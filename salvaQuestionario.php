@@ -112,13 +112,6 @@ if (isset($_POST['botaoConfirmar'])) {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-    
-    if ($conn->query($sql) === TRUE) {
-        echo "<meta http-equiv='refresh' content='0;url=consultaResposta.php'>";
-        die();
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
 
     $conn->close();
 }
