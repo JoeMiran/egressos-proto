@@ -1,6 +1,7 @@
 ﻿<?php
 include_once 'dadosEgresso.php';
-session_start();
+definirDadosSessao();
+cpfSecurity();
 $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
 ?>
 

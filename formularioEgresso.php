@@ -1,6 +1,7 @@
 ﻿<?php
 include_once 'dadosEgresso.php';
 definirDadosSessao();
+cpfSecurity();
 ?>
 
 <!DOCTYPE html>
