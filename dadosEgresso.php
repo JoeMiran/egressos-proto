@@ -136,8 +136,11 @@ function seletorRedirecionamento()
 function cpfSecurity()
 {
     if(!isset($_SESSION['cpf'])) {
-        echo "<script>alert('Acesso indevido: Para ter acesso, é necessário inserir o CPF');</script>";
-        echo "<meta http-equiv='refresh' content='0;url=validaCpf.php'>";
+        echo "<script language='javascript'>";
+        echo 'if(!alert("Acesso indevido: Para ter acesso, é necessário inserir o CPF")) {
+            window.location.replace("validaCpf.php");
+        };';
+        echo "</script>";
         die();
     }
 }
