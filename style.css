@@ -1,32 +1,42 @@
 ﻿* {
-    margin: 0px;
-    padding: 0px;
+    box-sizing: border-box;
+    margin: 0rem;
+    padding: 0rem;
 }
 
 body {
-    min-height: 46.25rem;
-    margin: 0 auto;
+    height: 100vh;
+    margin: 0;
     background-color: #ececec;
 }
 
 /************* Cabe�alho **************/
 
-header {
+/*header {
     display: block;
     height: 25.813rem;
-}
+}*/
 
-#navbar {
+/*#navbar {
     display: flex;
     position: absolute;
     align-items: center;
     background-image: linear-gradient(120deg, rgb(2, 116, 190) 0%, rgb(0, 59 ,177) 100%);
     width: 100%;
     height: 25.813rem;
+}*/
+
+#navbar{
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(120deg, rgb(2, 116, 190) 0%, rgb(0, 59 ,177) 100%);
+    height: 30%;
 }
 
 h1 {
-    position: relative;
     text-align: center;
     font-family: sans-serif;
     font-size: 3rem;
@@ -35,23 +45,34 @@ h1 {
     width: 70%;
 }
 
-.resp {
+/*.resp {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
     margin: auto;
-}
+}*/
 
-#barra {
+/*#barra {
     display: flex;
     position: relative;
     justify-content: space-evenly;
     margin-bottom: 2.5rem;
-}
+}*/
 
 .logo {
     margin-top: 1.875rem;
+}
+
+
+@media (width < 800px){
+    #navbar{
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        font-size: 2rem;
+    }
 }
 
 /************* Bot�es **************/
@@ -91,7 +112,24 @@ button:hover {
     text-align: center;
 }
 
-#borda {
+.form{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1.7rem 0rem;
+}
+
+#borda{
+    margin: 4.98rem 0rem;
+    padding: 5rem;
+    border-radius: 5px;
+    border: none;
+    background: whitesmoke;
+    box-shadow: 15px 15px 55px rgb(172, 170, 170);
+    color: rgb(2,116,190);
+}
+
+/*#borda {
     justify-content: center;
     margin-top: 7rem;
     margin-left: auto;
@@ -105,7 +143,7 @@ button:hover {
     box-shadow: 15px 15px 55px rgb(172, 170, 170);
     color: rgb(2,116,190);
     margin-bottom: 20rem;
-}
+}*/
 
 .cpf {
     height: 40px;
