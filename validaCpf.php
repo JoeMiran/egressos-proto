@@ -20,10 +20,10 @@ returnButtonSessionDestroy();
     <header>
         <div id="navbar">
 
-            <a href="https://egressos.ufpa.br/"><img class="logo" src="images/logo_ufpa.png"></a>
+            <a class="logo" href="https://egressos.ufpa.br/"><img src="images/logo_ufpa.png"></a>
             <!--<div class="resp">-->
                 <h1>
-                    <strong>Formulário de Egressos da UFPA</strong>
+                    <strong>Formulário Egressos</strong>
                 </h1>
             <!--</div>-->
         <!--<div id="barra">-->
