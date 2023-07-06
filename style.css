@@ -194,6 +194,13 @@ button:hover {
 
 
 /************* Área principal **************/
+
+.area-principal-pai{
+    display: flex;
+    justify-content: center;
+
+}
+
 #area-principal{
     max-width: 50%;
     margin-top: 5rem;
@@ -221,11 +228,6 @@ button:hover {
     margin-bottom: 20rem;
 }*/
 
-.area-principal-pai{
-    display: flex;
-    justify-content: center;
-
-}
 
 
 label {
@@ -287,6 +289,7 @@ input[type="radio"]:hover {
 @media(width < 800px){
     #area-principal{
         max-width: 100%;
+        margin: 0;
     }
 }
 
@@ -313,6 +316,7 @@ a {
     font-weight: inherit;
     color: #FFFFFF;
     margin-top: 30px;
+    text-decoration: none;
 }
 
 .erro {

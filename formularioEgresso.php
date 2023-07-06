@@ -23,15 +23,7 @@ cpfSecurity();
 		<h1>
 			<strong>Pesquisa de Egressos da UFPA</strong>
 		</h1>
-		<!----</div>--->
-		<!---</div>--->
-		<!---<div id="barra">---->
-		<form action="validaCpf.php" method="POST" name="returnForm" class="return">
-			<button class="return" type="submit" name="returnButton" value="1"><strong>
-					<p style="font-size: larger;" class="link">🢀</p>
-				</strong></button>
-		</form>
-		</a>
+		<button class="return"><strong><a href="validaCpf.php"><p style="font-size: larger;" class="link">🢀</p></a></strong></button>
 	</div>
 
 </header>

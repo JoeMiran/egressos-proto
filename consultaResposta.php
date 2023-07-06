@@ -27,15 +27,7 @@ $dados = getDadosEgressoFromDatabase($_SESSION['cpf']);
             <h1>
                 <strong>Consulta de Egressos UFPA</strong>
             </h1>
-            <!----</div>--->
-            <!---</div>--->
-            <!---<div id="barra">---->
-            <form action="validaCpf.php" method="POST" name="returnForm" class="return">
-                <button class="return" type="submit" name="returnButton" value="1"><strong>
-                        <p style="font-size: larger;" class="link">🢀</p>
-                    </strong></button>
-            </form>
-            </a>
+            <button class="return"><strong><a href="validaCpf.php"><p style="font-size: larger;" class="link">🢀</p></a></strong></button>
         </div>
     </header>
     <!-------------------------------- Fim da area de cabeçalho ------------------------------------------>
